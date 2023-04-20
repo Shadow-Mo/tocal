@@ -36,4 +36,102 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  margin: auto;
+  padding-inline: 20px;
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px !important;
+  }
+}
+
+.para {
+  line-height: 140%;
+  font-weight: 300;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 0.8rem 1.6rem;
+  transition: 0.5s ease;
+  font-family: "Arimo", sans-serif;
+}
+.btn__primary {
+  background: #005ce5;
+  border: 1px solid #005ce5;
+}
+.btn__primary:hover {
+  background: #067bff;
+  border: 1px solid #067bff;
+}
+.btn__primary:focus {
+  background: #084ec5;
+  border: 1px solid #084ec5;
+}
+.btn__secondary {
+  background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
+  border: 1px solid #ea2fa6;
+}
+.btn__secondary:hover, .btn__secondary:focus {
+  background: linear-gradient(45deg, #ffbdad 0%, #ea2fa6 86.88%);
+  border: 1px solid #ea2fa6;
+}
+.btn__secondary--bordered {
+  background: transparent !important;
+}
+.btn__secondary--bordered:hover {
+  border-color: #005ce5;
+}
+
+.header {
+  box-shadow: 0 -5px 0 0 #005ce5, 0 -6px 0 0 #ffffff, 0 -8px 0 0 #ea2fa6;
+  margin-top: 8px;
+}
+.header .navbar {
+  padding-block: 2rem;
+}
+.header .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navbar__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.header .navbar .active {
+  text-decoration: underline;
+  text-decoration-color: #005ce5;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25rem;
+  color: #005ce5;
+}
+.header.fixed {
+  box-shadow: none;
+  margin-top: 0;
+  z-index: 1000;
+}
+.header.fixed .navbar {
+  padding-block: 1rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+nav #navbarToggle:checked ~ #navbarMenu {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

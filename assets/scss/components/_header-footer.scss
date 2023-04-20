@@ -1,0 +1,45 @@
+.header {
+   box-shadow: 0 -5px 0 0 map-get($map: $primaryColor, $key: default),
+      0 -6px 0 0 $whiteColor, 0 -8px 0 0 $purpleColor;
+   margin-top: 8px;
+
+   .navbar {
+      padding-block: 2rem;
+
+      .container {
+         @include flex-between;
+      }
+
+      &__logo {
+         @include flex-between;
+      }
+
+      &__menu {
+         @include flex-center;
+         gap: 2rem;
+      }
+
+      .active {
+         text-decoration: underline;
+         text-decoration-color: map-get($map: $primaryColor, $key: default);
+         text-decoration-thickness: 2px;
+         text-underline-offset: 0.25rem;
+         color: map-get($map: $primaryColor, $key: default);
+      }
+   }
+
+   &.fixed {
+      box-shadow: none;
+      margin-top: 0;
+      z-index: 1000;
+      .navbar {
+         padding-block: 1rem;
+         background: $whiteColor;
+         border-bottom: 1px solid map-get($map: $darkColor, $key: 100);
+      }
+   }
+}
+
+nav #navbarToggle:checked ~ #navbarMenu {
+   display: flex;
+}

@@ -1,13 +1,14 @@
 // Important Imports
 @import "./misc/resets";
 @import "./misc/mixins";
+@import "./components/variables";
 @import "./misc/globals";
 
 // Component Imports
-@import "./components/variables";
 @import "./components/typography";
 @import "./components/cta";
 @import "./components/forms";
+@import "./components/header-footer";
 
 // Pages
 @import "./pages/home";

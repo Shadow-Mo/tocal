@@ -1,0 +1,38 @@
+.btn {
+   @include flex-center;
+   gap: 0.5rem;
+   color: $whiteColor;
+   border-radius: 50px;
+   padding: 0.8rem 1.6rem;
+   @include transition-light;
+   font-family: $font-primary;
+
+   &__primary {
+      background: map-get($map: $primaryColor, $key: default);
+      border: 1px solid map-get($map: $primaryColor, $key: default);
+      &:hover {
+         background: map-get($map: $primaryColor, $key: 600);
+         border: 1px solid map-get($map: $primaryColor, $key: 600);
+      }
+      &:focus {
+         background: map-get($map: $primaryColor, $key: 800);
+         border: 1px solid map-get($map: $primaryColor, $key: 800);
+      }
+   }
+   &__secondary {
+      background: $gradientColor;
+      border: 1px solid $purpleColor;
+      &:hover,
+      &:focus {
+         background: $gradientColorReversed;
+         border: 1px solid $purpleColor;
+      }
+
+      &--bordered {
+         background: transparent !important;
+         &:hover {
+            border-color: map-get($map: $primaryColor, $key: default);
+         }
+      }
+   }
+}

@@ -1,0 +1,114 @@
+// ! ======================================
+// ! FLEX mixins
+// ! ======================================
+@mixin flex-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+@mixin flex-start {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+@mixin flex-end {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+@mixin flex-between {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+@mixin flex-column {
+   display: flex;
+   flex-direction: column;
+}
+@mixin flex-row {
+   display: flex;
+   flex-direction: row;
+}
+@mixin flex-wrap {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+// ! ======================================
+// ! GRID mixins
+// ! ======================================
+@mixin grid-center {
+   display: grid;
+   place-content: center;
+}
+
+// ! ======================================
+// ! Z-index mixin
+// ! ======================================
+$indices: (
+   "alwaysOnTop": 1000,
+);
+
+@mixin z-index($value) {
+   z-index: map-get($map: $indices, $key: $value);
+}
+
+// ! ======================================
+// ! responsive mixins
+// ! ======================================
+$breakpoints: (
+   sm: "480px",
+   md: "768px",
+   lg: "976px",
+   xl: "1440px",
+);
+@mixin responsive($device) {
+   @media (min-width: map-get($map: $breakpoints, $key: $device)) {
+      @content;
+   }
+}
+
+// ! ======================================
+// ! scrollbar
+// ! ======================================
+@mixin scrollbar-thin {
+   // scrollbar
+   scrollbar-width: thin;
+   &::-webkit-scrollbar {
+      width: 5px;
+      height: 0.5rem;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      background-color: #cdcdcd;
+      border-radius: 0;
+   }
+
+   &::-webkit-scrollbar-track {
+      background: #f0f0f0;
+      border-radius: 0;
+   }
+}
+
+// ! ======================================
+// ! selection mixin
+// ! ======================================
+@mixin text-selection($background, $color) {
+   &::selection {
+      background: $background;
+      color: $color;
+   }
+}
+
+// ! ======================================
+// ! animation & transition mixins
+// ! ======================================
+@mixin transition($transition...) {
+   transition: $transition ease-in-out;
+}
+@mixin transition-light {
+   transition: 0.5s ease;
+}
+@mixin transition-lazy {
+   transition: 0.8s ease;
+}
