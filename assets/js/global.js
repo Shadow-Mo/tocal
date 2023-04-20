@@ -16,7 +16,8 @@ const currentURL = location.pathname;
 const navLinks = document.querySelectorAll(".navbar #navbarMenu li a");
 // const currentURL = location.pathname.replace('/budget-renovations', '');
 navLinks.forEach(link => {
-   if (link.getAttribute('href').split("/")[1] == currentURL.split("/")[1]) {
+   let anchorLink = link.getAttribute('href').split("/")[1];
+   if (anchorLink == currentURL.split("/")[1] || anchorLink.includes("index.html")) {
       link.classList.toggle("active");
    }
 });
