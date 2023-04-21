@@ -2,9 +2,11 @@
    box-shadow: 0 -5px 0 0 map-get($map: $primaryColor, $key: default),
       0 -6px 0 0 $whiteColor, 0 -8px 0 0 $purpleColor;
    margin-top: 8px;
+   @include transition-light;
 
    .navbar {
       padding-block: 2rem;
+      @include transition-light;
 
       .container {
          @include flex-between;
@@ -28,10 +30,9 @@
       }
    }
 
-   &.fixed {
+   &.scroll {
       box-shadow: none;
       margin-top: 0;
-      z-index: 1000;
       .navbar {
          padding-block: 1rem;
          background: $whiteColor;

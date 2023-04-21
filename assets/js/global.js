@@ -1,8 +1,8 @@
 $(window).scroll(function () {
-   if ($(this).scrollTop() > 100) {
-      $('#header').addClass('fixed');
+   if ($(this).scrollTop() > 80) {
+      $('#header').addClass('scroll');
    } else {
-      $('#header').removeClass('fixed');
+      $('#header').removeClass('scroll');
    }
 
    if ($(this).scrollTop() < 300) {
@@ -17,7 +17,7 @@ const navLinks = document.querySelectorAll(".navbar #navbarMenu li a");
 // const currentURL = location.pathname.replace('/budget-renovations', '');
 navLinks.forEach(link => {
    let anchorLink = link.getAttribute('href').split("/")[1];
-   if (anchorLink == currentURL.split("/")[1] || anchorLink.includes("index.html")) {
+   if (anchorLink == currentURL.split("/")[1] || (anchorLink.includes("index.html") && currentURL.split("/")[1] == undefined)) {
       link.classList.toggle("active");
    }
 });

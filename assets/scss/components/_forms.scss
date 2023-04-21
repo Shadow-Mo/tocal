@@ -1,0 +1,8 @@
+:is(input, textarea) {
+   &::placeholder {
+      font-weight: 300;
+   }
+   &:valid {
+      background: map-get($map: $primaryColor, $key: 50);
+   }
+}

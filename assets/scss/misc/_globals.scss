@@ -1,5 +1,10 @@
 body {
    // @include color-primary;
+   padding-top: 70px;
+
+   @include responsive(lg) {
+      padding-top: 80px;
+   }
 }
 
 .container {
