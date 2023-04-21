@@ -1,6 +1,7 @@
 body {
    // @include color-primary;
    padding-top: 70px;
+   background: map-get($map: $darkColor, $key: 50);
 
    @include responsive(lg) {
       padding-top: 80px;

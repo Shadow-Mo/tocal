@@ -40,6 +40,7 @@ a {
 
 body {
   padding-top: 70px;
+  background: #fdfdfd;
 }
 @media (min-width: 976px) {
   body {
@@ -114,6 +115,7 @@ body {
 }
 :is(input, textarea):valid {
   background: #edf9ff;
+  border: 1px solid #b5e4ff;
 }
 
 .header {
@@ -149,12 +151,12 @@ body {
   color: #005ce5;
 }
 .header.scroll {
+  background: #fdfdfd;
   box-shadow: none;
   margin-top: 0;
 }
 .header.scroll .navbar {
   padding-block: 1rem;
-  background: #ffffff;
   border-bottom: 1px solid #e3e3e3;
 }
 

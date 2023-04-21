@@ -31,11 +31,11 @@
    }
 
    &.scroll {
+      background: map-get($map: $darkColor, $key: 50);
       box-shadow: none;
       margin-top: 0;
       .navbar {
          padding-block: 1rem;
-         background: $whiteColor;
          border-bottom: 1px solid map-get($map: $darkColor, $key: 100);
       }
    }

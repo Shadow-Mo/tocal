@@ -4,5 +4,6 @@
    }
    &:valid {
       background: map-get($map: $primaryColor, $key: 50);
+      border: 1px solid map-get($map: $primaryColor, $key: 200);
    }
 }
