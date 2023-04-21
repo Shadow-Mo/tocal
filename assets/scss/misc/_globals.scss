@@ -2,6 +2,8 @@ body {
    // @include color-primary;
    padding-top: 70px;
    background: map-get($map: $darkColor, $key: 50);
+   color: map-get($map: $darkColor, $key: 950);
+   overflow-x: hidden;
 
    @include responsive(lg) {
       padding-top: 80px;
@@ -19,4 +21,13 @@ body {
 .para {
    line-height: 140%;
    font-weight: 300;
+   font-size: 0.95rem;
+
+   @include responsive(xl) {
+      font-size: 1rem;
+   }
+}
+
+.card-shadow {
+   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05);
 }

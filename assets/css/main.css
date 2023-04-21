@@ -63,6 +63,12 @@ body {
 .para {
   line-height: 140%;
   font-weight: 300;
+  font-size: 0.95rem;
+}
+@media (min-width: 1440px) {
+  .para {
+    font-size: 1rem;
+  }
 }
 
 .card-shadow {
@@ -168,4 +174,80 @@ body {
 
 nav #navbarToggle:checked ~ #navbarMenu {
   display: flex;
+}
+
+.page__about .gallery__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.page__about .gallery__wrapper .row {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.page__about .gallery__wrapper .row .marquee {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.page__about .gallery__wrapper .row .marquee__inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.page__about .gallery__wrapper .row #row1marquee1 {
+  animation: row1marquee1 10s linear infinite;
+}
+.page__about .gallery__wrapper .row #row1marquee2 {
+  animation: row1marquee2 10s linear infinite;
+  animation-delay: 5s;
+}
+.page__about .gallery__wrapper .row #row2marquee1 {
+  animation: row1marquee1 10s linear infinite reverse;
+}
+.page__about .gallery__wrapper .row #row2marquee2 {
+  animation: row1marquee2 10s linear infinite reverse;
+  animation-delay: 5s;
+}
+.page__about .gallery__wrapper .row #row3marquee1 {
+  animation: row1marquee1 10s linear infinite;
+}
+.page__about .gallery__wrapper .row #row3marquee2 {
+  animation: row1marquee2 10s linear infinite;
+  animation-delay: 5s;
+}
+.page__about .gallery__wrapper .card {
+  width: calc(50vw - 0.125rem);
+  aspect-ratio: 3/2;
+  background: #e3e3e3;
+}
+.page__about .gallery__wrapper .card img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (min-width: 976px) {
+  .page__about .gallery__wrapper .card {
+    width: calc(20vw - 0.125rem);
+  }
+}
+
+@keyframes row1marquee1 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes row1marquee2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
 }/*# sourceMappingURL=main.css.map */
