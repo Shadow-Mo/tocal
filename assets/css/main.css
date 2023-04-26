@@ -341,6 +341,9 @@ nav #navbarToggle:checked ~ #navbarMenu {
   background-clip: text;
   text-fill-color: transparent;
 }
+.page__home .location-inner {
+  background: linear-gradient(92.28deg, #00a0e5 0%, #005ce5 41.37%);
+}
 
 @keyframes row1marquee1 {
   from {

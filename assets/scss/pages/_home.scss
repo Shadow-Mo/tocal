@@ -168,6 +168,13 @@
             }
          }
       }
+
+      // location
+      .location {
+         &-inner {
+            background: linear-gradient(92.28deg, #00a0e5 0%, #005ce5 41.37%);
+         }
+      }
    }
 }
 
