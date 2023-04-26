@@ -1,0 +1,189 @@
+.page {
+   &__home {
+      background: map-get($map: $darkColor, $key: 50);
+
+      // Hero
+      .hero {
+         .marquee {
+            @include flex-start;
+            gap: 1rem;
+
+            &__inner {
+               @include flex-start;
+               gap: 1rem;
+            }
+
+            .card {
+               width: 100%;
+               aspect-ratio: 4 / 2;
+               @include grid-center;
+               background: $whiteColor;
+               border: 2px solid rgba($purpleColor, 0.1);
+            }
+
+            img {
+               height: 100%;
+            }
+
+            @include responsive(md) {
+               width: 200vw;
+            }
+         }
+
+         --duration: 10s;
+         #marquee1 {
+            animation: row1marquee1 var(--duration) linear infinite;
+         }
+         #marquee2 {
+            animation: row1marquee2 var(--duration) linear infinite;
+            animation-delay: calc(var(--duration) / 2);
+         }
+      }
+
+      // Styling Client Slider
+      .clientSlider {
+         white-space: nowrap;
+         overflow: hidden;
+         width: 100%;
+         position: relative;
+
+         .marquee {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            width: 400vw;
+
+            &__inner {
+               width: 100%;
+               display: grid;
+               grid-template-columns: repeat(6, 1fr);
+               gap: 1rem;
+            }
+
+            .card {
+               width: 100%;
+               aspect-ratio: 4 / 2;
+               @include grid-center;
+               background: $whiteColor;
+               border: 2px solid rgba($purpleColor, 0.1);
+            }
+
+            img {
+               height: 100%;
+            }
+
+            @include responsive(md) {
+               width: 200vw;
+            }
+         }
+
+         --duration: 10s;
+         #marquee1 {
+            animation: row1marquee1 var(--duration) linear infinite;
+         }
+         #marquee2 {
+            animation: row1marquee2 var(--duration) linear infinite;
+            animation-delay: calc(var(--duration) / 2);
+         }
+      }
+
+      // Statistics Slider
+      .statistics-slider-wrapper {
+         position: relative;
+
+         .statistics-slider {
+            position: relative;
+            transform: translateX(10%);
+
+            &::after {
+               content: "";
+               position: absolute;
+               top: 50%;
+               right: 103%;
+               transform: translateY(-50%);
+               height: 90%;
+               aspect-ratio: 1 / 1;
+               border-radius: 100%;
+               background: map-get($map: $darkColor, $key: 50);
+               box-shadow: 1px 0 0 0 map-get($map: $primaryColor, $key: 700);
+            }
+
+            &::before {
+               content: "";
+               position: absolute;
+               top: 50%;
+               right: 103%;
+               transform: translate(50%, -50%);
+               height: 1rem;
+               aspect-ratio: 1 / 1;
+               border-radius: 100%;
+               background: $gradientColor;
+               z-index: 1;
+            }
+
+            @include responsive(lg) {
+               transform: translateX(40%);
+            }
+         }
+
+         .slick-slide {
+            opacity: 0.1;
+            font-weight: 300;
+
+            .card {
+               @include transition-light;
+               padding-left: 0;
+               * {
+                  width: fit-content;
+               }
+            }
+         }
+         .slick-slide.slick-active {
+            opacity: 1;
+            p:first-child {
+               font-size: 1.8rem;
+
+               @include responsive(lg) {
+                  font-size: 2.2rem;
+               }
+            }
+         }
+         .slick-slide.slick-active.slick-current {
+            opacity: 1;
+            .card {
+               padding-left: 2rem;
+
+               p:first-child {
+                  font-weight: 700;
+                  background: linear-gradient(
+                     135deg,
+                     #ffbdad 0%,
+                     #ea2fa6 86.88%
+                  );
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  text-fill-color: transparent;
+               }
+            }
+         }
+      }
+   }
+}
+
+@keyframes row1marquee1 {
+   from {
+      transform: translateX(100%);
+   }
+   to {
+      transform: translateX(-100%);
+   }
+}
+@keyframes row1marquee2 {
+   from {
+      transform: translateX(0%);
+   }
+   to {
+      transform: translateX(-200%);
+   }
+}

@@ -185,6 +185,179 @@ nav #navbarToggle:checked ~ #navbarMenu {
   display: flex;
 }
 
+.page__home {
+  background: #fdfdfd;
+}
+.page__home .hero {
+  --duration: 10s;
+}
+.page__home .hero .marquee {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.page__home .hero .marquee__inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.page__home .hero .marquee .card {
+  width: 100%;
+  aspect-ratio: 4/2;
+  display: grid;
+  place-content: center;
+  background: #ffffff;
+  border: 2px solid rgba(234, 47, 166, 0.1);
+}
+.page__home .hero .marquee img {
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .page__home .hero .marquee {
+    width: 200vw;
+  }
+}
+.page__home .hero #marquee1 {
+  animation: row1marquee1 var(--duration) linear infinite;
+}
+.page__home .hero #marquee2 {
+  animation: row1marquee2 var(--duration) linear infinite;
+  animation-delay: calc(var(--duration) / 2);
+}
+.page__home .clientSlider {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  --duration: 10s;
+}
+.page__home .clientSlider .marquee {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 400vw;
+}
+.page__home .clientSlider .marquee__inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+.page__home .clientSlider .marquee .card {
+  width: 100%;
+  aspect-ratio: 4/2;
+  display: grid;
+  place-content: center;
+  background: #ffffff;
+  border: 2px solid rgba(234, 47, 166, 0.1);
+}
+.page__home .clientSlider .marquee img {
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .page__home .clientSlider .marquee {
+    width: 200vw;
+  }
+}
+.page__home .clientSlider #marquee1 {
+  animation: row1marquee1 var(--duration) linear infinite;
+}
+.page__home .clientSlider #marquee2 {
+  animation: row1marquee2 var(--duration) linear infinite;
+  animation-delay: calc(var(--duration) / 2);
+}
+.page__home .statistics-slider-wrapper {
+  position: relative;
+}
+.page__home .statistics-slider-wrapper .statistics-slider {
+  position: relative;
+  transform: translateX(10%);
+}
+.page__home .statistics-slider-wrapper .statistics-slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 103%;
+  transform: translateY(-50%);
+  height: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: #fdfdfd;
+  box-shadow: 1px 0 0 0 #005ce5;
+}
+.page__home .statistics-slider-wrapper .statistics-slider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 103%;
+  transform: translate(50%, -50%);
+  height: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
+  z-index: 1;
+}
+@media (min-width: 976px) {
+  .page__home .statistics-slider-wrapper .statistics-slider {
+    transform: translateX(40%);
+  }
+}
+.page__home .statistics-slider-wrapper .slick-slide {
+  opacity: 0.1;
+  font-weight: 300;
+}
+.page__home .statistics-slider-wrapper .slick-slide .card {
+  transition: 0.5s ease;
+  padding-left: 0;
+}
+.page__home .statistics-slider-wrapper .slick-slide .card * {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page__home .statistics-slider-wrapper .slick-slide.slick-active {
+  opacity: 1;
+}
+.page__home .statistics-slider-wrapper .slick-slide.slick-active p:first-child {
+  font-size: 1.8rem;
+}
+@media (min-width: 976px) {
+  .page__home .statistics-slider-wrapper .slick-slide.slick-active p:first-child {
+    font-size: 2.2rem;
+  }
+}
+.page__home .statistics-slider-wrapper .slick-slide.slick-active.slick-current {
+  opacity: 1;
+}
+.page__home .statistics-slider-wrapper .slick-slide.slick-active.slick-current .card {
+  padding-left: 2rem;
+}
+.page__home .statistics-slider-wrapper .slick-slide.slick-active.slick-current .card p:first-child {
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes row1marquee1 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes row1marquee2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
 .page__about .gallery__wrapper {
   display: flex;
   flex-direction: column;
