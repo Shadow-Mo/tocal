@@ -182,7 +182,7 @@
                </div>
 
                <!-- Contact Form -->
-               <div class="contactForm">
+               <form class="contactForm" id="contactForm">
                   <div
                      class="card border lg:border-0 bg-white md:min-w-[400px] lg:min-w-[550px] card-shadow rounded-lg p-7 lg:p-10 flex flex-col gap-3">
                      <div class="title">
@@ -207,25 +207,27 @@
                         <span class="error text-red italic font-[300] text-sm leading-[100%]" id="emailError"></span>
                      </div>
                      <div class="form-group flex flex-col gap-1">
-                        <label for="contactNumber">Contact Number</label>
-                        <input type="text" id="contactNumber" placeholder="Enter full name"
+                        <label for="phoneNumber">Contact Number</label>
+                        <input type="text" id="phoneNumber" placeholder="Enter full name"
                            class="form-control w-full p-2 px-3 border rounded-md" required>
                         <span class="error text-red italic font-[300] text-sm leading-[100%]"
-                           id="contactNumberError"></span>
+                           id="phoneNumberError"></span>
                      </div>
                      <div class="form-group flex flex-col gap-1">
                         <label for="message">Message</label>
-                        <textarea name="" id="message" cols="30" rows="3" placeholder="Message"
+                        <textarea id="message" cols="30" rows="3" placeholder="Message"
                            class="form-control w-full p-2 px-3 border rounded-md" required></textarea>
                         <span class="error text-red italic font-[300] text-sm leading-[100%]" id="messageError"></span>
                      </div>
 
-                     <button class="btn btn__primary w-fit">
+                     <button class="btn btn__primary w-fit" id="submitContactFormBtn">
                         <i class="bi bi-send-fill"></i>
                         <span>Send Message</span>
                      </button>
+
+                     <span id="responseText"></span>
                   </div>
-               </div>
+               </form>
             </div>
          </div>
       </section>
@@ -382,6 +384,7 @@
 
    <!-- Custom JS -->
    <script src="/assets/js/global.js"></script>
+   <script src="/assets/js/contact.js"></script>
    <script src="/assets/js/components/index.js"></script>
 
    <!-- Internal JS -->
