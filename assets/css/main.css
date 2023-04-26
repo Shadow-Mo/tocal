@@ -8,6 +8,7 @@ body,
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -42,7 +43,6 @@ body {
   padding-top: 70px;
   background: #fdfdfd;
   color: #1b1b1b;
-  overflow-x: hidden;
 }
 @media (min-width: 976px) {
   body {
@@ -195,13 +195,14 @@ nav #navbarToggle:checked ~ #navbarMenu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  width: 100% !important;
 }
 .page__home .hero .marquee__inner {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .page__home .hero .marquee .card {
   width: 100%;
@@ -214,9 +215,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__home .hero .marquee img {
   height: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 976px) {
   .page__home .hero .marquee {
-    width: 200vw;
+    gap: 1rem;
+  }
+  .page__home .hero .marquee__inner {
+    gap: 1rem;
   }
 }
 .page__home .hero #marquee1 {

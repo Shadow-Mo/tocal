@@ -3,7 +3,6 @@ body {
    padding-top: 70px;
    background: map-get($map: $darkColor, $key: 50);
    color: map-get($map: $darkColor, $key: 950);
-   overflow-x: hidden;
 
    @include responsive(lg) {
       padding-top: 80px;
