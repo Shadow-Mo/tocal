@@ -19,7 +19,7 @@ $(document).ready(function () {
       arrows: false,
       dots: false,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1000,
    });
 
 })
