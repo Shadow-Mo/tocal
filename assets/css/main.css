@@ -462,6 +462,29 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__services .hero .hero-slider .slick-dots li.slick-active {
   background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%) !important;
 }
+.page__services .vehicles .content-slider-wrapper .content-slider {
+  width: 100% !important;
+}
+.page__services .vehicles .nav-slider-wrapper .card {
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1/1;
+  width: 100% !important;
+  border: none;
+}
+.page__services .vehicles .nav-slider-wrapper .card img {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page__services .vehicles .nav-slider-wrapper .slick-slide.slick-current {
+  background: #fff !important;
+  box-shadow: 0px 10px 40px 0px rgba(27, 27, 27, 0.2);
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
+  background-clip: padding-box;
+}
 .page__services .clientSlider {
   white-space: nowrap;
   overflow: hidden;

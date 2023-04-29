@@ -28,6 +28,38 @@
          }
       }
 
+      // Vehical Slider
+      .vehicles {
+         // Main Slider
+         .content-slider-wrapper {
+            .content-slider {
+               width: 100% !important;
+            }
+         }
+         // Nav Slider
+         .nav-slider-wrapper {
+            .card {
+               @include grid-center;
+               aspect-ratio: 1 / 1;
+               width: 100% !important;
+               border: none;
+               img {
+                  height: 100%;
+                  width: fit-content;
+               }
+            }
+
+            .slick-slide.slick-current {
+               background: #fff !important;
+               box-shadow: 0px 10px 40px 0px #1b1b1b33;
+               border: 2px solid;
+               border-image-slice: 1;
+               border-image-source: $gradientColor;
+               background-clip: padding-box;
+            }
+         }
+      }
+
       // Styling Client Slider
       .clientSlider {
          white-space: nowrap;
