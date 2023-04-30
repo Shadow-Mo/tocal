@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Meta Elements -->
+   <title>Become a driver</title>
+   <meta content="Description for the page" name="description" />
+   <meta content="keyword" name="keywords" />
+
+   <!-- Favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+   <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+
+   <!-- Google fonts -->
+   <link rel="DNS-prefetch" href="//fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+      as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+         rel="stylesheet">
+   </noscript>
+
+   <!-- 3rd Party CSS Libraries -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="/assets/vendor/slick-slider/slick.css">
+   <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+   <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+   </noscript>
+
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="/assets/css/main.min.css">
+
+   <!-- Critical JS -->
+   <script src="./assets/js/tailwind.config.js"></script>
+
+   <!-- Internal CSS -->
+   <style></style>
+</head>
+<body class="page page__driver">
+   <!-- Header -->
+   <header class="header w-full fixed top-0 z-50" id="header">
+      <nav class="navbar relative">
+         <div class="container">
+            <!-- checkbox -->
+            <input type="checkbox" class="hidden" id="navbarToggle">
+            <!-- Logo -->
+            <div class="flex w-full items-center justify-between">
+               <a href="./index.html">
+                  <img src="/assets/img/tocal-logo.svg" alt="Tocal Logo" class="h-8 lg:h-10">
+               </a>
+               <label for="navbarToggle" class="block lg:hidden text-2xl cursor-pointer">
+                  <i class="bi bi-list"></i>
+               </label>
+            </div>
+            <!-- Nav Links -->
+            <ul id="navbarMenu" class="
+                  hidden 
+                  absolute lg:relative top-full left-0 w-full bg-dark-50 lg:bg-transparent
+                  opacity-100 
+                  lg:flex flex-col gap-5 lg:flex-row items-center xl:gap-10 
+                  pt-5 pb-10 lg:py-0 
+                  drop-shadow-xl lg:drop-shadow-none whitespace-nowrap font-arimo">
+               <li class="hover:text-primary-700">
+                  <a href="./index.html">Home</a>
+               </li>
+               <li>
+                  <a href="./about-us.html" class="hover:text-primary-700">About Us</a>
+               </li>
+               <li>
+                  <a href="./our-services.html" class="hover:text-primary-700">Our Services</a>
+               </li>
+               <li>
+                  <a href="./become-a-driver.html" class="hover:text-primary-700">Become a Driver</a>
+               </li>
+               <li>
+                  <a href="./contact-us.html" class="hover:text-primary-700">Contact Us</a>
+               </li>
+               <li>
+                  <a href="./our-services.html#bookAPilot" class="btn btn__primary">
+                     <span>Book a free Pilot</span>
+                     <i class="bi bi-arrow-right"></i>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+   </header>
+
+   <!-- Main Content -->
+   <main>
+      <!-- Page bg -->
+      <img src="./assets/img/driver-hero-bg.svg" alt="Background" class="absolute z-[-1] top-0 right-0  w-full">
+
+      <!-- Hero Section -->
+      <section class="hero my-20">
+         <div class="container">
+            <div class="grid grid-cols-1 items-center lg:grid-cols-2 gap-10">
+               <div class="content flex flex-col gap-6 flex-1">
+                  <h1 class="text-4xl lg:text-5xl font-bold">
+                     Join us & Say goodbye to <span class="text-primary-700">low income</span>.
+                  </h1>
+                  <p class="para lg:w-[80%]">
+                     Lorem ipsum dolor sit amet consectetur. Sit ornare arcu porttitor netus volutpat. Lectus
+                     placerat mauris consectetur id purus accumsan auctor. Arcu ultrices dui nunc ut sed id ut.
+                  </p>
+                  <div class="flex flex-wrap items-center gap-4">
+                     <a href="/become-a-driver.html#perks" class="btn btn__primary">
+                        <span>Learn More</span>
+                        <i class="bi bi-arrow-right"></i>
+                     </a>
+                  </div>
+               </div>
+               <div class="image order-first lg:order-last flex gap-4">
+                  <img src="./assets/img/driver/hero1.svg" alt="Image 1"
+                     class="mt-28 lg:mt-40 aspect-[2/3] border-t-2 border-primary-700 rounded-lg h-fit">
+                  <img src="./assets/img/driver/hero2.svg" alt="Image 2"
+                     class="mt-14 lg:mt-20 aspect-[2/3] border-t-2 border-primary-700 rounded-lg h-fit">
+                  <img src="./assets/img/driver/hero3.svg" alt="Image 3"
+                     class="aspect-[2/3] border-t-2 border-primary-700 rounded-lg h-fit">
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Perks -->
+      <section class="perks section-spacing">
+         <div class="container">
+            <div class="title flex flex-col w-full">
+               <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">Join Us To</p>
+               <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
+                  Earn minimum of <span class="text-primary-700">₹30,000/month</span> and
+               </h2>
+            </div>
+
+            <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mt-14">
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
+                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
+                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+                  <p class="para lg:text-[18px] leading-[120%]">
+                     Get instant <b class="font-medium">joining bonus</b>
+                  </p>
+               </div>
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
+                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
+                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+                  <p class="para lg:text-[18px] leading-[120%]">
+                     <b class="font-medium">Incentives</b> & Insurance at first
+                  </p>
+               </div>
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
+                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
+                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+                  <p class="para lg:text-[18px] leading-[120%]">
+                     Bi-weekly <b class="font-medium">on-time payment</b>
+                  </p>
+               </div>
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
+                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
+                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+                  <p class="para lg:text-[18px] leading-[120%]">
+                     Rent electric 2/3 wheelers
+                  </p>
+               </div>
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
+                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
+                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+                  <p class="para lg:text-[18px] leading-[120%]">
+                     Become a certified delivery professional
+                  </p>
+               </div>
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
+                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
+                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+                  <p class="para lg:text-[18px] leading-[120%]">
+                     Wide range of products for delivery.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Our Fleet -->
+      <section class="fleet section-spacing">
+         <div class="container">
+            <!-- Title -->
+            <div class="title flex flex-col w-full text-center max-w-[800px] mx-auto">
+               <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
+                  Deliver to customer doorsteps to become a <span class="text-primary-700">sustainable delivery
+                     champion</span> and <span class="text-primary-700">earn</span>
+               </h2>
+            </div>
+            <!-- galley -->
+            <div class="galley-wrapper my-14 overflow-hidden">
+               <div class="marquee">
+                  <div class="marquee__inner" id="marquee1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                  </div>
+                  <div class="marquee__inner" id="marquee2">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                  </div>
+               </div>
+            </div>
+            <!-- Perks -->
+            <div
+               class="fleet-perk max-w-[1100px] mx-auto flex items-start lg:justify-center lg:items-center flex-wrap gap-y-8 gap-10 lg:gap-32 my-14">
+               <div class="card flex items-center gap-4 lg:flex-1">
+                  <img src="./assets/img/flaticons/Chat box.svg" alt="Earning" class="max-w-[48px]">
+                  <p class="para">
+                     Earn minimum of <b class="font-medium">₹30,000 per month</b>
+                  </p>
+               </div>
+               <div class="card flex items-center gap-4 lg:flex-1">
+                  <img src="./assets/img/flaticons/Chat box.svg" alt="Earning" class="max-w-[48px]">
+                  <p class="para">
+                     <b class="font-medium">Extra support care</b> during harsh weather conditions
+                  </p>
+               </div>
+               <div class="card flex items-center gap-4 lg:flex-1">
+                  <img src="./assets/img/flaticons/Chat box.svg" alt="Earning" class="max-w-[48px]">
+                  <p class="para">
+                     <b class="font-medium">Flexible</b> working hours
+                  </p>
+               </div>
+            </div>
+            <!-- cta -->
+            <hr class="max-w-[1100px] mx-auto my-8">
+            <div class="flex flex-wrap justify-center items-center gap-4">
+               <a href="/contact-us.html"
+                  class="btn btn__secondary btn__secondary--bordered text-purple hover:text-primary-700">
+                  <span>Contact Us</span>
+               </a>
+               <a href="/our-services.html" class="btn btn__primary">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+               </a>
+            </div>
+            <hr class="max-w-[1100px] mx-auto my-8">
+         </div>
+      </section>
+   </main>
+
+   <!-- Footer -->
+   <footer class="bg-dark-950 text-dark-50">
+      <div class="flex flex-col gap-10 py-20">
+         <!-- Top Footer -->
+         <aside>
+            <div class="container">
+               <div class="flex flex-col gap-2 md:gap-0">
+                  <h3 class="heading text-3xl leading-[120%] font-arimo font-[500]">
+                     Don't let your doubts scratch your head.
+                  </h3>
+                  <h4 class="text-xl">Let us help you.</h4>
+
+                  <div class="flex flex-wrap gap-3 mt-5">
+                     <a href="./our-services.html#bookAPilot" class="btn btn__secondary btn__secondary--bordered">
+                        Book a free Pilot
+                     </a>
+                     <a href="./contact-us.html" class="btn btn__primary">
+                        <span>Send Us a Message</span>
+                        <i class="bi bi-arrow-right"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </aside>
+         <!-- Main Footer -->
+         <aside>
+            <div class="container flex flex-col gap-10 lg:flex-row lg:justify-between">
+               <div class="about flex flex-col gap-3 max-w-[500px]">
+                  <h4 class="text-lg font-[700]">About Us</h4>
+                  <p class="para text-dark-100 mb-2">
+                     At TOCAL, we specialise in hyperlocal and last-mile delivery services. Our platform offers a
+                     dedicated fleet of delivery executives equipped with EVs, providing fast and efficient delivery...
+                     <a href="./about-us.html" class="text-primary-600 underline hover:text-purple">Read More</a>
+                  </p>
+                  <p class="para">
+                     <span class="font-[600] italic block">Address:</span>
+                     <span class="text-sm text-dark-100">VMG3+X4, 1642/C, A Block, AECS Layout – A Block, AECS Layout,
+                        Singasandra,
+                        Bengaluru, Karnataka 560068</span>
+                  </p>
+                  <div class="flex flex-wrap gap-10 gap-y-3">
+                     <p class="para">
+                        <span class="font-[600] italic block">Email:</span>
+                        <span class="text-sm text-dark-100">
+                           <a href="mailto:info@dbytdynamics.com"
+                              class="underline hover:text-primary-700">info@dbytdynamics.com</a>
+                        </span>
+                     </p>
+                     <p class="para">
+                        <span class="font-[600] italic block">Address:</span>
+                        <span class="text-sm text-dark-100 flex gap-2">
+                           <a href="tel:919840499441" class="underline hover:text-primary-700">+91-9840499441</a>
+                           |
+                           <a href="tel:919840499441" class="underline hover:text-primary-700">+91-9840499441</a>
+                        </span>
+                     </p>
+                  </div>
+               </div>
+               <div class="links flex flex-wrap gap-20 gap-y-10">
+                  <ul class="flex flex-col gap-3">
+                     <li>
+                        <h4 class="text-lg font-[700]">Important Links</h4>
+                     </li>
+                     <li>
+                        <a href="#"
+                           class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                           <i class="bi bi-caret-right-fill text-primary-600"></i>
+                           <span>Our Services</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#"
+                           class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                           <i class="bi bi-caret-right-fill text-primary-600"></i>
+                           <span>About Us</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#"
+                           class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                           <i class="bi bi-caret-right-fill text-primary-600"></i>
+                           <span>Become a Driver</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#"
+                           class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                           <i class="bi bi-caret-right-fill text-primary-600"></i>
+                           <span>Contact Us</span>
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="flex flex-col gap-3">
+                     <li>
+                        <h4 class="text-lg font-[700]">Follow Us</h4>
+                     </li>
+                     <li class="flex flex-wrap gap-2">
+                        <a href="#"
+                           class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#E1306C]"
+                           title="Follow Us">
+                           <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#"
+                           class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#4267B2]"
+                           title="Become a Friend">
+                           <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#"
+                           class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#1DA1F2]"
+                           title="Follow Us">
+                           <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#"
+                           class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#0077b5]"
+                           title="Connect with Us">
+                           <i class="bi bi-linkedin"></i>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </aside>
+      </div>
+      <!-- Copyright -->
+      <div class="copyright bg-black">
+         <div class="container">
+            <div class="flex justify-center items-center p-2 text-sm font-[300]">
+               &copy; 2023. All rights reserved &nbsp;| &nbsp;<a href="https://www.tocal.in"
+                  class="underline hover:text-primary-600">tocal.in</a>
+            </div>
+         </div>
+      </div>
+
+      <!-- Go to Top -->
+      <div href="#" id="goToTop" class="
+            hidden flex justify-center items-center 
+            w-10 aspect-square p-2 
+            bg-black hover:bg-primary-700 rounded-lg cursor-pointer
+            fixed right-5 bottom-5 z-index-10" onclick="goToTop()" title="Go to top">
+         <i class="bi bi-arrow-up"></i>
+      </div>
+   </footer>
+
+
+
+   <!-- 3rd Party JS Libraries -->
+   <script src="/assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+   <script src="/assets/vendor/slick-slider/slick.min.js"></script>
+
+   <!-- Custom JS -->
+   <script src="/assets/js/global.js"></script>
+   <script src="/assets/js/index.js"></script>
+   <script src="/assets/js/components/index.js"></script>
+
+   <!-- Internal JS -->
+   <script></script>
+</body>
+</html>

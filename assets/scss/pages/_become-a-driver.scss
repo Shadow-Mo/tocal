@@ -1,0 +1,47 @@
+.page {
+   &__driver {
+      // Styling Client Slider
+
+      .marquee {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 1rem;
+         width: 400vw;
+
+         &__inner {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+         }
+
+         .card {
+            width: 100%;
+            aspect-ratio: 4 / 2;
+            @include grid-center;
+            background: $whiteColor;
+            border: 2px solid rgba($purpleColor, 0.1);
+         }
+
+         img {
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            aspect-ratio: 2 / 3;
+         }
+
+         @include responsive(md) {
+            width: 200vw;
+         }
+      }
+
+      --duration: 10s;
+      #marquee1 {
+         animation: row1marquee1 var(--duration) linear infinite;
+      }
+      #marquee2 {
+         animation: row1marquee2 var(--duration) linear infinite;
+         animation-delay: calc(var(--duration) / 2);
+      }
+   }
+}

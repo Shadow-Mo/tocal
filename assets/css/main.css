@@ -526,4 +526,47 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__services .clientSlider #marquee2 {
   animation: row1marquee2 var(--duration) linear infinite;
   animation-delay: calc(var(--duration) / 2);
+}
+
+.page__driver {
+  --duration: 10s;
+}
+.page__driver .marquee {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 400vw;
+}
+.page__driver .marquee__inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+.page__driver .marquee .card {
+  width: 100%;
+  aspect-ratio: 4/2;
+  display: grid;
+  place-content: center;
+  background: #ffffff;
+  border: 2px solid rgba(234, 47, 166, 0.1);
+}
+.page__driver .marquee img {
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 2/3;
+}
+@media (min-width: 768px) {
+  .page__driver .marquee {
+    width: 200vw;
+  }
+}
+.page__driver #marquee1 {
+  animation: row1marquee1 var(--duration) linear infinite;
+}
+.page__driver #marquee2 {
+  animation: row1marquee2 var(--duration) linear infinite;
+  animation-delay: calc(var(--duration) / 2);
 }/*# sourceMappingURL=main.css.map */
