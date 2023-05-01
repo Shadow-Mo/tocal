@@ -41,4 +41,5 @@ $(document).ready(function () {
          $($(this).find(".value")).css("left", `calc(100% - 7%)`)
       }
    });
+
 })
