@@ -32,6 +32,7 @@
    <!-- 3rd Party CSS Libraries -->
    <script src="https://cdn.tailwindcss.com"></script>
    <link rel="stylesheet" href="/assets/vendor/slick-slider/slick.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'" />
    <noscript>
@@ -49,63 +50,16 @@
 </head>
 <body class="page page__home">
    <!-- Header -->
-   <header class="header w-full fixed top-0 z-50" id="header">
-      <nav class="navbar relative">
-         <div class="container">
-            <!-- checkbox -->
-            <input type="checkbox" class="hidden" id="navbarToggle">
-            <!-- Logo -->
-            <div class="flex w-full items-center justify-between">
-               <a href="./index.html">
-                  <img src="/assets/img/tocal-logo.svg" alt="Tocal Logo" class="h-8 lg:h-10">
-               </a>
-               <label for="navbarToggle" class="block lg:hidden text-2xl cursor-pointer">
-                  <i class="bi bi-list"></i>
-               </label>
-            </div>
-            <!-- Nav Links -->
-            <ul id="navbarMenu" class="
-                  hidden 
-                  absolute lg:relative top-full left-0 w-full bg-dark-50 lg:bg-transparent
-                  opacity-100 
-                  lg:flex flex-col gap-5 lg:flex-row items-center xl:gap-10 
-                  pt-5 pb-10 lg:py-0 
-                  drop-shadow-xl lg:drop-shadow-none whitespace-nowrap font-arimo">
-               <li class="hover:text-primary-700">
-                  <a href="./index.html">Home</a>
-               </li>
-               <li>
-                  <a href="./about-us.html" class="hover:text-primary-700">About Us</a>
-               </li>
-               <li>
-                  <a href="./our-services.html" class="hover:text-primary-700">Our Services</a>
-               </li>
-               <li>
-                  <a href="./become-a-driver.html" class="hover:text-primary-700">Become a Driver</a>
-               </li>
-               <li>
-                  <a href="./contact-us.html" class="hover:text-primary-700">Contact Us</a>
-               </li>
-               <li>
-                  <a href="./our-services.html#bookAPilot" class="btn btn__primary">
-                     <span>Book a free Pilot</span>
-                     <i class="bi bi-arrow-right"></i>
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </nav>
-   </header>
+   <website-header></website-header>
 
    <!-- Main Content -->
    <main>
-
       <!-- Hero Section -->
       <section class="hero section-spacing">
          <div class="container">
-
             <!-- Text -->
-            <div class="max-w-[1000px] mx-auto flex flex-col justify-center items-center gap-6 text-center">
+            <div data-aos="fade-up"
+               class="max-w-[1000px] mx-auto flex flex-col justify-center items-center gap-6 text-center">
                <div class="title flex flex-col justify-center items-center w-full text-center">
                   <h2 class="text-4xl lg:text-5xl font-[900] leading-[100%] tracking-tight w-full">
                      Making hyperlocal & last-mile deliveries cost-efficient and <span
@@ -130,7 +84,8 @@
             </div>
 
             <!-- Graphics -->
-            <div class="max-w-[1000px] aspect-video mx-auto mt-24 border border-dark-950 rounded-lg p-2 lg:p-4">
+            <div data-aos="fade-up" data-aos-delay="500"
+               class="max-w-[1200px] aspect-video mx-auto mt-24 border border-dark-950 rounded-lg p-2 lg:p-4">
                <!-- slider -->
                <div class="marquee w-full overflow-hidden">
                   <div class="marquee__inner" id="marquee1">
@@ -271,18 +226,18 @@
       </section>
 
       <!-- About Section -->
-      <section class="about section-spacing" id="about">
-         <div class="container">
+      <section class="about section-spacing max-w-[1200px] mx-auto" id="about">
+         <div class="container lg:px-0">
             <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
                <div class="content flex-1 flex flex-col gap-6 relative z-10">
-                  <div class="title flex flex-col justify-center items-center w-full">
+                  <div class="title flex flex-col justify-center items-center w-full" data-aos="fade-up">
                      <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">We Are</p>
                      <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
                         Efficient, reliable, and <span class="text-primary-700">eco-friendly delivery solutions</span>
                         at your service
                      </h2>
                   </div>
-                  <p class="para">
+                  <p class="para" data-aos="fade-up">
                      At our company, we take pride in our team of trained and trustworthy delivery professionals who
                      prioritize quick and safe deliveries of your packages, whether it's groceries, e-commerce items,
                      food, medicines, and more. Our cutting-edge technology platform guarantees an end-to-end effective
@@ -290,12 +245,12 @@
                      also strive to provide your customers with a delightful experience of your brand, from start to
                      finish.
                   </p>
-                  <a href="/about-us.html" class="btn btn__primary w-fit hidden lg:block">
+                  <a href="/about-us.html" class="btn btn__primary w-fit hidden lg:block" data-aos="fade-up">
                      <span>About Us</span>
                      <i class="bi bi-arrow-right"></i>
                   </a>
                </div>
-               <div class="slider flex-1">
+               <div class="slider flex-1" data-aos="fade-up" data-aos-delay="1000">
                   <div class="statistics-slider-wrapper">
                      <div class="statistics-slider">
                         <div>
@@ -342,7 +297,7 @@
       <!-- Services Section -->
       <section class="services section-spacing">
          <div class="container">
-            <div class="title flex flex-col justify-center items-center text-center px-5 w-full">
+            <div data-aos="fade-up" class="title flex flex-col justify-center items-center text-center px-5 w-full">
                <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">Our Services</p>
                <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
                   <span class="text-primary-700">Fast</span> and <span class="text-primary-700">Efficient</span>
@@ -351,7 +306,7 @@
             </div>
 
             <div class="flex flex-wrap gap-4 lg:gap-8 justify-center items-center lg:flex-nowrap my-14">
-               <div
+               <div data-aos="fade-up"
                   class="flex-1 card bg-white card-shadow md:max-w-[320px] lg:max-w-full p-6 rounded-lg flex flex-col gap-4">
                   <div class="img-wrapper rounded-md overflow-hidden">
                      <img src="./assets/img/services/hyperlocal-deliveries.png" alt="Hyperlocal Deliveries">
@@ -366,7 +321,7 @@
                      convenient services to customers within their immediate vicinity in real-time.
                   </p>
                </div>
-               <div
+               <div data-aos="fade-up" data-aos-delay="200"
                   class="flex-1 card bg-white card-shadow md:max-w-[320px] lg:max-w-full p-6 rounded-lg flex flex-col gap-4">
                   <div class="img-wrapper rounded-md overflow-hidden">
                      <img src="./assets/img/services/last-mile-deliveries.png" alt="Last-mile deliveries">
@@ -381,7 +336,7 @@
                      retailers that offer home delivery or e-commerce services.
                   </p>
                </div>
-               <div
+               <div data-aos="fade-up" data-aos-delay="400"
                   class="flex-1 card bg-white card-shadow md:max-w-[320px] lg:max-w-full p-6 rounded-lg flex flex-col gap-4">
                   <div class="img-wrapper rounded-md overflow-hidden">
                      <img src="./assets/img/services/fullfilment-centers.png" alt="Fullfilment Centres">
@@ -398,12 +353,12 @@
                   </p>
                </div>
             </div>
-            <div class="flex flex-wrap justify-center items-center gap-4">
+            <div data-aos="fade-up" class="flex flex-wrap justify-center items-center gap-4">
                <a href="/our-services.html"
                   class="btn btn__secondary btn__secondary--bordered text-purple hover:text-primary-700">
                   <span>Learn More</span>
                </a>
-               <a href="/our-services.html#book-a-pilot" class="btn btn__primary">
+               <a href="/our-services.html#bookAPilot" class="btn btn__primary">
                   <span>Book a free Pilot</span>
                   <i class="bi bi-arrow-right"></i>
                </a>
@@ -414,7 +369,7 @@
       <!-- Location Section -->
       <section class="location section-spacing">
          <div class="container">
-            <div
+            <div data-aos="flip-up"
                class="location-inner text-white rounded-lg flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-20 p-10">
                <div class="flex items-center">
                   <h2 class="h-full max-w-[300px] tracking-tight">
@@ -423,13 +378,15 @@
                         in</span>
                   </h2>
                </div>
-               <div class="card flex flex-col gap-2">
-                  <img src="./assets/img/flaticons/Bangalore.svg" alt="Bangalore" class="max-h-[80px] w-fit">
-                  <p class="text-2xl lg:text-3xl font-bold font-arimo tracking-tight">Bangalore</p>
-               </div>
-               <div class="card flex flex-col gap-2">
-                  <img src="./assets/img/flaticons/Hydrabad.svg" alt="Hydrabad" class="max-h-[80px] w-fit">
-                  <p class="text-2xl lg:text-3xl font-bold font-arimo tracking-tight">Hyderabad</p>
+               <div class="flex flex-row lg:items-center gap-8 lg:gap-20">
+                  <div class="card flex flex-col gap-2">
+                     <img src="./assets/img/flaticons/Bangalore.svg" alt="Bangalore" class="max-h-[80px] w-fit">
+                     <p class="text-2xl lg:text-3xl font-bold font-arimo tracking-tight">Bangalore</p>
+                  </div>
+                  <div class="card flex flex-col gap-2">
+                     <img src="./assets/img/flaticons/Hydrabad.svg" alt="Hydrabad" class="max-h-[80px] w-fit">
+                     <p class="text-2xl lg:text-3xl font-bold font-arimo tracking-tight">Hyderabad</p>
+                  </div>
                </div>
             </div>
          </div>
@@ -438,14 +395,14 @@
       <!-- Why Us Section -->
       <section class="whyUs section-spacing">
          <div class="container">
-            <div class="title flex flex-col justify-center items-center text-center px-5">
+            <div data-aos="fade-up" class="title flex flex-col justify-center items-center text-center px-5">
                <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight">
                   Accelerate Your Business Growth with —
                </h2>
             </div>
 
             <div class="grid gap-10 grid-cols-2 lg:grid-cols-4 my-16">
-               <div class="card flex flex-col gap-2">
+               <div data-aos="fade-up" class="card flex flex-col gap-2">
                   <img src="./assets/img/flaticons/Fast delivery.svg" class="h-10 lg:h-14 w-fit aspect-square"
                      alt="Fast Deliver">
                   <h3 class="text-xl lg:text-2xl font-bold leading-[120%]">Responsible Delivery</h3>
@@ -458,7 +415,7 @@
                      electric vehicles for maximum efficiency.
                   </p>
                </div>
-               <div class="card flex flex-col gap-2">
+               <div data-aos="fade-up" data-aos-delay="200" class="card flex flex-col gap-2">
                   <img src="./assets/img/flaticons/Coupon.svg" class="h-10 lg:h-14 w-fit aspect-square" alt="Coupon">
                   <h3 class="text-xl lg:text-2xl font-bold leading-[120%]">Lowest Delivery Cost</h3>
                   <div class="progress negative" data-change="-42">
@@ -470,7 +427,7 @@
                      requirements
                   </p>
                </div>
-               <div class="card flex flex-col gap-2">
+               <div data-aos="fade-up" data-aos-delay="400" class="card flex flex-col gap-2">
                   <img src="./assets/img/flaticons/No emission.svg" class="h-10 lg:h-14 w-fit aspect-square"
                      alt="No Emmission">
                   <h3 class="text-xl lg:text-2xl font-bold leading-[120%]">Zero Emission Delivery</h3>
@@ -483,7 +440,7 @@
                      high-performing EVs
                   </p>
                </div>
-               <div class="card flex flex-col gap-2">
+               <div data-aos="fade-up" data-aos-delay="600" class="card flex flex-col gap-2">
                   <img src="./assets/img/flaticons/Chat box.svg" class="h-10 lg:h-14 w-fit aspect-square"
                      alt="Chat Box">
                   <h3 class="text-xl lg:text-2xl font-bold leading-[120%]">Quick Response</h3>
@@ -497,12 +454,12 @@
                </div>
             </div>
 
-            <div class="flex flex-wrap justify-center items-center gap-4">
+            <div data-aos="fade-up" class="flex flex-wrap justify-center items-center gap-4">
                <a href="/our-services.html"
                   class="btn btn__secondary btn__secondary--bordered text-purple hover:text-primary-700">
                   <span>Learn More</span>
                </a>
-               <a href="/our-services.html#book-a-pilot" class="btn btn__primary">
+               <a href="/our-services.html#bookAPilot" class="btn btn__primary">
                   <span>Book a free Pilot</span>
                   <i class="bi bi-arrow-right"></i>
                </a>
@@ -511,7 +468,7 @@
       </section>
 
       <!-- Clients & Testimonials -->
-      <section class="testimonials flex flex-col gap-14 section-spacing">
+      <section data-aos="fade-up" class="testimonials flex flex-col gap-14 section-spacing">
          <div class="title flex flex-col justify-center items-center text-center px-5">
             <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight">
                We are pleased to serve them!
@@ -539,6 +496,9 @@
                   </div>
                   <div class="card md:max-w-[320px] lg:max-w-full bg-white">
                      <img src="./assets/img/clients/porter.svg" alt="Porter">
+                  </div>
+                  <div class="card md:max-w-[320px] lg:max-w-full bg-white">
+                     <img src="./assets/img/clients/sprink.svg" alt="Sprink">
                   </div>
                </div>
                <div class="marquee__inner" id="marquee2">
@@ -583,18 +543,10 @@
                      </div>
                      <!-- review -->
                      <p class="para">
-                        Lorem ipsum dolor sit amet consectetur. Pellentesque eget tellus phasellus egestas. Justo
-                        feugiat
-                        molestie lectus habitant. Adipiscing semper diam nisi lobortis sed eu amet adipiscing. Vulputate
-                        tristique tempor dui ut aliquet commodo orci diam.
+                        Great customer service and very timely delivery. The fleet of drivers was great and worked very
+                        hard to make it to our customers' destination on time everyday . I very much appreciate the hard
+                        work and communication!
                      </p>
-                     <!-- separator -->
-                     <hr class="w-28 border-primary-700 border-t-4">
-                     <!-- User -->
-                     <div>
-                        <p class="font-bold font-arimo text-xl">Shubham Gujarathi</p>
-                        <p class="text-dark-500 italic font-light">Founder & CEO at <b>CakeZone</b></p>
-                     </div>
                   </div>
                </div>
                <div class="card">
@@ -602,7 +554,7 @@
                      <!-- image -->
                      <div
                         class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
-                        <img src="/assets/img/clients/cakezone.svg" alt="Cake Zone">
+                        <img src="/assets/img/clients/sprink.svg" alt="Sprink">
                      </div>
                      <!-- Ratings -->
                      <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
@@ -614,18 +566,9 @@
                      </div>
                      <!-- review -->
                      <p class="para">
-                        Lorem ipsum dolor sit amet consectetur. Pellentesque eget tellus phasellus egestas. Justo
-                        feugiat
-                        molestie lectus habitant. Adipiscing semper diam nisi lobortis sed eu amet adipiscing. Vulputate
-                        tristique tempor dui ut aliquet commodo orci diam.
+                        I was very impressed by how quickly and professionally the TOCAL team works on ground to avoid
+                        any operations hassles. They understand our logistics pain points and work accordingly. Thanks
                      </p>
-                     <!-- separator -->
-                     <hr class="w-28 border-primary-700 border-t-4">
-                     <!-- User -->
-                     <div>
-                        <p class="font-bold font-arimo text-xl">Shubham Gujarathi</p>
-                        <p class="text-dark-500 italic font-light">Founder & CEO at <b>CakeZone</b></p>
-                     </div>
                   </div>
                </div>
                <div class="card">
@@ -633,7 +576,7 @@
                      <!-- image -->
                      <div
                         class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
-                        <img src="/assets/img/clients/cakezone.svg" alt="Cake Zone">
+                        <img src="/assets/img/clients/gourmet-garden.svg" alt="Fourmet garden">
                      </div>
                      <!-- Ratings -->
                      <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
@@ -645,49 +588,9 @@
                      </div>
                      <!-- review -->
                      <p class="para">
-                        Lorem ipsum dolor sit amet consectetur. Pellentesque eget tellus phasellus egestas. Justo
-                        feugiat
-                        molestie lectus habitant. Adipiscing semper diam nisi lobortis sed eu amet adipiscing. Vulputate
-                        tristique tempor dui ut aliquet commodo orci diam.
+                        We really appreciate your team providing timely service on short notices and catering to our
+                        rider requirements promptly at all our operating locations
                      </p>
-                     <!-- separator -->
-                     <hr class="w-28 border-primary-700 border-t-4">
-                     <!-- User -->
-                     <div>
-                        <p class="font-bold font-arimo text-xl">Shubham Gujarathi</p>
-                        <p class="text-dark-500 italic font-light">Founder & CEO at <b>CakeZone</b></p>
-                     </div>
-                  </div>
-               </div>
-               <div class="card">
-                  <div class="flex flex-col justify-center items-center gap-3 text-center">
-                     <!-- image -->
-                     <div
-                        class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
-                        <img src="/assets/img/clients/cakezone.svg" alt="Cake Zone">
-                     </div>
-                     <!-- Ratings -->
-                     <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                     </div>
-                     <!-- review -->
-                     <p class="para">
-                        Lorem ipsum dolor sit amet consectetur. Pellentesque eget tellus phasellus egestas. Justo
-                        feugiat
-                        molestie lectus habitant. Adipiscing semper diam nisi lobortis sed eu amet adipiscing. Vulputate
-                        tristique tempor dui ut aliquet commodo orci diam.
-                     </p>
-                     <!-- separator -->
-                     <hr class="w-28 border-primary-700 border-t-4">
-                     <!-- User -->
-                     <div>
-                        <p class="font-bold font-arimo text-xl">Shubham Gujarathi</p>
-                        <p class="text-dark-500 italic font-light">Founder & CEO at <b>CakeZone</b></p>
-                     </div>
                   </div>
                </div>
             </div>
@@ -702,158 +605,20 @@
    </main>
 
    <!-- Footer -->
-   <footer class="bg-dark-950 text-dark-50">
-      <div class="flex flex-col gap-10 py-20">
-         <!-- Top Footer -->
-         <aside>
-            <div class="container">
-               <div class="flex flex-col gap-2 md:gap-0">
-                  <h3 class="heading text-3xl leading-[120%] font-arimo font-[500]">
-                     Don't let your doubts scratch your head.
-                  </h3>
-                  <h4 class="text-xl">Let us help you.</h4>
-
-                  <div class="flex flex-wrap gap-3 mt-5">
-                     <a href="./our-services.html#bookAPilot" class="btn btn__secondary btn__secondary--bordered">
-                        Book a free Pilot
-                     </a>
-                     <a href="./contact-us.html" class="btn btn__primary">
-                        <span>Send Us a Message</span>
-                        <i class="bi bi-arrow-right"></i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </aside>
-         <!-- Main Footer -->
-         <aside>
-            <div class="container flex flex-col gap-10 lg:flex-row lg:justify-between">
-               <div class="about flex flex-col gap-3 max-w-[500px]">
-                  <h4 class="text-lg font-[700]">About Us</h4>
-                  <p class="para text-dark-100 mb-2">
-                     At TOCAL, we specialise in hyperlocal and last-mile delivery services. Our platform offers a
-                     dedicated fleet of delivery executives equipped with EVs, providing fast and efficient delivery...
-                     <a href="./about-us.html" class="text-primary-600 underline hover:text-purple">Read More</a>
-                  </p>
-                  <p class="para">
-                     <span class="font-[600] italic block">Address:</span>
-                     <span class="text-sm text-dark-100">VMG3+X4, 1642/C, A Block, AECS Layout – A Block, AECS Layout,
-                        Singasandra,
-                        Bengaluru, Karnataka 560068</span>
-                  </p>
-                  <div class="flex flex-wrap gap-10 gap-y-3">
-                     <p class="para">
-                        <span class="font-[600] italic block">Email:</span>
-                        <span class="text-sm text-dark-100">
-                           <a href="mailto:info@dbytdynamics.com"
-                              class="underline hover:text-primary-700">info@dbytdynamics.com</a>
-                        </span>
-                     </p>
-                     <p class="para">
-                        <span class="font-[600] italic block">Address:</span>
-                        <span class="text-sm text-dark-100 flex gap-2">
-                           <a href="tel:919840499441" class="underline hover:text-primary-700">+91-9840499441</a>
-                           |
-                           <a href="tel:919840499441" class="underline hover:text-primary-700">+91-9840499441</a>
-                        </span>
-                     </p>
-                  </div>
-               </div>
-               <div class="links flex flex-wrap gap-20 gap-y-10">
-                  <ul class="flex flex-col gap-3">
-                     <li>
-                        <h4 class="text-lg font-[700]">Important Links</h4>
-                     </li>
-                     <li>
-                        <a href="#"
-                           class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
-                           <i class="bi bi-caret-right-fill text-primary-600"></i>
-                           <span>Our Services</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#"
-                           class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
-                           <i class="bi bi-caret-right-fill text-primary-600"></i>
-                           <span>About Us</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#"
-                           class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
-                           <i class="bi bi-caret-right-fill text-primary-600"></i>
-                           <span>Become a Driver</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#"
-                           class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
-                           <i class="bi bi-caret-right-fill text-primary-600"></i>
-                           <span>Contact Us</span>
-                        </a>
-                     </li>
-                  </ul>
-                  <ul class="flex flex-col gap-3">
-                     <li>
-                        <h4 class="text-lg font-[700]">Follow Us</h4>
-                     </li>
-                     <li class="flex flex-wrap gap-2">
-                        <a href="#"
-                           class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#E1306C]"
-                           title="Follow Us">
-                           <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="#"
-                           class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#4267B2]"
-                           title="Become a Friend">
-                           <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="#"
-                           class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#1DA1F2]"
-                           title="Follow Us">
-                           <i class="bi bi-twitter"></i>
-                        </a>
-                        <a href="#"
-                           class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#0077b5]"
-                           title="Connect with Us">
-                           <i class="bi bi-linkedin"></i>
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </aside>
-      </div>
-      <!-- Copyright -->
-      <div class="copyright bg-black">
-         <div class="container">
-            <div class="flex justify-center items-center p-2 text-sm font-[300]">
-               &copy; 2023. All rights reserved &nbsp;| &nbsp;<a href="https://www.tocal.in"
-                  class="underline hover:text-primary-600">tocal.in</a>
-            </div>
-         </div>
-      </div>
-
-      <!-- Go to Top -->
-      <div href="#" id="goToTop" class="
-            hidden flex justify-center items-center 
-            w-10 aspect-square p-2 
-            bg-black hover:bg-primary-700 rounded-lg cursor-pointer
-            fixed right-5 bottom-5 z-index-10" onclick="goToTop()" title="Go to top">
-         <i class="bi bi-arrow-up"></i>
-      </div>
-   </footer>
+   <website-footer></website-footer>
 
 
 
    <!-- 3rd Party JS Libraries -->
    <script src="/assets/vendor/jquery/jquery-3.6.0.min.js"></script>
    <script src="/assets/vendor/slick-slider/slick.min.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
    <!-- Custom JS -->
    <script src="/assets/js/global.js"></script>
    <script src="/assets/js/index.js"></script>
-   <script src="/assets/js/components/index.js"></script>
+   <script type="module" src="/assets/js/components/header.js"></script>
+   <script type="module" src="/assets/js/components/footer.js"></script>
 
    <!-- Internal JS -->
    <script></script>

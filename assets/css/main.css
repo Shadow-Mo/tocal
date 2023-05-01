@@ -242,12 +242,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 .page__home .clientSlider .marquee__inner {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
   gap: 1rem;
   padding-inline: 0.5rem;
 }
 .page__home .clientSlider .marquee .card {
+  padding: 1rem;
   width: 100%;
   aspect-ratio: 4/2;
   display: grid;
@@ -545,13 +545,13 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 .page__services .clientSlider .marquee__inner {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
   gap: 1rem;
   padding-inline: 0.5rem;
 }
 .page__services .clientSlider .marquee .card {
   width: 100%;
+  padding: 1rem;
   aspect-ratio: 4/2;
   display: grid;
   place-content: center;

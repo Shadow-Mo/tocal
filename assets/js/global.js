@@ -12,15 +12,7 @@ $(window).scroll(function () {
    }
 });
 
-const currentURL = location.pathname;
-const navLinks = document.querySelectorAll(".navbar #navbarMenu li a");
-// const currentURL = location.pathname.replace('/budget-renovations', '');
-navLinks.forEach(link => {
-   let anchorLink = link.getAttribute('href').split("/")[1];
-   if (anchorLink == currentURL.split("/")[1] || (anchorLink.includes("index.html") && currentURL.split("/")[1] == "")) {
-      link.classList.toggle("active");
-   }
-});
+
 
 function goToTop() {
    document.body.scrollTop = 0; // For Safari

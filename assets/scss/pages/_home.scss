@@ -58,13 +58,13 @@
 
             &__inner {
                width: 100%;
-               display: grid;
-               grid-template-columns: repeat(6, 1fr);
+               display: flex;
                gap: 1rem;
                padding-inline: 0.5rem;
             }
 
             .card {
+               padding: 1rem;
                width: 100%;
                aspect-ratio: 4 / 2;
                @include grid-center;
