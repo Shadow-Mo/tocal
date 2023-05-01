@@ -60,6 +60,87 @@
             }
          }
       }
+
+      .statistics-slider-wrapper {
+         position: relative;
+
+         .statistics-slider {
+            position: relative;
+            transform: translateX(10%);
+
+            &::after {
+               content: "";
+               position: absolute;
+               top: 50%;
+               right: 103%;
+               transform: translateY(-50%);
+               height: 90%;
+               aspect-ratio: 1 / 1;
+               border-radius: 100%;
+               background: map-get($map: $darkColor, $key: 950);
+               box-shadow: 1px 0 0 0 map-get($map: $darkColor, $key: 500);
+            }
+
+            &::before {
+               content: "";
+               position: absolute;
+               top: 50%;
+               right: 103%;
+               transform: translate(50%, -50%);
+               height: 1rem;
+               aspect-ratio: 1 / 1;
+               border-radius: 100%;
+               background: $gradientColor;
+               z-index: 1;
+            }
+
+            @include responsive(lg) {
+               transform: translateX(40%);
+            }
+         }
+
+         .slick-slide {
+            opacity: 0.1;
+            font-weight: 300;
+
+            .card {
+               @include transition-light;
+               padding-left: 0;
+               * {
+                  width: fit-content;
+               }
+            }
+         }
+         .slick-slide.slick-active {
+            opacity: 1;
+            p:first-child {
+               font-size: 1.8rem;
+
+               @include responsive(lg) {
+                  font-size: 2.2rem;
+               }
+            }
+         }
+         .slick-slide.slick-active.slick-current {
+            opacity: 1;
+            .card {
+               padding-left: 2rem;
+
+               p:first-child {
+                  font-weight: 700;
+                  background: linear-gradient(
+                     135deg,
+                     #ffbdad 0%,
+                     #ea2fa6 86.88%
+                  );
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-clip: text;
+                  text-fill-color: transparent;
+               }
+            }
+         }
+      }
    }
 }
 

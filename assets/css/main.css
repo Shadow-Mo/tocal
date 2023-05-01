@@ -469,6 +469,79 @@ nav #navbarToggle:checked ~ #navbarMenu {
     width: calc(20vw - 0.125rem);
   }
 }
+.page__about .statistics-slider-wrapper {
+  position: relative;
+}
+.page__about .statistics-slider-wrapper .statistics-slider {
+  position: relative;
+  transform: translateX(10%);
+}
+.page__about .statistics-slider-wrapper .statistics-slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 103%;
+  transform: translateY(-50%);
+  height: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: #1b1b1b;
+  box-shadow: 1px 0 0 0 #666666;
+}
+.page__about .statistics-slider-wrapper .statistics-slider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 103%;
+  transform: translate(50%, -50%);
+  height: 1rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
+  z-index: 1;
+}
+@media (min-width: 976px) {
+  .page__about .statistics-slider-wrapper .statistics-slider {
+    transform: translateX(40%);
+  }
+}
+.page__about .statistics-slider-wrapper .slick-slide {
+  opacity: 0.1;
+  font-weight: 300;
+}
+.page__about .statistics-slider-wrapper .slick-slide .card {
+  transition: 0.5s ease;
+  padding-left: 0;
+}
+.page__about .statistics-slider-wrapper .slick-slide .card * {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page__about .statistics-slider-wrapper .slick-slide.slick-active {
+  opacity: 1;
+}
+.page__about .statistics-slider-wrapper .slick-slide.slick-active p:first-child {
+  font-size: 1.8rem;
+}
+@media (min-width: 976px) {
+  .page__about .statistics-slider-wrapper .slick-slide.slick-active p:first-child {
+    font-size: 2.2rem;
+  }
+}
+.page__about .statistics-slider-wrapper .slick-slide.slick-active.slick-current {
+  opacity: 1;
+}
+.page__about .statistics-slider-wrapper .slick-slide.slick-active.slick-current .card {
+  padding-left: 2rem;
+}
+.page__about .statistics-slider-wrapper .slick-slide.slick-active.slick-current .card p:first-child {
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 
 @keyframes row1marquee1 {
   from {
