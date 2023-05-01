@@ -32,6 +32,7 @@
    <!-- 3rd Party CSS Libraries -->
    <script src="https://cdn.tailwindcss.com"></script>
    <link rel="stylesheet" href="/assets/vendor/slick-slider/slick.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'" />
    <noscript>
@@ -58,7 +59,7 @@
             <div class="flex flex-col gap-20 lg:flex-row">
                <!-- Content -->
                <div class="content flex flex-col gap-10">
-                  <div class="title">
+                  <div class="title" data-aos="fade-up">
                      <p class="uppercase text-primary-700 tracking-widest mb-1 lg:text-lg">LET'S TALK</p>
                      <h2 class="text-3xl lg:text-4xl font-[700] leading-[100%] tracking-tight">
                         Need any assistance? <span class="font-[300]">Feel free to get in touch with us at your nearest
@@ -67,7 +68,7 @@
                   </div>
 
                   <!-- location -->
-                  <div class="location flex flex-col gap-4">
+                  <div class="location flex flex-col gap-4" data-aos="fade-up" data-aos-delay="200">
                      <img src="/assets/img/flaticons/location.svg" alt="Location Icon" class="max-w-[2rem]">
                      <h3 class="text-2xl lg:font-[600] tracking-tight flex items-center gap-2">
                         <span>Corporate Office</span>
@@ -83,7 +84,7 @@
                   </div>
 
                   <!-- assistance -->
-                  <div class="assistance flex flex-col gap-4">
+                  <div class="assistance flex flex-col gap-4" data-aos="fade-up" data-aos-delay="400">
                      <img src="/assets/img/flaticons/assistance.svg" alt="Assitance Icon" class="max-w-[2rem]">
                      <h3 class="text-2xl lg:font-[600] tracking-tight">
                         <span>Assistance</span>
@@ -106,7 +107,7 @@
                   </div>
 
                   <!-- social follow -->
-                  <div class="social flex flex-col gap-4">
+                  <div class="social flex flex-col gap-4" data-aos="fade-up" data-aos-delay="200">
                      <h3 class="text-2xl lg:font-[600] tracking-tight">
                         <span>Follow Us</span>
                      </h3>
@@ -131,7 +132,7 @@
                </div>
 
                <!-- Contact Form -->
-               <form class="contactForm" id="contactForm">
+               <form class="contactForm" id="contactForm" data-aos="fade-left" data-aos-delay="400">
                   <div
                      class="card border lg:border-0 bg-white md:min-w-[400px] lg:min-w-[550px] card-shadow rounded-lg p-7 lg:p-10 flex flex-col gap-3">
                      <div class="title">
@@ -190,6 +191,7 @@
    <!-- 3rd Party JS Libraries -->
    <script src="/assets/vendor/jquery/jquery-3.6.0.min.js"></script>
    <script src="/assets/vendor/slick-slider/slick.min.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
    <!-- Custom JS -->
    <script src="/assets/js/global.js"></script>
