@@ -197,9 +197,10 @@
             display: block;
             position: absolute;
             bottom: 150%;
-            letter-spacing: -1px;
             font-weight: 700;
             transform: translateX(-50%);
+            @include transition-light;
+            width: 0px;
 
             &::after {
                content: "";
@@ -217,8 +218,11 @@
             position: absolute;
             top: 0;
             height: 100%;
+            width: 0%;
             background: var(--progress-color);
             border-radius: 3px;
+            @include transition-lazy;
+            transition-delay: 1s;
          }
 
          &.positive {

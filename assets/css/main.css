@@ -361,9 +361,10 @@ nav #navbarToggle:checked ~ #navbarMenu {
   display: block;
   position: absolute;
   bottom: 150%;
-  letter-spacing: -1px;
   font-weight: 700;
   transform: translateX(-50%);
+  transition: 0.5s ease;
+  width: 0px;
 }
 .page__home .progress .value::after {
   content: "";
@@ -379,8 +380,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
   position: absolute;
   top: 0;
   height: 100%;
+  width: 0%;
   background: var(--progress-color);
   border-radius: 3px;
+  transition: 0.8s ease;
+  transition-delay: 1s;
 }
 .page__home .progress.positive {
   --progress-color: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
