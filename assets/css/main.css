@@ -195,7 +195,6 @@ nav #navbarToggle:checked ~ #navbarMenu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;
   width: 100% !important;
 }
 .page__home .hero .marquee__inner {
@@ -203,6 +202,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
+  padding-inline: 0.25rem;
 }
 .page__home .hero .marquee .card {
   width: 100%;
@@ -216,11 +216,9 @@ nav #navbarToggle:checked ~ #navbarMenu {
   height: 100%;
 }
 @media (min-width: 976px) {
-  .page__home .hero .marquee {
-    gap: 1rem;
-  }
   .page__home .hero .marquee__inner {
     gap: 1rem;
+    padding-inline: 0.5rem;
   }
 }
 .page__home .hero #marquee1 {
@@ -240,7 +238,6 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__home .clientSlider .marquee {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
   width: 400vw;
 }
 .page__home .clientSlider .marquee__inner {
@@ -248,6 +245,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
+  padding-inline: 0.5rem;
 }
 .page__home .clientSlider .marquee .card {
   width: 100%;
@@ -348,6 +346,54 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__home .location-inner {
   background: linear-gradient(92.28deg, #00a0e5 0%, #005ce5 41.37%);
 }
+.page__home .progress {
+  position: relative;
+  width: 50%;
+  height: 1.5rem;
+  background: #005ce5;
+  border-radius: 3px;
+  margin-top: 2rem;
+}
+.page__home .progress * {
+  transition: 0.5s ease;
+}
+.page__home .progress .value {
+  display: block;
+  position: absolute;
+  bottom: 150%;
+  letter-spacing: -1px;
+  font-weight: 700;
+  transform: translateX(-50%);
+}
+.page__home .progress .value::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  height: 8px;
+  background: #1b1b1b;
+  z-index: 1;
+}
+.page__home .progress .progressChange {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: var(--progress-color);
+  border-radius: 3px;
+}
+.page__home .progress.positive {
+  --progress-color: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
+}
+.page__home .progress.positive .progressChange {
+  left: calc(100% - 3px);
+}
+.page__home .progress.negative {
+  --progress-color: #00e56f;
+}
+.page__home .progress.negative .progressChange {
+  right: 0;
+}
 
 @keyframes row1marquee1 {
   from {
@@ -379,13 +425,13 @@ nav #navbarToggle:checked ~ #navbarMenu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.5rem;
 }
 .page__about .gallery__wrapper .row .marquee__inner {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
+  padding-inline: 0.25rem;
 }
 .page__about .gallery__wrapper .row #row1marquee1 {
   animation: row1marquee1 10s linear infinite;
@@ -495,7 +541,6 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__services .clientSlider .marquee {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
   width: 400vw;
 }
 .page__services .clientSlider .marquee__inner {
@@ -503,6 +548,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
+  padding-inline: 0.5rem;
 }
 .page__services .clientSlider .marquee .card {
   width: 100%;
@@ -534,7 +580,6 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__driver .marquee {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
   width: 400vw;
 }
 .page__driver .marquee__inner {
@@ -542,6 +587,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
+  padding-inline: 0.5rem;
 }
 .page__driver .marquee .card {
   width: 100%;

@@ -22,4 +22,20 @@ $(document).ready(function () {
       autoplaySpeed: 1000,
    });
 
+   // Progress
+   $('.progress').each(function (i, obj) {
+      // getting data change
+      const dataChange = $(this).data("change");
+
+      // changing the span element width
+      if (dataChange > 0) {
+         $($(this)).addClass("positive");
+         $($(this).find(".progressChange")).css("width", `${dataChange}%`)
+         $($(this).find(".value")).css("left", `calc(100% + ${dataChange - 10}%)`)
+      } else {
+         $($(this)).addClass("negative");
+         $($(this).find(".progressChange")).css("width", `${dataChange * -1}%`)
+         $($(this).find(".value")).css("left", `calc(100% - 7%)`)
+      }
+   });
 })

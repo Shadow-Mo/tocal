@@ -12,11 +12,11 @@
 
                .marquee {
                   @include flex-start;
-                  gap: 0.5rem;
 
                   &__inner {
                      @include flex-start;
                      gap: 0.5rem;
+                     padding-inline: 0.25rem;
                   }
                }
 

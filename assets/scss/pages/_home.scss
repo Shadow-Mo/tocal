@@ -6,12 +6,12 @@
       .hero {
          .marquee {
             @include flex-start;
-            gap: 0.5rem;
             width: 100% !important;
 
             &__inner {
                @include flex-start;
                gap: 0.5rem;
+               padding-inline: 0.25rem;
             }
 
             .card {
@@ -27,10 +27,9 @@
             }
 
             @include responsive(lg) {
-               gap: 1rem;
-
                &__inner {
                   gap: 1rem;
+                  padding-inline: 0.5rem;
                }
             }
          }
@@ -55,7 +54,6 @@
          .marquee {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1rem;
             width: 400vw;
 
             &__inner {
@@ -63,6 +61,7 @@
                display: grid;
                grid-template-columns: repeat(6, 1fr);
                gap: 1rem;
+               padding-inline: 0.5rem;
             }
 
             .card {
@@ -178,6 +177,63 @@
       .location {
          &-inner {
             background: linear-gradient(92.28deg, #00a0e5 0%, #005ce5 41.37%);
+         }
+      }
+
+      // Styling Progress Bars
+      .progress {
+         position: relative;
+         width: 50%;
+         height: 1.5rem;
+         background: map-get($map: $primaryColor, $key: 700);
+         border-radius: 3px;
+         margin-top: 2rem;
+
+         * {
+            @include transition-light;
+         }
+
+         .value {
+            display: block;
+            position: absolute;
+            bottom: 150%;
+            letter-spacing: -1px;
+            font-weight: 700;
+            transform: translateX(-50%);
+
+            &::after {
+               content: "";
+               position: absolute;
+               top: 100%;
+               left: 50%;
+               width: 2px;
+               height: 8px;
+               background: #1b1b1b;
+               z-index: 1;
+            }
+         }
+
+         .progressChange {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            background: var(--progress-color);
+            border-radius: 3px;
+         }
+
+         &.positive {
+            --progress-color: #{$gradientColor};
+
+            .progressChange {
+               left: calc(100% - 3px);
+            }
+         }
+
+         &.negative {
+            --progress-color: #00e56f;
+            .progressChange {
+               right: 0;
+            }
          }
       }
    }
