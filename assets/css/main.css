@@ -650,6 +650,44 @@ nav #navbarToggle:checked ~ #navbarMenu {
   animation: row1marquee2 var(--duration) linear infinite;
   animation-delay: calc(var(--duration) / 2);
 }
+.page__services .form-wrapper .navigation .step {
+  --stateColor: #e3e3e3;
+  position: relative;
+  z-index: 1;
+  font-family: "Arimo", sans-serif;
+  cursor: pointer;
+  border: 1px solid var(--stateColor);
+  background: var(--stateColor);
+}
+.page__services .form-wrapper .navigation .step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+  z-index: -1;
+}
+.page__services .form-wrapper .navigation .step.completed {
+  --stateColor: #005ce5;
+  color: #ffffff;
+}
+.page__services .form-wrapper .navigation .step.active {
+  color: #005ce5;
+  font-weight: bold;
+  border: 1px solid #005ce5;
+}
+.page__services .form-wrapper .step-wrapper .step-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.page__services .form-wrapper .step-wrapper .card {
+  display: none;
+}
+.page__services .form-wrapper .step-wrapper .card.active {
+  display: block;
+}
 
 .page__driver {
   --duration: 10s;
@@ -692,4 +730,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__driver #marquee2 {
   animation: row1marquee2 var(--duration) linear infinite;
   animation-delay: calc(var(--duration) / 2);
+}
+.page__driver .why-us .card .number {
+  transition: background 0.5s ease !important;
+}
+.page__driver .why-us .card:hover .number {
+  background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%) !important;
+  color: #ffffff !important;
 }/*# sourceMappingURL=main.css.map */

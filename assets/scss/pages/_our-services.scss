@@ -106,5 +106,56 @@
             animation-delay: calc(var(--duration) / 2);
          }
       }
+
+      // form
+      .form-wrapper {
+         .navigation {
+            .step {
+               --stateColor: #{map-get($map: $darkColor, $key: 100)};
+               position: relative;
+               z-index: 1;
+               font-family: $font-primary;
+               cursor: pointer;
+               border: 1px solid var(--stateColor);
+               background: var(--stateColor);
+
+               &:not(:last-child)::after {
+                  content: "";
+                  position: absolute;
+                  top: 50%;
+                  left: 100%;
+                  width: 100%;
+                  height: 2px;
+                  background: inherit;
+                  z-index: -1;
+               }
+
+               &.completed {
+                  --stateColor: #{map-get($map: $primaryColor, $key: 700)};
+                  color: $whiteColor;
+               }
+
+               &.active {
+                  color: map-get($map: $primaryColor, $key: 700);
+                  font-weight: bold;
+                  border: 1px solid map-get($map: $primaryColor, $key: 700);
+               }
+            }
+         }
+
+         .step-wrapper {
+            .step-inner {
+               display: grid;
+               grid-template-columns: 1fr;
+            }
+            .card {
+               display: none;
+
+               &.active {
+                  display: block;
+               }
+            }
+         }
+      }
    }
 }

@@ -43,5 +43,20 @@
          animation: row1marquee2 var(--duration) linear infinite;
          animation-delay: calc(var(--duration) / 2);
       }
+
+      // Why Us
+      .why-us {
+         .card {
+            .number {
+               transition: background 0.5s ease !important;
+            }
+         }
+         .card:hover {
+            .number {
+               background: $gradientColor !important;
+               color: $whiteColor !important;
+            }
+         }
+      }
    }
 }

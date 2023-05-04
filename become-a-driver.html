@@ -32,6 +32,7 @@
    <!-- 3rd Party CSS Libraries -->
    <script src="https://cdn.tailwindcss.com"></script>
    <link rel="stylesheet" href="/assets/vendor/slick-slider/slick.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'" />
    <noscript>
@@ -43,6 +44,7 @@
 
    <!-- Critical JS -->
    <script src="./assets/js/tailwind.config.js"></script>
+   <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 
    <!-- Internal CSS -->
    <style></style>
@@ -87,8 +89,8 @@
          </div>
       </section>
 
-      <!-- Perks -->
-      <section class="perks section-spacing" id="perks">
+      <!-- Why Join Tocal -->
+      <section class="why-us section-spacing" id="perks">
          <div class="container">
             <div class="title flex flex-col w-full">
                <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">Join Us To</p>
@@ -102,43 +104,279 @@
                   <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
                      class="h-[48px] lg:h-[60px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
-                     Get instant <b class="font-medium">joining bonus</b>
+                     Own an EV for free
                   </p>
                </div>
                <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
                   <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
                      class="h-[48px] lg:h-[60px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
-                     <b class="font-medium">Incentives</b> & Insurance at first
+                     Zero petrol and maintenance cost
                   </p>
                </div>
                <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
                   <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
                      class="h-[48px] lg:h-[60px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
-                     Bi-weekly <b class="font-medium">on-time payment</b>
+                     Guaranteed fixed salary
                   </p>
                </div>
                <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
                   <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
                      class="h-[48px] lg:h-[60px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
-                     Rent electric 2/3 wheelers
+                     Flexible working hours
                   </p>
                </div>
                <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
                   <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
                      class="h-[48px] lg:h-[60px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
-                     Become a certified delivery professional
+                     Weekly payouts
                   </p>
                </div>
                <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
                   <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
                      class="h-[48px] lg:h-[60px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
-                     Wide range of products for delivery.
+                     Accident and medical insurance covered
                   </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Earn Extra with Tocal -->
+      <section class="earn-extra section-spacing py-20 card-shadow bg-white relative">
+         <!-- WHY ELEMENT -->
+         <img src="./assets/img/driver-why-element.svg" alt="Why Element"
+            class="absolute top-0 right-0 z-5 max-h-[100px] w-fit">
+
+         <div class="container">
+            <div class="title flex flex-col w-full">
+               <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
+                  Join us & <span class="text-primary-700">Earn in many ways</span>
+               </h2>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 lg:gap-8 mt-14">
+               <div class="card grid gap-2">
+                  <div
+                     class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
+                     1</div>
+                  <h3 class="text-xl font-semibold">Joining Bonuses</h3>
+                  <p class="para">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet numquam corporis vitae? In
+                     reiciendis aperiam, facere incidunt amet excepturi minus.
+                  </p>
+               </div>
+               <div class="card grid gap-2">
+                  <div
+                     class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
+                     2</div>
+                  <h3 class="text-xl font-semibold">Performance Incentives</h3>
+                  <p class="para">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet numquam corporis vitae? In
+                     reiciendis aperiam, facere incidunt amet excepturi minus.
+                  </p>
+               </div>
+               <div class="card grid gap-2">
+                  <div
+                     class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
+                     3</div>
+                  <h3 class="text-xl font-semibold">Attendance Incentives</h3>
+                  <p class="para">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet numquam corporis vitae? In
+                     reiciendis aperiam, facere incidunt amet excepturi minus.
+                  </p>
+               </div>
+               <div class="card grid gap-2">
+                  <div
+                     class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
+                     4</div>
+                  <h3 class="text-xl font-semibold">Referral Bonuses</h3>
+                  <p class="para">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet numquam corporis vitae? In
+                     reiciendis aperiam, facere incidunt amet excepturi minus.
+                  </p>
+               </div>
+               <div class="card grid gap-2">
+                  <div
+                     class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
+                     5</div>
+                  <h3 class="text-xl font-semibold">Promotion Incentives</h3>
+                  <p class="para">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet numquam corporis vitae? In
+                     reiciendis aperiam, facere incidunt amet excepturi minus.
+                  </p>
+               </div>
+               <div class="card grid gap-2">
+                  <div
+                     class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
+                     6</div>
+                  <h3 class="text-xl font-semibold">Loyalty Rewards Incentives</h3>
+                  <p class="para">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet numquam corporis vitae? In
+                     reiciendis aperiam, facere incidunt amet excepturi minus.
+                  </p>
+               </div>
+               <div class="card grid gap-2">
+                  <div
+                     class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold font-arimo">
+                     <i class="bi bi-asterisk text-sm"></i>
+                  </div>
+                  <h3 class="text-xl font-semibold">And Many More...</h3>
+                  <p class="para">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet numquam corporis vitae? In
+                     reiciendis aperiam, facere incidunt amet excepturi minus.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Perks of Joining Us -->
+      <section class="perks section-spacing">
+         <div class="container">
+            unique perks section will go here
+         </div>
+      </section>
+
+      <!-- FAQs -->
+      <section class="faq section-spacing">
+         <div class="container">
+            <div class="title flex flex-col w-full">
+               <h2 class="text-3xl lg:text-4xl text-center font-[900] leading-[100%] tracking-tight w-full">
+                  Frequently Asked Questions
+               </h2>
+            </div>
+            <div class="flex justify-center items-start mt-14">
+               <div class="w-full max-w-[1100px]">
+                  <ul class="flex flex-col gap-2">
+                     <li class="bg-white card-shadow border border-dark-100" x-data="accordion(1)">
+                        <h2 @click="handleClick()"
+                           class="flex flex-row justify-between items-center font-semibold p-5 cursor-pointer">
+                           <span>When will my order arrive?</span>
+                           <svg :class="handleRotate()"
+                              class="fill-current text-primary-700 h-6 w-6 transform transition-transform duration-500"
+                              viewBox="0 0 20 20">
+                              <path
+                                 d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                              </path>
+                           </svg>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()"
+                           class="border-purple-600 overflow-hidden max-h-0 duration-500 transition-all bg-[#fdfdfd]">
+                           <p class="px-5 p-3 text-gray-800 para">
+                              Shipping time is set by our delivery partners, according to the delivery method chosen by
+                              you. Additional details can be found in the order confirmation
+                           </p>
+                        </div>
+                     </li>
+                     <li class="bg-white card-shadow border border-dark-100" x-data="accordion(2)">
+                        <h2 @click="handleClick()"
+                           class="flex flex-row justify-between items-center font-semibold p-5 cursor-pointer">
+                           <span>How do I track my order?</span>
+                           <svg :class="handleRotate()"
+                              class="fill-current text-primary-700 h-6 w-6 transform transition-transform duration-500"
+                              viewBox="0 0 20 20">
+                              <path
+                                 d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                              </path>
+                           </svg>
+                        </h2>
+                        <div class="border-purple-600 overflow-hidden max-h-0 duration-500 transition-al bg-[#fdfdfd]l"
+                           x-ref="tab" :style="handleToggle()">
+                           <p class="px-5 p-3 text-gray-800 para">
+                              Once shipped, you’ll get a confirmation email that includes a tracking number and
+                              additional information regarding tracking your order.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="bg-white card-shadow border border-dark-100" x-data="accordion(3)">
+                        <h2 @click="handleClick()"
+                           class="flex flex-row justify-between items-center font-semibold p-5 cursor-pointer">
+                           <span>What’s your return policy?</span>
+                           <svg :class="handleRotate()"
+                              class="fill-current text-primary-700 h-6 w-6 transform transition-transform duration-500"
+                              viewBox="0 0 20 20">
+                              <path
+                                 d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                              </path>
+                           </svg>
+                        </h2>
+                        <div class="border-purple-600 overflow-hidden max-h-0 duration-500 transition-al bg-[#fdfdfd]l"
+                           x-ref="tab" :style="handleToggle()">
+                           <p class="px-5 p-3 text-gray-800 para">
+                              We allow the return of all items within 30 days of your original order’s date. If you’re
+                              interested in returning your items, send us an email with your order number and we’ll ship
+                              a return label.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="bg-white card-shadow border border-dark-100" x-data="accordion(4)">
+                        <h2 @click="handleClick()"
+                           class="flex flex-row justify-between items-center font-semibold p-5 cursor-pointer">
+                           <span>How do I make changes to an existing order?</span>
+                           <svg :class="handleRotate()"
+                              class="fill-current text-primary-700 h-6 w-6 transform transition-transform duration-500"
+                              viewBox="0 0 20 20">
+                              <path
+                                 d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                              </path>
+                           </svg>
+                        </h2>
+                        <div class="border-purple-600 overflow-hidden max-h-0 duration-500 transition-al bg-[#fdfdfd]l"
+                           x-ref="tab" :style="handleToggle()">
+                           <p class="px-5 p-3 text-gray-800 para">
+                              Changes to an existing order can be made as long as the order is still in “processing”
+                              status. Please contact our team via email and we’ll make sure to apply the needed changes.
+                              If your order has already been shipped, we cannot apply any changes to it. If you are
+                              unhappy with your order when it arrives, please contact us for any changes you may
+                              require.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="bg-white card-shadow border border-dark-100" x-data="accordion(5)">
+                        <h2 @click="handleClick()"
+                           class="flex flex-row justify-between items-center font-semibold p-5 cursor-pointer">
+                           <span>What shipping options do you have?</span>
+                           <svg :class="handleRotate()"
+                              class="fill-current text-primary-700 h-6 w-6 transform transition-transform duration-500"
+                              viewBox="0 0 20 20">
+                              <path
+                                 d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                              </path>
+                           </svg>
+                        </h2>
+                        <div class="border-purple-600 overflow-hidden max-h-0 duration-500 transition-al bg-[#fdfdfd]l"
+                           x-ref="tab" :style="handleToggle()">
+                           <p class="px-5 p-3 text-gray-800 para">
+                              For USA domestic orders we offer FedEx and USPS shipping.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="bg-white card-shadow border border-dark-100" x-data="accordion(6)">
+                        <h2 @click="handleClick()"
+                           class="flex flex-row justify-between items-center font-semibold p-5 cursor-pointer">
+                           <span>What payment methods do you accept?</span>
+                           <svg :class="handleRotate()"
+                              class="fill-current text-primary-700 h-6 w-6 transform transition-transform duration-500"
+                              viewBox="0 0 20 20">
+                              <path
+                                 d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10">
+                              </path>
+                           </svg>
+                        </h2>
+                        <div class="border-purple-600 overflow-hidden max-h-0 duration-500 transition-al bg-[#fdfdfd]l"
+                           x-ref="tab" :style="handleToggle()">
+                           <p class="px-5 p-3 text-gray-800 para">
+                              Any method of payments acceptable by you. For example: We accept MasterCard, Visa,
+                              American Express, PayPal, JCB Discover, Gift Cards, etc.
+                           </p>
+                        </div>
+                     </li>
+                  </ul>
                </div>
             </div>
          </div>
@@ -175,41 +413,100 @@
                   </div>
                </div>
             </div>
-            <!-- Perks -->
-            <div
-               class="fleet-perk max-w-[1100px] mx-auto flex items-start lg:justify-center lg:items-center flex-wrap gap-y-8 gap-10 lg:gap-32 my-14">
-               <div class="card flex items-center gap-4 lg:flex-1">
-                  <img src="./assets/img/flaticons/Chat box.svg" alt="Earning" class="max-w-[48px]">
-                  <p class="para">
-                     Earn minimum of <b class="font-medium">₹30,000 per month</b>
-                  </p>
+         </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials section-spacing">
+         <div class="container">
+            <div class="title flex flex-col w-full">
+               <h2 class="text-3xl lg:text-4xl text-center font-[900] leading-[100%] tracking-tight w-full">
+                  What our driver's say about us!
+               </h2>
+            </div>
+
+            <!-- testominials slider -->
+            <div class="testimonial-wrapper relative mt-14">
+               <div class="testimonial-slider max-w-[850px] mx-auto px-14 lg:px-20">
+                  <div class="card">
+                     <div class="flex flex-col justify-center items-center gap-3 text-center">
+                        <!-- image -->
+                        <div
+                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
+                           <img src="/assets/img/clients/cakezone.svg" alt="Cake Zone">
+                        </div>
+                        <!-- Ratings -->
+                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                        </div>
+                        <!-- review -->
+                        <p class="para">
+                           Great customer service and very timely delivery. The fleet of drivers was great and worked
+                           very
+                           hard to make it to our customers' destination on time everyday . I very much appreciate the
+                           hard
+                           work and communication!
+                        </p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="flex flex-col justify-center items-center gap-3 text-center">
+                        <!-- image -->
+                        <div
+                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
+                           <img src="/assets/img/clients/sprink.svg" alt="Sprink">
+                        </div>
+                        <!-- Ratings -->
+                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                        </div>
+                        <!-- review -->
+                        <p class="para">
+                           I was very impressed by how quickly and professionally the TOCAL team works on ground to
+                           avoid
+                           any operations hassles. They understand our logistics pain points and work accordingly.
+                           Thanks
+                        </p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="flex flex-col justify-center items-center gap-3 text-center">
+                        <!-- image -->
+                        <div
+                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
+                           <img src="/assets/img/clients/gourmet-garden.svg" alt="Fourmet garden">
+                        </div>
+                        <!-- Ratings -->
+                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                        </div>
+                        <!-- review -->
+                        <p class="para">
+                           We really appreciate your team providing timely service on short notices and catering to our
+                           rider requirements promptly at all our operating locations
+                        </p>
+                     </div>
+                  </div>
                </div>
-               <div class="card flex items-center gap-4 lg:flex-1">
-                  <img src="./assets/img/flaticons/Chat box.svg" alt="Earning" class="max-w-[48px]">
-                  <p class="para">
-                     <b class="font-medium">Extra support care</b> during harsh weather conditions
-                  </p>
-               </div>
-               <div class="card flex items-center gap-4 lg:flex-1">
-                  <img src="./assets/img/flaticons/Chat box.svg" alt="Earning" class="max-w-[48px]">
-                  <p class="para">
-                     <b class="font-medium">Flexible</b> working hours
-                  </p>
+               <!-- btns -->
+               <div
+                  class="slider-btn absolute top-2/4 left-0 translate-y-2/4 z-50 w-full flex justify-between items-center p-4 lg:px-32 xl:px-48 text-xl lg:text-2xl">
+                  <button class="btn-prev"><i class="bi bi-chevron-left"></i></button>
+                  <button class="btn-next"><i class="bi bi-chevron-right"></i></button>
                </div>
             </div>
-            <!-- cta -->
-            <hr class="max-w-[1100px] mx-auto my-8">
-            <div class="flex flex-wrap justify-center items-center gap-4">
-               <a href="/contact-us.html"
-                  class="btn btn__secondary btn__secondary--bordered text-purple hover:text-primary-700">
-                  <span>Contact Us</span>
-               </a>
-               <a href="/our-services.html" class="btn btn__primary">
-                  <span>Learn More</span>
-                  <i class="bi bi-arrow-right"></i>
-               </a>
-            </div>
-            <hr class="max-w-[1100px] mx-auto my-8">
          </div>
       </section>
    </main>
@@ -221,10 +518,11 @@
    <!-- 3rd Party JS Libraries -->
    <script src="/assets/vendor/jquery/jquery-3.6.0.min.js"></script>
    <script src="/assets/vendor/slick-slider/slick.min.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
    <!-- Custom JS -->
    <script src="/assets/js/global.js"></script>
-   <script src="/assets/js/index.js"></script>
+   <script src="/assets/js/driver.js"></script>
    <script type="module" src="/assets/js/components/header.js"></script>
    <script type="module" src="/assets/js/components/footer.js"></script>
 
