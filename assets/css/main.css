@@ -650,43 +650,146 @@ nav #navbarToggle:checked ~ #navbarMenu {
   animation: row1marquee2 var(--duration) linear infinite;
   animation-delay: calc(var(--duration) / 2);
 }
+.page__services .form-wrapper .navigation {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
 .page__services .form-wrapper .navigation .step {
-  --stateColor: #e3e3e3;
+  --color: #e3e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  line-height: 100%;
+  flex: 1;
   position: relative;
-  z-index: 1;
-  font-family: "Arimo", sans-serif;
-  cursor: pointer;
-  border: 1px solid var(--stateColor);
-  background: var(--stateColor);
+  pointer-events: none;
+}
+.page__services .form-wrapper .navigation .step span:first-child {
+  display: block;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color);
+  border: 1px solid transparent;
+  border-radius: 100%;
+}
+.page__services .form-wrapper .navigation .step span:last-child {
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 .page__services .form-wrapper .navigation .step:not(:last-child)::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 100%;
   width: 100%;
   height: 2px;
-  background: inherit;
+  background: var(--color);
+  left: 50%;
+  top: 1rem;
+  translate: 0 -50%;
   z-index: -1;
 }
 .page__services .form-wrapper .navigation .step.completed {
-  --stateColor: #005ce5;
+  --color: #005ce5;
   color: #ffffff;
+  pointer-events: all;
+  cursor: pointer;
+}
+.page__services .form-wrapper .navigation .step.completed span:last-child {
+  color: var(--color);
+}
+.page__services .form-wrapper .navigation .step.completed:hover span:first-child {
+  border-color: #ea2fa6 !important;
 }
 .page__services .form-wrapper .navigation .step.active {
-  color: #005ce5;
-  font-weight: bold;
-  border: 1px solid #005ce5;
+  --color: #005ce5;
 }
-.page__services .form-wrapper .step-wrapper .step-inner {
-  display: grid;
-  grid-template-columns: 1fr;
+.page__services .form-wrapper .navigation .step.active span:first-child {
+  background: #e3e3e3;
+  border: 1px solid var(--color);
+  color: var(--color);
 }
-.page__services .form-wrapper .step-wrapper .card {
+.page__services .form-wrapper .navigation .step.active span:last-child {
+  color: var(--color);
+}
+.page__services .form-wrapper .navigation .step.active:not(:last-child)::after {
+  background: #e3e3e3;
+}
+.page__services .form-wrapper .navigation .step.active.completed:not(:last-child)::after {
+  background: var(--color);
+}
+.page__services .form-wrapper .step-wrapper {
+  padding: 2rem;
+}
+.page__services .form-wrapper .step-wrapper .select-city .optionWrapper:has(input:checked),
+.page__services .form-wrapper .step-wrapper .select-delivery .optionWrapper:has(input:checked) {
+  border: 2px solid #005ce5;
+}
+
+[x-cloak] {
   display: none;
 }
-.page__services .form-wrapper .step-wrapper .card.active {
-  display: block;
+
+[type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.form-checkbox,
+.form-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  flex-shrink: 0;
+  color: currentColor;
+  background-color: #fff;
+  border-color: #e2e8f0;
+  border-width: 1px;
+  height: 1.4em;
+  width: 1.4em;
+}
+
+.form-checkbox {
+  border-radius: 0.25rem;
+}
+
+.form-radio {
+  border-radius: 50%;
+}
+
+.form-checkbox:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .page__driver {
