@@ -11,8 +11,8 @@
       background: map-get($map: $primaryColor, $key: default);
       border: 1px solid map-get($map: $primaryColor, $key: default);
       &:hover {
-         background: map-get($map: $primaryColor, $key: 600);
-         border: 1px solid map-get($map: $primaryColor, $key: 600);
+         background: map-get($map: $primaryColor, $key: 500);
+         border: 1px solid map-get($map: $primaryColor, $key: 500);
       }
       &:focus {
          background: map-get($map: $primaryColor, $key: 800);

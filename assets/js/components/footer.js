@@ -39,21 +39,21 @@ class WebsiteFooter extends HTMLElement {
                         <a href="./about-us.html" class="text-primary-600 underline hover:text-purple">Read More</a>
                      </p>
                      <p class="para">
-                        <span class="font-[600] italic block">Address:</span>
+                        <span class="font-[600] italic block text-white">Address:</span>
                         <span class="text-sm text-dark-100">VMG3+X4, 1642/C, A Block, AECS Layout – A Block, AECS Layout,
                            Singasandra,
                            Bengaluru, Karnataka 560068</span>
                      </p>
                      <div class="flex flex-wrap gap-10 gap-y-3">
                         <p class="para">
-                           <span class="font-[600] italic block">Email:</span>
+                           <span class="font-[600] italic block text-white">Email:</span>
                            <span class="text-sm text-dark-100">
                               <a href="mailto:info@dbytdynamics.com"
                                  class="underline hover:text-primary-700">info@dbytdynamics.com</a>
                            </span>
                         </p>
                         <p class="para">
-                           <span class="font-[600] italic block">Phone:</span>
+                           <span class="font-[600] italic block text-white">Phone:</span>
                            <span class="text-sm text-dark-100 flex gap-2">
                               <a href="tel:918222042225" class="underline hover:text-primary-700">+91-8222042225</a>
                            </span>

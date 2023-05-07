@@ -21,6 +21,7 @@ body {
    line-height: 140%;
    font-weight: 300;
    font-size: 0.95rem;
+   color: map-get($map: $darkColor, $key: 600);
 
    @include responsive(xl) {
       font-size: 1rem;
@@ -37,4 +38,10 @@ body {
    @include responsive(lg) {
       margin-block: 150px;
    }
+}
+
+.text-gradient {
+   background: $gradientColorReversed;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }

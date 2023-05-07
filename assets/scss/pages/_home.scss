@@ -98,6 +98,7 @@
          .statistics-slider {
             position: relative;
             transform: translateX(10%);
+            max-width: 400px;
 
             &::after {
                content: "";
@@ -105,7 +106,7 @@
                top: 50%;
                right: 103%;
                transform: translateY(-50%);
-               height: 90%;
+               height: 50%;
                aspect-ratio: 1 / 1;
                border-radius: 100%;
                background: map-get($map: $darkColor, $key: 50);
@@ -127,6 +128,9 @@
 
             @include responsive(lg) {
                transform: translateX(40%);
+            }
+            @include responsive(md) {
+               transform: translateX(30%);
             }
          }
 
@@ -176,7 +180,32 @@
       // location
       .location {
          &-inner {
-            background: linear-gradient(92.28deg, #00a0e5 0%, #005ce5 41.37%);
+            // background: linear-gradient(92.28deg, #00a0e5 0%, #005ce5 41.37%);
+            background: map-get($map: $darkColor, $key: 950);
+         }
+         .card:has(img) {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            &::after {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: linear-gradient(
+                  to top,
+                  map-get($map: $darkColor, $key: 950) 0%,
+                  #00000000 50%
+               );
+            }
+            img {
+               @include transition-lazy;
+            }
+            &:hover img {
+               transform: scale(2) rotate(-30deg);
+            }
          }
       }
 
@@ -197,7 +226,7 @@
             display: block;
             position: absolute;
             bottom: 150%;
-            font-weight: 700;
+            font-weight: 300;
             transform: translateX(-50%);
             @include transition-light;
             width: 0px;
@@ -207,7 +236,7 @@
                position: absolute;
                top: 100%;
                left: 50%;
-               width: 2px;
+               width: 1px;
                height: 8px;
                background: #1b1b1b;
                z-index: 1;
@@ -222,11 +251,11 @@
             background: var(--progress-color);
             border-radius: 3px;
             @include transition-lazy;
-            transition-delay: 1s;
+            transition-delay: 1.5s;
          }
 
          &.positive {
-            --progress-color: #{$gradientColor};
+            --progress-color: #00e56f;
 
             .progressChange {
                left: calc(100% - 3px);
@@ -234,10 +263,43 @@
          }
 
          &.negative {
-            --progress-color: #00e56f;
+            --progress-color: #{$gradientColor};
             .progressChange {
                right: 0;
             }
+         }
+      }
+
+      // Fluid
+      .fluid {
+         position: absolute;
+         transform: translate(-50%, -50%);
+         z-index: -1;
+         pointer-events: none;
+         width: 200px;
+         border-radius: 100%;
+         aspect-ratio: 1 / 1;
+         @include transition-lazy;
+         transition-duration: 5s;
+         filter: blur(200px);
+         opacity: 0.1;
+
+         &.pink {
+            top: 0;
+            left: 0;
+            background: $gradientColor;
+            // animation: randomTopLeft 10s linear infinite alternate;
+         }
+
+         &.blue {
+            top: 0;
+            left: 100%;
+            background: map-get($map: $primaryColor, $key: 700);
+            // animation: randomTopLeft 10s linear infinite alternate;
+         }
+
+         @include responsive(lg) {
+            width: 600px;
          }
       }
    }
@@ -257,5 +319,16 @@
    }
    to {
       transform: translateX(-200%);
+   }
+}
+
+@keyframes randomTopLeft {
+   from {
+      top: random(100) + "%";
+      left: random(100) + "%";
+   }
+   to {
+      top: random(100) + "%";
+      left: random(100) + "%";
    }
 }

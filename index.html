@@ -48,7 +48,12 @@
    <!-- Internal CSS -->
    <style></style>
 </head>
-<body class="page page__home">
+<body class="page page__home pt-10">
+   <!-- Fluids -->
+   <div class="fluid pink"></div>
+   <div class="fluid blue"></div>
+
+
    <!-- Header -->
    <website-header></website-header>
 
@@ -85,7 +90,7 @@
 
             <!-- Graphics -->
             <div data-aos="fade-up" data-aos-delay="500"
-               class="max-w-[1200px] aspect-video mx-auto mt-24 border border-dark-950 rounded-lg p-2 lg:p-4">
+               class="max-w-[1200px] mx-auto mt-24 border border-dark-950 rounded-lg p-2 lg:p-4">
                <!-- slider -->
                <div class="marquee w-full overflow-hidden">
                   <div class="marquee__inner" id="marquee1">
@@ -221,15 +226,17 @@
                      </div>
                   </div>
                </div>
+               <lottie-player src="./assets/img/lottie/home-hero.json" background="transparent" speed="1" loop
+                  autoplay></lottie-player>
             </div>
          </div>
       </section>
 
       <!-- About Section -->
       <section class="about section-spacing max-w-[1200px] mx-auto" id="about">
-         <div class="container lg:px-0">
-            <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
-               <div class="content flex-1 flex flex-col gap-6 relative z-10">
+         <div class="container xl:px-0">
+            <div class="grid grid-cols-1 lg:grid-cols-[4fr_3fr] items-center gap-10">
+               <div class="content grid gap-6 relative z-10">
                   <div class="title flex flex-col justify-center items-center w-full" data-aos="fade-up">
                      <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">We Are</p>
                      <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
@@ -251,7 +258,7 @@
                      <i class="bi bi-arrow-right"></i>
                   </a>
                </div>
-               <div class="slider flex-1" data-aos="fade-up" data-aos-delay="1000">
+               <div class="slider" data-aos="fade-up" data-aos-delay="1000">
                   <div class="statistics-slider-wrapper">
                      <div class="statistics-slider">
                         <div>
@@ -325,7 +332,7 @@
                <div data-aos="fade-up" data-aos-delay="200"
                   class="flex-1 card bg-white card-shadow md:max-w-[320px] lg:max-w-full p-6 rounded-lg flex flex-col gap-4">
                   <div class="img-wrapper rounded-md overflow-hidden">
-                     <img src="./assets/img/services/last-mile-deliveries.png" alt="Last-mile deliveries">
+                     <img src="./assets/img/services/fullfilment-centers.png" alt="Last-mile deliveries">
                   </div>
                   <h3>
                      <span class="text-sm uppercase tracking-light">We do</span>
@@ -340,7 +347,7 @@
                <div data-aos="fade-up" data-aos-delay="400"
                   class="flex-1 card bg-white card-shadow md:max-w-[320px] lg:max-w-full p-6 rounded-lg flex flex-col gap-4">
                   <div class="img-wrapper rounded-md overflow-hidden">
-                     <img src="./assets/img/services/fullfilment-centers.png" alt="Fullfilment Centres">
+                     <img src="./assets/img/services/last-mile-deliveries.png" alt="Fullfilment Centres">
                   </div>
                   <h3>
                      <span class="text-sm uppercase tracking-light">We provide</span>
@@ -371,29 +378,28 @@
       <section class="location section-spacing">
          <div class="container relative">
             <div data-aos="flip-up"
-               class="location-inner text-white rounded-lg flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-20 p-10">
+               class="location-inner text-white rounded-lg flex flex-col lg:flex-row lg:items-center xl:justify-between gap-8 lg:gap-20 p-10">
                <div class="flex items-center">
                   <h2 class="h-full max-w-[300px] tracking-tight">
                      <span class="text-lg">Unlock the Door to Our Services:</span>
-                     <span class="text-2xl font-bold leading-[120%]">Your Gateway to Fast and Reliable Deliveries
+                     <span class="text-2xl font-bold leading-[120%] text-gradient">Your Gateway to Fast and Reliable
+                        Deliveries
                         in</span>
                   </h2>
                </div>
-               <div class="flex flex-row lg:items-center gap-8 lg:gap-20">
-                  <div class="card flex flex-col gap-2">
-                     <img src="./assets/img/flaticons/Bangalore.svg" alt="Bangalore" class="max-h-[80px] w-fit">
-                     <p class="text-2xl lg:text-3xl font-bold font-arimo tracking-tight">Bangalore</p>
+               <div class="flex flex-col md:flex-row lg:items-center gap-8 lg:gap-10">
+                  <div class="card flex-1 flex flex-col gap-2 rounded-lg relative">
+                     <img src="./assets/img/banglore.jpg" alt="Bangalore" class="aspect-video  max-h-[200px] w-fit">
+                     <p class="absolute bottom-4 left-4 text-2xl lg:text-3xl font-bold font-arimo tracking-tight z-50">
+                        Bangalore</p>
                   </div>
-                  <div class="card flex flex-col gap-2">
-                     <img src="./assets/img/flaticons/Hydrabad.svg" alt="Hydrabad" class="max-h-[80px] w-fit">
-                     <p class="text-2xl lg:text-3xl font-bold font-arimo tracking-tight">Hyderabad</p>
+                  <div class="card flex-1 flex flex-col gap-2 rounded-lg relative">
+                     <img src="./assets/img/hydrabad.jpg" alt="Hyderabad" class="aspect-video  max-h-[200px] w-fit">
+                     <p class="absolute bottom-4 left-4 text-2xl lg:text-3xl font-bold font-arimo tracking-tight z-50">
+                        Hyderabad</p>
                   </div>
                </div>
             </div>
-
-            <!-- img -->
-            <img src="./assets/img/location.svg" alt="Location"
-               class="hidden md:block lg:hidden xl:block absolute md:right-10 md:top-1/2 md:-translate-y-2/4 xl:top-10 xl:right-32 xl:translate-y-0 md:max-w-[250px] xl:max-w-[300px]">
          </div>
       </section>
 
@@ -410,7 +416,7 @@
                <div data-aos="fade-up" class="card flex flex-col gap-2">
                   <img src="./assets/img/flaticons/Fast delivery.svg" class="h-10 lg:h-14 w-fit aspect-square"
                      alt="Fast Deliver">
-                  <h3 class="text-xl lg:text-2xl font-bold leading-[120%]">Responsible Delivery</h3>
+                  <h3 class="text-xl lg:text-2xl font-bold leading-[120%] tracking-tight">Responsible Delivery</h3>
                   <div class="progress positive" data-change="20">
                      <span class="value">+20%</span>
                      <span class="progressChange"></span>
@@ -422,7 +428,7 @@
                </div>
                <div data-aos="fade-up" data-aos-delay="200" class="card flex flex-col gap-2">
                   <img src="./assets/img/flaticons/Coupon.svg" class="h-10 lg:h-14 w-fit aspect-square" alt="Coupon">
-                  <h3 class="text-xl lg:text-2xl font-bold leading-[120%]">Lowest Delivery Cost</h3>
+                  <h3 class="text-xl lg:text-2xl font-bold leading-[120%] tracking-tight">Lowest Delivery Cost</h3>
                   <div class="progress negative" data-change="-42">
                      <span class="value">-42%</span>
                      <span class="progressChange"></span>
@@ -435,7 +441,7 @@
                <div data-aos="fade-up" data-aos-delay="400" class="card flex flex-col gap-2">
                   <img src="./assets/img/flaticons/No emission.svg" class="h-10 lg:h-14 w-fit aspect-square"
                      alt="No Emmission">
-                  <h3 class="text-xl lg:text-2xl font-bold leading-[120%]">Zero Emission Delivery</h3>
+                  <h3 class="text-xl lg:text-2xl font-bold leading-[120%] tracking-tight">Zero Emission Delivery</h3>
                   <div class="progress" data-change="22">
                      <span class="value">+22%</span>
                      <span class="progressChange"></span>
@@ -448,7 +454,7 @@
                <div data-aos="fade-up" data-aos-delay="600" class="card flex flex-col gap-2">
                   <img src="./assets/img/flaticons/Chat box.svg" class="h-10 lg:h-14 w-fit aspect-square"
                      alt="Chat Box">
-                  <h3 class="text-xl lg:text-2xl font-bold leading-[120%]">Quick Response</h3>
+                  <h3 class="text-xl lg:text-2xl font-bold leading-[120%] tracking-tight">Quick Response</h3>
                   <div class="progress" data-change="100">
                      <span class="value">+68%</span>
                      <span class="progressChange"></span>
@@ -618,6 +624,7 @@
    <script src="/assets/vendor/jquery/jquery-3.6.0.min.js"></script>
    <script src="/assets/vendor/slick-slider/slick.min.js"></script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
    <!-- Custom JS -->
    <script src="/assets/js/global.js"></script>
