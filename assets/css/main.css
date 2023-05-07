@@ -730,11 +730,49 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__services .form-wrapper .step-wrapper {
   padding: 2rem;
 }
-.page__services .form-wrapper .step-wrapper .select-city .optionWrapper:has(input:checked),
-.page__services .form-wrapper .step-wrapper .select-delivery .optionWrapper:has(input:checked) {
+.page__services .form-wrapper .step-wrapper .select-city .optionWrapper label .customCheck,
+.page__services .form-wrapper .step-wrapper .select-delivery .optionWrapper label .customCheck,
+.page__services .form-wrapper .step-wrapper .select-vehicle .optionWrapper label .customCheck,
+.page__services .form-wrapper .step-wrapper .select-service .optionWrapper label .customCheck,
+.page__services .form-wrapper .step-wrapper .select-product .optionWrapper label .customCheck {
+  transition: 0.8s ease;
+}
+.page__services .form-wrapper .step-wrapper .select-city .optionWrapper input:checked + label .customCheck,
+.page__services .form-wrapper .step-wrapper .select-delivery .optionWrapper input:checked + label .customCheck,
+.page__services .form-wrapper .step-wrapper .select-vehicle .optionWrapper input:checked + label .customCheck,
+.page__services .form-wrapper .step-wrapper .select-service .optionWrapper input:checked + label .customCheck,
+.page__services .form-wrapper .step-wrapper .select-product .optionWrapper input:checked + label .customCheck {
   border: 2px solid #005ce5;
+  background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
+}
+.page__services .form-wrapper .step-wrapper .select-city .optionWrapper input:checked + label,
+.page__services .form-wrapper .step-wrapper .select-delivery .optionWrapper input:checked + label,
+.page__services .form-wrapper .step-wrapper .select-vehicle .optionWrapper input:checked + label,
+.page__services .form-wrapper .step-wrapper .select-service .optionWrapper input:checked + label,
+.page__services .form-wrapper .step-wrapper .select-product .optionWrapper input:checked + label {
+  border-color: #005ce5;
+}
+.page__services .form-wrapper .step-wrapper .pill {
+  background: #005ce5;
+  color: #ffffff;
+  border-radius: 5px;
+  text-transform: capitalize;
+  padding: 0.1rem 0.3rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.page__services .form-wrapper .step-wrapper .bink {
+  animation: 0.2s blink alternate infinite;
 }
 
+@keyframes blink {
+  to {
+    color: #1b1b1b;
+  }
+  from {
+    color: red;
+  }
+}
 [x-cloak] {
   display: none;
 }

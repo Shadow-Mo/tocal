@@ -195,13 +195,47 @@
             padding: 2rem;
 
             .select-city,
-            .select-delivery {
-               .optionWrapper:has(input:checked) {
-                  border: 2px solid map-get($map: $primaryColor, $key: 700);
+            .select-delivery,
+            .select-vehicle,
+            .select-service,
+            .select-product {
+               .optionWrapper {
+                  label .customCheck {
+                     @include transition-lazy;
+                  }
+                  input:checked + label .customCheck {
+                     border: 2px solid map-get($map: $primaryColor, $key: 700);
+                     background: $gradientColor;
+                  }
+                  input:checked + label {
+                     border-color: map-get($map: $primaryColor, $key: 700);
+                  }
                }
+            }
+
+            .pill {
+               background: map-get($map: $primaryColor, $key: 700);
+               color: $whiteColor;
+               border-radius: 5px;
+               text-transform: capitalize;
+               padding: 0.1rem 0.3rem;
+               width: fit-content;
+            }
+
+            .bink {
+               animation: 0.2s blink alternate infinite;
             }
          }
       }
+   }
+}
+
+@keyframes blink {
+   to {
+      color: map-get($map: $darkColor, $key: 950);
+   }
+   from {
+      color: red;
    }
 }
 

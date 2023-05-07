@@ -57,494 +57,6 @@
       <!-- Page bg -->
       <img src="./assets/img/service-hero-bg.svg" alt="Background" class="absolute z-[-1] top-0 right-0  w-full">
 
-      <!-- Form -->
-      <!-- Interactive Form -->
-      <section class="multi-form section-spacing" id="bookAPilot">
-         <div class="container">
-            <div x-data="app()" x-cloak>
-               <div class="max-w-3xl mx-auto px-4 py-10">
-                  <div x-show.transition="step === 'complete'">
-                     <div class="bg-white rounded-lg p-10 flex items-center shadow justify-between">
-                        <div>
-                           <svg class="mb-4 h-20 w-20 text-green-500 mx-auto" viewBox="0 0 20 20" fill="currentColor">
-                              <path fill-rule="evenodd"
-                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                 clip-rule="evenodd" />
-                           </svg>
-
-                           <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Registration Success</h2>
-
-                           <div class="text-gray-600 mb-8">
-                              Thank you. We have sent you an email to demo@demo.test. Please click the link in the
-                              message to activate your account.
-                           </div>
-
-                           <button @click="step = 1"
-                              class="w-40 block mx-auto focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border">Back
-                              to home</button>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div x-show.transition="step != 'complete'">
-                     <!-- Top Navigation -->
-                     <div class="border-b-2 py-4">
-                        <div class="uppercase tracking-wide text-xs font-bold text-gray-500 mb-1 leading-tight"
-                           x-text="`Step: ${step} of 3`"></div>
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                           <div class="flex-1">
-                              <div x-show="step === 1">
-                                 <div class="text-lg font-bold text-gray-700 leading-tight">Your Profile</div>
-                              </div>
-
-                              <div x-show="step === 2">
-                                 <div class="text-lg font-bold text-gray-700 leading-tight">Your Password</div>
-                              </div>
-
-                              <div x-show="step === 3">
-                                 <div class="text-lg font-bold text-gray-700 leading-tight">Tell me about yourself</div>
-                              </div>
-                           </div>
-
-                           <div class="flex items-center md:w-64">
-                              <div class="w-full bg-white rounded-full mr-2">
-                                 <div class="rounded-full bg-green-500 text-xs leading-none h-2 text-center text-white"
-                                    :style="'width: '+ parseInt(step / 3 * 100) +'%'"></div>
-                              </div>
-                              <div class="text-xs w-10 text-gray-600" x-text="parseInt(step / 3 * 100) +'%'"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <!-- /Top Navigation -->
-
-                     <!-- Step Content -->
-                     <div class="py-10">
-                        <div x-show.transition.in="step === 1">
-                           <div class="mb-5 text-center">
-                              <div
-                                 class="mx-auto w-32 h-32 mb-2 border rounded-full relative bg-gray-100 mb-4 shadow-inset">
-                                 <img id="image" class="object-cover w-full h-32 rounded-full" :src="image" />
-                              </div>
-
-                              <label for="fileInput" type="button"
-                                 class="cursor-pointer inine-flex justify-between items-center focus:outline-none border py-2 px-4 rounded-lg shadow-sm text-left text-gray-600 bg-white hover:bg-gray-100 font-medium">
-                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="inline-flex flex-shrink-0 w-6 h-6 -mt-1 mr-1" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
-                                    <path
-                                       d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />
-                                    <circle cx="12" cy="13" r="3" />
-                                 </svg>
-                                 Browse Photo
-                              </label>
-
-                              <div class="mx-auto w-48 text-gray-500 text-xs text-center mt-1">Click to add profile
-                                 picture</div>
-
-                              <input name="photo" id="fileInput" accept="image/*" class="hidden" type="file" @change="let file = document.getElementById('fileInput').files[0]; 
-                                 var reader = new FileReader();
-                                 reader.onload = (e) => image = e.target.result;
-                                 reader.readAsDataURL(file);">
-                           </div>
-
-                           <div class="mb-5">
-                              <label for="firstname" class="font-bold mb-1 text-gray-700 block">Firstname</label>
-                              <input type="text"
-                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                                 placeholder="Enter your firstname...">
-                           </div>
-
-                           <div class="mb-5">
-                              <label for="email" class="font-bold mb-1 text-gray-700 block">Email</label>
-                              <input type="email"
-                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                                 placeholder="Enter your email address...">
-                           </div>
-
-                        </div>
-                        <div x-show.transition.in="step === 2">
-
-                           <div class="mb-5">
-                              <label for="password" class="font-bold mb-1 text-gray-700 block">Set up password</label>
-                              <div class="text-gray-600 mt-2 mb-4">
-                                 Please create a secure password including the following criteria below.
-
-                                 <ul class="list-disc text-sm ml-4 mt-2">
-                                    <li>lowercase letters</li>
-                                    <li>numbers</li>
-                                    <li>capital letters</li>
-                                    <li>special characters</li>
-                                 </ul>
-                              </div>
-
-                              <div class="relative">
-                                 <input :type="togglePassword ? 'text' : 'password'" @keydown="checkPasswordStrength()"
-                                    x-model="password"
-                                    class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                                    placeholder="Your strong password...">
-
-                                 <div class="absolute right-0 bottom-0 top-0 px-3 py-3 cursor-pointer"
-                                    @click="togglePassword = !togglePassword">
-                                    <svg :class="{'hidden': !togglePassword, 'block': togglePassword }"
-                                       xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current text-gray-500"
-                                       viewBox="0 0 24 24">
-                                       <path
-                                          d="M12 19c.946 0 1.81-.103 2.598-.281l-1.757-1.757C12.568 16.983 12.291 17 12 17c-5.351 0-7.424-3.846-7.926-5 .204-.47.674-1.381 1.508-2.297L4.184 8.305c-1.538 1.667-2.121 3.346-2.132 3.379-.069.205-.069.428 0 .633C2.073 12.383 4.367 19 12 19zM12 5c-1.837 0-3.346.396-4.604.981L3.707 2.293 2.293 3.707l18 18 1.414-1.414-3.319-3.319c2.614-1.951 3.547-4.615 3.561-4.657.069-.205.069-.428 0-.633C21.927 11.617 19.633 5 12 5zM16.972 15.558l-2.28-2.28C14.882 12.888 15 12.459 15 12c0-1.641-1.359-3-3-3-.459 0-.888.118-1.277.309L8.915 7.501C9.796 7.193 10.814 7 12 7c5.351 0 7.424 3.846 7.926 5C19.624 12.692 18.76 14.342 16.972 15.558z" />
-                                    </svg>
-
-                                    <svg :class="{'hidden': togglePassword, 'block': !togglePassword }"
-                                       xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current text-gray-500"
-                                       viewBox="0 0 24 24">
-                                       <path
-                                          d="M12,9c-1.642,0-3,1.359-3,3c0,1.642,1.358,3,3,3c1.641,0,3-1.358,3-3C15,10.359,13.641,9,12,9z" />
-                                       <path
-                                          d="M12,5c-7.633,0-9.927,6.617-9.948,6.684L1.946,12l0.105,0.316C2.073,12.383,4.367,19,12,19s9.927-6.617,9.948-6.684 L22.054,12l-0.105-0.316C21.927,11.617,19.633,5,12,5z M12,17c-5.351,0-7.424-3.846-7.926-5C4.578,10.842,6.652,7,12,7 c5.351,0,7.424,3.846,7.926,5C19.422,13.158,17.348,17,12,17z" />
-                                    </svg>
-                                 </div>
-                              </div>
-
-                              <div class="flex items-center mt-4 h-3">
-                                 <div class="w-2/3 flex justify-between h-2">
-                                    <div
-                                       :class="{ 'bg-red-400': passwordStrengthText == 'Too weak' ||  passwordStrengthText == 'Could be stronger' || passwordStrengthText == 'Strong password' }"
-                                       class="h-2 rounded-full mr-1 w-1/3 bg-gray-300"></div>
-                                    <div
-                                       :class="{ 'bg-orange-400': passwordStrengthText == 'Could be stronger' || passwordStrengthText == 'Strong password' }"
-                                       class="h-2 rounded-full mr-1 w-1/3 bg-gray-300"></div>
-                                    <div :class="{ 'bg-green-400': passwordStrengthText == 'Strong password' }"
-                                       class="h-2 rounded-full w-1/3 bg-gray-300"></div>
-                                 </div>
-                                 <div x-text="passwordStrengthText"
-                                    class="text-gray-500 font-medium text-sm ml-3 leading-none"></div>
-                              </div>
-
-                              <p class="mt-5 text-gray-600">Inspired from dribbble shot: Exploration for a password
-                                 strength meter by <a href="https://dribbble.com/OvertonGraphics"
-                                    class="text-blue-500">Josh Overton</a>.</p>
-                           </div>
-
-                        </div>
-                        <div x-show.transition.in="step === 3">
-                           <div class="mb-5">
-                              <label for="email" class="font-bold mb-1 text-gray-700 block">Gender</label>
-
-                              <div class="flex">
-                                 <label
-                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm mr-4">
-                                    <div class="text-teal-600 mr-3">
-                                       <input type="radio" x-model="gender" value="Male"
-                                          class="form-radio focus:outline-none focus:shadow-outline" />
-                                    </div>
-                                    <div class="select-none text-gray-700">Male</div>
-                                 </label>
-
-                                 <label
-                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm">
-                                    <div class="text-teal-600 mr-3">
-                                       <input type="radio" x-model="gender" value="Female"
-                                          class="form-radio focus:outline-none focus:shadow-outline" />
-                                    </div>
-                                    <div class="select-none text-gray-700">Female</div>
-                                 </label>
-                              </div>
-                           </div>
-
-                           <div class="mb-5">
-                              <label for="profession" class="font-bold mb-1 text-gray-700 block">Profession</label>
-                              <input type="profession"
-                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                                 placeholder="eg. Web Developer">
-                           </div>
-                        </div>
-                     </div>
-                     <!-- / Step Content -->
-                  </div>
-               </div>
-
-               <!-- Bottom Navigation -->
-               <!-- <div class="fixed bottom-0 left-0 right-0 py-5 bg-white shadow-md" x-show="step != 'complete'">
-                  <div class="max-w-3xl mx-auto px-4">
-                     <div class="flex justify-between">
-                        <div class="w-1/2">
-                           <button x-show="step > 1" @click="step--"
-                              class="w-32 focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border">Previous</button>
-                        </div>
-
-                        <div class="w-1/2 text-right">
-                           <button x-show="step < 6" @click="step++"
-                              class="w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium">Next</button>
-
-                           <button @click="step = 'complete'" x-show="step === 6"
-                              class="w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium">Complete</button>
-                        </div>
-                     </div>
-                  </div>
-               </div> -->
-
-
-               <div class="grid gap-4 grid-cols-1 lg:grid-cols-[2fr_1fr]">
-                  <!-- Form -->
-                  <div class="form-wrapper border border-primary-700 rounded-lg card-shadow bg-white overflow-hidden">
-                     <!-- Navigation -->
-                     <ul class="navigation">
-                        <li class="step completed"
-                           :class="{ 'completed': step >= 1 || step == 'complete' ,'active': step == 1 }"
-                           @click="step = 1">
-                           <span>1</span>
-                           <span class="hidden xl:inline-block">Your City</span>
-                        </li>
-                        <li class="step" :class="{ 'completed': step >= 2 || step == 'complete', 'active': step == 2 }"
-                           @click="step = 2">
-                           <span>2</span>
-                           <span class="hidden xl:inline-block">Delivery Type</span>
-                        </li>
-                        <li class="step" :class="{ 'completed': step >= 3 || step == 'complete','active': step == 3 }"
-                           @click="step = 3">
-                           <span>3</span>
-                           <span class="hidden xl:inline-block">The Vehicle</span>
-                        </li>
-                        <li class="step" :class="{ 'completed': step >= 4 || step == 'complete','active': step == 4 }"
-                           @click="step = 4">
-                           <span>4</span>
-                           <span class="hidden xl:inline-block">The services</span>
-                        </li>
-                        <li class="step" :class="{ 'completed': step >= 5 || step == 'complete','active': step == 5 }"
-                           @click="step = 5">
-                           <span>5</span>
-                           <span class="hidden xl:inline-block">Product Categories</span>
-                        </li>
-                        <li class="step" :class="{ 'completed': step >= 6 || step == 'complete','active': step == 6 }"
-                           @click="step = 6">
-                           <span>6</span>
-                           <span class="hidden xl:inline-block">Book <br> a Free Pilot</span>
-                        </li>
-                     </ul>
-
-                     <div class="step-wrapper" x-show.transition="step != 'complete'">
-                        <!-- Step Content -->
-                        <div x-show.transition.in="step === 1" class="select-city">
-                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">Select your city</h3>
-
-                           <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                              <div class="optionWrapper">
-                                 <input type="radio" name="city" id="cityBanglore" value="Banglore" class="hidden">
-                                 <label for="cityBanglore" class="block hover:text-primary-700 cursor-pointer"
-                                    @click="step++">
-                                    <div class="aspect-video overflow-hidden">
-                                       <img src="./assets/img/banglore.jpg" alt="Banglore"
-                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
-                                    </div>
-                                    <h4 class="text-lg font-bold mt-1">Banglore</h4>
-                                 </label>
-                              </div>
-                              <div class="optionWrapper">
-                                 <input type="radio" name="city" id="cityHyderabad" value="Hyderabad" class="hidden">
-                                 <label for="cityHyderabad" class="block hover:text-primary-700 cursor-pointer"
-                                    @click="step++">
-                                    <div class="aspect-video overflow-hidden">
-                                       <img src="./assets/img/hydrabad.jpg" alt="Hydrabad"
-                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
-                                    </div>
-                                    <h4 class="text-lg font-bold mt-1">Hyderabad</h4>
-                                 </label>
-                              </div>
-                              <div class="optionWrapper">
-                                 <input type="radio" name="city" id="cityIndia" value="India" class="hidden">
-                                 <label for="cityIndia" class="block  hover:text-primary-700 cursor-pointer"
-                                    @click="step++">
-                                    <div class="aspect-video overflow-hidden">
-                                       <img src="./assets/img/india.jpg" alt="India"
-                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
-                                    </div>
-                                    <h4 class="text-lg font-bold mt-1">PAN India</h4>
-                                 </label>
-                              </div>
-                           </div>
-                           <div class="mx-auto max-w-[400px] flex justify-center items-center my-8 gap-2">
-                              <hr class="border-t-1 flex-1">
-                              <span class="uppercase text-sm my-4 text-dark-300 font-light">or</span>
-                              <hr class="border-t-1 flex-1">
-                           </div>
-                           <div>
-                              <div class="form-group flex flex-col gap-1">
-                                 <label for="phoneNumber">Enter your City</label>
-                                 <input type="text" id="phoneNumber" placeholder="Enter full name"
-                                    class="form-control w-full p-2 px-3 border rounded-md" required>
-                                 <span class="error text-red italic font-[300] text-sm leading-[100%]"
-                                    id="phoneNumberError"></span>
-                                 <button class="btn btn__primary w-fit rounded-md py-2 px-4" @click="step++">
-                                    <span>Next</span>
-                                 </button>
-                              </div>
-                           </div>
-                        </div>
-                        <div x-show.transition.in="step === 2" class="select-delivery">
-                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
-                              Select delivery type requried
-                           </h3>
-
-                           <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                              <div class="optionWrapper">
-                                 <input type="radio" name="delivery" id="deliveryHyperlocal" value="Hyperlocal"
-                                    class="hidden">
-                                 <label for="deliveryHyperlocal" class="block hover:text-primary-700 cursor-pointer"
-                                    @click="step++">
-                                    <div class="aspect-video overflow-hidden">
-                                       <img src="./assets/img/banglore.jpg" alt="Banglore"
-                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
-                                    </div>
-                                    <h4 class="text-lg font-bold mt-1">Hyperlocal Delivery</h4>
-                                    <p class="para text-sm">
-                                       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, provident!
-                                       Illo atque a nesciunt, doloribus explicabo suscipit culpa.
-                                    </p>
-                                 </label>
-                              </div>
-                              <div class="optionWrapper">
-                                 <input type="radio" name="delivery" id="deliveryLastMile" value="Last Mile"
-                                    class="hidden">
-                                 <label for="deliveryLastMile" class="block hover:text-primary-700 cursor-pointer"
-                                    @click="step++">
-                                    <div class="aspect-video overflow-hidden">
-                                       <img src="./assets/img/hydrabad.jpg" alt="Hydrabad"
-                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
-                                    </div>
-                                    <h4 class="text-lg font-bold mt-1">Last Mile Delivery</h4>
-                                    <p class="para text-sm">
-                                       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, provident!
-                                       Illo atque a nesciunt, doloribus explicabo suscipit culpa.
-                                    </p>
-                                 </label>
-                              </div>
-                           </div>
-
-                        </div>
-                        <div x-show.transition.in="step === 3">
-                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
-                              Select the vehicle
-                           </h3>
-                        </div>
-                        <div x-show.transition.in="step === 4">
-                           <div class="mb-5">
-                              <label for="email" class="font-bold mb-1 text-gray-700 block">Gender</label>
-
-                              <div class="flex">
-                                 <label
-                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm mr-4">
-                                    <div class="text-teal-600 mr-3">
-                                       <input type="radio" x-model="gender" value="Male"
-                                          class="form-radio focus:outline-none focus:shadow-outline" />
-                                    </div>
-                                    <div class="select-none text-gray-700">Male</div>
-                                 </label>
-
-                                 <label
-                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm">
-                                    <div class="text-teal-600 mr-3">
-                                       <input type="radio" x-model="gender" value="Female"
-                                          class="form-radio focus:outline-none focus:shadow-outline" />
-                                    </div>
-                                    <div class="select-none text-gray-700">Female</div>
-                                 </label>
-                              </div>
-                           </div>
-
-                           <div class="mb-5">
-                              <label for="profession" class="font-bold mb-1 text-gray-700 block">Profession</label>
-                              <input type="profession"
-                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                                 placeholder="eg. Web Developer">
-                           </div>
-                        </div>
-                        <div x-show.transition.in="step === 5">
-                           <div class="mb-5">
-                              <label for="email" class="font-bold mb-1 text-gray-700 block">Gender</label>
-
-                              <div class="flex">
-                                 <label
-                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm mr-4">
-                                    <div class="text-teal-600 mr-3">
-                                       <input type="radio" x-model="gender" value="Male"
-                                          class="form-radio focus:outline-none focus:shadow-outline" />
-                                    </div>
-                                    <div class="select-none text-gray-700">Male</div>
-                                 </label>
-
-                                 <label
-                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm">
-                                    <div class="text-teal-600 mr-3">
-                                       <input type="radio" x-model="gender" value="Female"
-                                          class="form-radio focus:outline-none focus:shadow-outline" />
-                                    </div>
-                                    <div class="select-none text-gray-700">Female</div>
-                                 </label>
-                              </div>
-                           </div>
-
-                           <div class="mb-5">
-                              <label for="profession" class="font-bold mb-1 text-gray-700 block">Profession</label>
-                              <input type="profession"
-                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                                 placeholder="eg. Web Developer">
-                           </div>
-                        </div>
-                        <div x-show.transition.in="step === 6">
-                           <div class="mb-5">
-                              <label for="email" class="font-bold mb-1 text-gray-700 block">Gender</label>
-
-                              <div class="flex">
-                                 <label
-                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm mr-4">
-                                    <div class="text-teal-600 mr-3">
-                                       <input type="radio" x-model="gender" value="Male"
-                                          class="form-radio focus:outline-none focus:shadow-outline" />
-                                    </div>
-                                    <div class="select-none text-gray-700">Male</div>
-                                 </label>
-
-                                 <label
-                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm">
-                                    <div class="text-teal-600 mr-3">
-                                       <input type="radio" x-model="gender" value="Female"
-                                          class="form-radio focus:outline-none focus:shadow-outline" />
-                                    </div>
-                                    <div class="select-none text-gray-700">Female</div>
-                                 </label>
-                              </div>
-                           </div>
-
-                           <div class="mb-5">
-                              <label for="profession" class="font-bold mb-1 text-gray-700 block">Profession</label>
-                              <input type="profession"
-                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
-                                 placeholder="eg. Web Developer">
-                           </div>
-                        </div>
-                        <!-- / Step Content -->
-                     </div>
-                  </div>
-
-                  <!-- Graphs -->
-                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 items-center justify-center">
-                     <div class="card grid gap-2 rounded-lg border card-shadow p-6 h-full">
-                        <h3 class="font-semibold text-xl lg:text-xl font-arimo tracking-tight">Graph title 1</h3>
-                        <div class="graph mt-4">
-                           <canvas id="graph1" class="w-full"></canvas>
-                        </div>
-                     </div>
-                     <div class="card grid gap-2 rounded-lg border card-shadow p-6 h-full">
-                        <h3 class="font-semibold text-xl lg:text-xl font-arimo tracking-tight">Graph title 3</h3>
-                        <div class="graph mt-4">
-                           <canvas id="graph3" class="w-full"></canvas>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-      </section>
-
       <!-- Hero -->
       <section class="hero min-h-[100vh]" data-aos="fade-up">
          <div class="container">
@@ -698,7 +210,7 @@
       </section>
 
       <!-- Vehicles -->
-      <section class="vehicles section-spacing py-20 bg-[#F8F8F8]">
+      <section class="vehicles section-spacing py-20 bg-[#F8F8F8]" id="vehicles">
          <div class="container">
             <div class="title flex flex-col justify-center items-center text-center px-5 w-full">
                <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">We provide</p>
@@ -1102,6 +614,781 @@
                </div>
             </div>
          </div>
+      </section>
+
+      <!-- Interactive Form -->
+      <section class="multi-form section-spacing" id="bookAPilot">
+         <div class="container">
+            <div x-data="app()" x-cloak>
+               <!-- <div class="max-w-3xl mx-auto px-4 py-10">
+                  <div x-show.transition="step === 'complete'">
+                     <div class="bg-white rounded-lg p-10 flex items-center shadow justify-between">
+                        <div>
+                           <svg class="mb-4 h-20 w-20 text-green-500 mx-auto" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd"
+                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                 clip-rule="evenodd" />
+                           </svg>
+
+                           <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Registration Success</h2>
+
+                           <div class="text-gray-600 mb-8">
+                              Thank you. We have sent you an email to demo@demo.test. Please click the link in the
+                              message to activate your account.
+                           </div>
+
+                           <button @click="step = 1"
+                              class="w-40 block mx-auto focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border">Back
+                              to home</button>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div x-show.transition="step != 'complete'">
+                     <div class="border-b-2 py-4">
+                        <div class="uppercase tracking-wide text-xs font-bold text-gray-500 mb-1 leading-tight"
+                           x-text="`Step: ${step} of 3`"></div>
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                           <div class="flex-1">
+                              <div x-show="step === 1">
+                                 <div class="text-lg font-bold text-gray-700 leading-tight">Your Profile</div>
+                              </div>
+
+                              <div x-show="step === 2">
+                                 <div class="text-lg font-bold text-gray-700 leading-tight">Your Password</div>
+                              </div>
+
+                              <div x-show="step === 3">
+                                 <div class="text-lg font-bold text-gray-700 leading-tight">Tell me about yourself</div>
+                              </div>
+                           </div>
+
+                           <div class="flex items-center md:w-64">
+                              <div class="w-full bg-white rounded-full mr-2">
+                                 <div class="rounded-full bg-green-500 text-xs leading-none h-2 text-center text-white"
+                                    :style="'width: '+ parseInt(step / 3 * 100) +'%'"></div>
+                              </div>
+                              <div class="text-xs w-10 text-gray-600" x-text="parseInt(step / 3 * 100) +'%'"></div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="py-10">
+                        <div x-show.transition.in="step === 1">
+                           <div class="mb-5 text-center">
+                              <div
+                                 class="mx-auto w-32 h-32 mb-2 border rounded-full relative bg-gray-100 mb-4 shadow-inset">
+                                 <img id="image" class="object-cover w-full h-32 rounded-full" :src="image" />
+                              </div>
+
+                              <label for="fileInput" type="button"
+                                 class="cursor-pointer inine-flex justify-between items-center focus:outline-none border py-2 px-4 rounded-lg shadow-sm text-left text-gray-600 bg-white hover:bg-gray-100 font-medium">
+                                 <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="inline-flex flex-shrink-0 w-6 h-6 -mt-1 mr-1" viewBox="0 0 24 24"
+                                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="0" y="0" width="24" height="24" stroke="none"></rect>
+                                    <path
+                                       d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />
+                                    <circle cx="12" cy="13" r="3" />
+                                 </svg>
+                                 Browse Photo
+                              </label>
+
+                              <div class="mx-auto w-48 text-gray-500 text-xs text-center mt-1">Click to add profile
+                                 picture</div>
+
+                              <input name="photo" id="fileInput" accept="image/*" class="hidden" type="file" @change="let file = document.getElementById('fileInput').files[0]; 
+                                 var reader = new FileReader();
+                                 reader.onload = (e) => image = e.target.result;
+                                 reader.readAsDataURL(file);">
+                           </div>
+
+                           <div class="mb-5">
+                              <label for="firstname" class="font-bold mb-1 text-gray-700 block">Firstname</label>
+                              <input type="text"
+                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                                 placeholder="Enter your firstname...">
+                           </div>
+
+                           <div class="mb-5">
+                              <label for="email" class="font-bold mb-1 text-gray-700 block">Email</label>
+                              <input type="email"
+                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                                 placeholder="Enter your email address...">
+                           </div>
+
+                        </div>
+                        <div x-show.transition.in="step === 2">
+
+                           <div class="mb-5">
+                              <label for="password" class="font-bold mb-1 text-gray-700 block">Set up password</label>
+                              <div class="text-gray-600 mt-2 mb-4">
+                                 Please create a secure password including the following criteria below.
+
+                                 <ul class="list-disc text-sm ml-4 mt-2">
+                                    <li>lowercase letters</li>
+                                    <li>numbers</li>
+                                    <li>capital letters</li>
+                                    <li>special characters</li>
+                                 </ul>
+                              </div>
+
+                              <div class="relative">
+                                 <input :type="togglePassword ? 'text' : 'password'" @keydown="checkPasswordStrength()"
+                                    x-model="password"
+                                    class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                                    placeholder="Your strong password...">
+
+                                 <div class="absolute right-0 bottom-0 top-0 px-3 py-3 cursor-pointer"
+                                    @click="togglePassword = !togglePassword">
+                                    <svg :class="{'hidden': !togglePassword, 'block': togglePassword }"
+                                       xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current text-gray-500"
+                                       viewBox="0 0 24 24">
+                                       <path
+                                          d="M12 19c.946 0 1.81-.103 2.598-.281l-1.757-1.757C12.568 16.983 12.291 17 12 17c-5.351 0-7.424-3.846-7.926-5 .204-.47.674-1.381 1.508-2.297L4.184 8.305c-1.538 1.667-2.121 3.346-2.132 3.379-.069.205-.069.428 0 .633C2.073 12.383 4.367 19 12 19zM12 5c-1.837 0-3.346.396-4.604.981L3.707 2.293 2.293 3.707l18 18 1.414-1.414-3.319-3.319c2.614-1.951 3.547-4.615 3.561-4.657.069-.205.069-.428 0-.633C21.927 11.617 19.633 5 12 5zM16.972 15.558l-2.28-2.28C14.882 12.888 15 12.459 15 12c0-1.641-1.359-3-3-3-.459 0-.888.118-1.277.309L8.915 7.501C9.796 7.193 10.814 7 12 7c5.351 0 7.424 3.846 7.926 5C19.624 12.692 18.76 14.342 16.972 15.558z" />
+                                    </svg>
+
+                                    <svg :class="{'hidden': togglePassword, 'block': !togglePassword }"
+                                       xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current text-gray-500"
+                                       viewBox="0 0 24 24">
+                                       <path
+                                          d="M12,9c-1.642,0-3,1.359-3,3c0,1.642,1.358,3,3,3c1.641,0,3-1.358,3-3C15,10.359,13.641,9,12,9z" />
+                                       <path
+                                          d="M12,5c-7.633,0-9.927,6.617-9.948,6.684L1.946,12l0.105,0.316C2.073,12.383,4.367,19,12,19s9.927-6.617,9.948-6.684 L22.054,12l-0.105-0.316C21.927,11.617,19.633,5,12,5z M12,17c-5.351,0-7.424-3.846-7.926-5C4.578,10.842,6.652,7,12,7 c5.351,0,7.424,3.846,7.926,5C19.422,13.158,17.348,17,12,17z" />
+                                    </svg>
+                                 </div>
+                              </div>
+
+                              <div class="flex items-center mt-4 h-3">
+                                 <div class="w-2/3 flex justify-between h-2">
+                                    <div
+                                       :class="{ 'bg-red-400': passwordStrengthText == 'Too weak' ||  passwordStrengthText == 'Could be stronger' || passwordStrengthText == 'Strong password' }"
+                                       class="h-2 rounded-full mr-1 w-1/3 bg-gray-300"></div>
+                                    <div
+                                       :class="{ 'bg-orange-400': passwordStrengthText == 'Could be stronger' || passwordStrengthText == 'Strong password' }"
+                                       class="h-2 rounded-full mr-1 w-1/3 bg-gray-300"></div>
+                                    <div :class="{ 'bg-green-400': passwordStrengthText == 'Strong password' }"
+                                       class="h-2 rounded-full w-1/3 bg-gray-300"></div>
+                                 </div>
+                                 <div x-text="passwordStrengthText"
+                                    class="text-gray-500 font-medium text-sm ml-3 leading-none"></div>
+                              </div>
+
+                              <p class="mt-5 text-gray-600">Inspired from dribbble shot: Exploration for a password
+                                 strength meter by <a href="https://dribbble.com/OvertonGraphics"
+                                    class="text-blue-500">Josh Overton</a>.</p>
+                           </div>
+
+                        </div>
+                        <div x-show.transition.in="step === 3">
+                           <div class="mb-5">
+                              <label for="email" class="font-bold mb-1 text-gray-700 block">Gender</label>
+
+                              <div class="flex">
+                                 <label
+                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm mr-4">
+                                    <div class="text-teal-600 mr-3">
+                                       <input type="radio" x-model="gender" value="Male"
+                                          class="form-radio focus:outline-none focus:shadow-outline" />
+                                    </div>
+                                    <div class="select-none text-gray-700">Male</div>
+                                 </label>
+
+                                 <label
+                                    class="flex justify-start items-center text-truncate rounded-lg bg-white pl-4 pr-6 py-3 shadow-sm">
+                                    <div class="text-teal-600 mr-3">
+                                       <input type="radio" x-model="gender" value="Female"
+                                          class="form-radio focus:outline-none focus:shadow-outline" />
+                                    </div>
+                                    <div class="select-none text-gray-700">Female</div>
+                                 </label>
+                              </div>
+                           </div>
+
+                           <div class="mb-5">
+                              <label for="profession" class="font-bold mb-1 text-gray-700 block">Profession</label>
+                              <input type="profession"
+                                 class="w-full px-4 py-3 rounded-lg shadow-sm focus:outline-none focus:shadow-outline text-gray-600 font-medium"
+                                 placeholder="eg. Web Developer">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+
+               <!-- Bottom Navigation -->
+               <!-- <div class="fixed bottom-0 left-0 right-0 py-5 bg-white shadow-md" x-show="step != 'complete'">
+                  <div class="max-w-3xl mx-auto px-4">
+                     <div class="flex justify-between">
+                        <div class="w-1/2">
+                           <button x-show="step > 1" @click="step--"
+                              class="w-32 focus:outline-none py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border">Previous</button>
+                        </div>
+
+                        <div class="w-1/2 text-right">
+                           <button x-show="step < 6" @click="step++"
+                              class="w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium">Next</button>
+
+                           <button @click="step = 'complete'" x-show="step === 6"
+                              class="w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium">Complete</button>
+                        </div>
+                     </div>
+                  </div>
+               </div> -->
+
+
+               <div class="grid gap-4 grid-cols-1 lg:grid-cols-[2fr_1fr]">
+                  <!-- Form -->
+                  <div class="form-wrapper border rounded-lg card-shadow bg-white overflow-hidden">
+                     <!-- Navigation -->
+                     <ul class="navigation bg-gray-100">
+                        <li class="step completed"
+                           :class="{ 'completed': step >= 1 || step == 'complete' ,'active': step == 1 }"
+                           @click="step = 1">
+                           <span>1</span>
+                           <span class="hidden xl:inline-block">Your City</span>
+                        </li>
+                        <li class="step" :class="{ 'completed': step >= 2 || step == 'complete', 'active': step == 2 }"
+                           @click="step = 2">
+                           <span>2</span>
+                           <span class="hidden xl:inline-block">Delivery Type</span>
+                        </li>
+                        <li class="step" :class="{ 'completed': step >= 3 || step == 'complete','active': step == 3 }"
+                           @click="step = 3">
+                           <span>3</span>
+                           <span class="hidden xl:inline-block">The Vehicle</span>
+                        </li>
+                        <li class="step" :class="{ 'completed': step >= 4 || step == 'complete','active': step == 4 }"
+                           @click="step = 4">
+                           <span>4</span>
+                           <span class="hidden xl:inline-block">The services</span>
+                        </li>
+                        <li class="step" :class="{ 'completed': step >= 5 || step == 'complete','active': step == 5 }"
+                           @click="step = 5">
+                           <span>5</span>
+                           <span class="hidden xl:inline-block">Product Categories</span>
+                        </li>
+                        <li class="step" :class="{ 'completed': step >= 6 || step == 'complete','active': step == 6 }"
+                           @click="step = 6">
+                           <span>6</span>
+                           <span class="hidden xl:inline-block">Book <br> a Free Pilot</span>
+                        </li>
+                     </ul>
+
+                     <div class="step-wrapper" x-show.transition="step != 'complete'">
+                        <!-- Step Content -->
+                        <div x-show.transition.in="step === 1" class="select-city">
+                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize bink">Select your city</h3>
+
+                           <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                              <div class="optionWrapper">
+                                 <input type="radio" name="city" id="cityBanglore" value="Banglore" class="hidden">
+                                 <label for="cityBanglore"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative"
+                                    @click="step++">
+                                    <div
+                                       class="customCheck absolute top-2 left-2 z-[10] rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/banglore.jpg" alt="Banglore"
+                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1">Banglore</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="radio" name="city" id="cityHyderabad" value="Hyderabad" class="hidden">
+                                 <label for="cityHyderabad"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative"
+                                    @click="step++">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/hydrabad.jpg" alt="Hydrabad"
+                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1">Hyderabad</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="radio" name="city" id="cityIndia" value="India" class="hidden">
+                                 <label for="cityIndia"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative"
+                                    @click="step++">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/india.jpg" alt="India"
+                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1">PAN India</h4>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="mx-auto max-w-[400px] flex justify-center items-center my-8 gap-2">
+                              <hr class="border-t-1 flex-1">
+                              <span class="uppercase text-sm my-4 text-dark-300 font-light">or</span>
+                              <hr class="border-t-1 flex-1">
+                           </div>
+                           <div>
+                              <div class="form-group flex flex-col gap-1">
+                                 <label for="phoneNumber">Enter your City</label>
+                                 <input type="text" id="phoneNumber" placeholder="Enter full name"
+                                    class="form-control w-full p-2 px-3 border rounded-md" required>
+                                 <span class="error text-red italic font-[300] text-sm leading-[100%]"
+                                    id="phoneNumberError"></span>
+                                 <div class="flex flex-wrap items-center gap-4 mt-4">
+                                    <button class="btn btn__primary" @click="step++">
+                                       <span>Save & Next</span>
+                                       <i class="bi bi-arrow-right"></i>
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div x-show.transition.in="step === 2" class="select-delivery">
+                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
+                              Select delivery type requried
+                           </h3>
+                           <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                              <div class="optionWrapper">
+                                 <input type="radio" name="delivery" id="deliveryHyperlocal" value="Hyperlocal"
+                                    class="hidden">
+                                 <label for="deliveryHyperlocal"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative"
+                                    @click="step++">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/services/hyperlocal-deliveries.png" alt="Hyperlocal"
+                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1">Hyperlocal Delivery</h4>
+                                    <p class="para text-sm">
+                                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    </p>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="radio" name="delivery" id="deliveryLastMile" value="Last Mile"
+                                    class="hidden">
+                                 <label for="deliveryLastMile"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative"
+                                    @click="step++">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/services/fullfilment-centers.png" alt="Last Mile Delivery"
+                                          class="object-cover h-full w-fit hover:scale-150 ease-in duration-300">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1">Last Mile Delivery</h4>
+                                    <p class="para text-sm">
+                                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    </p>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div x-show.transition.in="step === 3" class="select-vehicle">
+                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
+                              Select the vehicle
+                           </h3>
+                           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                              <div class="optionWrapper">
+                                 <input type="radio" name="vehicle" id="vehicleHeroNYX" value="Hero Nyx" class="hidden">
+                                 <label for="vehicleHeroNYX"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/vehical/thumbnail/hero-nyx.svg" alt="Hero Nyx"
+                                          class="object-cover">
+                                    </div>
+                                    <hr class="my-2">
+                                    <h4 class="text-lg font-bold mt-1 text-center">Hero Nyx</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="radio" name="vehicle" id="vehicleEagle" value="Eagle" class="hidden">
+                                 <label for="vehicleEagle"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/vehical/thumbnail/eagle.svg" alt="Eagle"
+                                          class="object-cover">
+                                    </div>
+                                    <hr class="my-2">
+                                    <h4 class="text-lg font-bold mt-1 text-center">Eagle</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="radio" name="vehicle" id="vehicleRage" value="Rage +" class="hidden">
+                                 <label for="vehicleRage"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/vehical/thumbnail/rage-plus.svg" alt="Rage +"
+                                          class="object-cover">
+                                    </div>
+                                    <hr class="my-2">
+                                    <h4 class="text-lg font-bold mt-1 text-center">Rage +</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="radio" name="vehicle" id="vehicleEular" value="Eular" class="hidden">
+                                 <label for="vehicleEular"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/vehical/thumbnail/eular.svg" alt="Eular"
+                                          class="object-cover">
+                                    </div>
+                                    <hr class="my-2">
+                                    <h4 class="text-lg font-bold mt-1 text-center">Eular</h4>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="flex flex-wrap items-center gap-4 mt-4">
+                              <button class="btn btn__primary" @click="step++">
+                                 <span>Save & Next</span>
+                                 <i class="bi bi-arrow-right"></i>
+                              </button>
+                              <a href="/our-services.html#vehicles"
+                                 class="font-arimo underline text-primary-700 hover:text-primary-500">
+                                 <span>Learn More</span>
+                              </a>
+                           </div>
+                        </div>
+                        <div x-show.transition.in="step === 4" class="select-service">
+                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
+                              Choose the services
+                           </h3>
+                           <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                              <div class="optionWrapper">
+                                 <label for="vehicleHeroNYX"
+                                    class="block cursor-pointer rounded-lg bg-gray-100 border border-dark-100 p-4 relative"
+                                    title="Mandatory">
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/vehical/thumbnail/hero-nyx.svg" alt="Hero Nyx"
+                                          class="object-cover">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1 text-center">Driver</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <label for="vehicleEagle"
+                                    class="block cursor-pointer rounded-lg bg-gray-100 border border-dark-100 p-4 relative"
+                                    title="Mandatory">
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/vehical/thumbnail/eagle.svg" alt="Eagle"
+                                          class="object-cover">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1 text-center">Vehicle</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="radio" name="service" id="serviceSoftware" value="Software"
+                                    class="hidden">
+                                 <label for="serviceSoftware"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative"
+                                    title="Choose & save upto 5% to 10% in delivery cost.">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/services/software.png" alt="SaaS" class="object-cover">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1 text-center">Software</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="radio" name="service" id="serviceWarehouse" value="Warehouse"
+                                    class="hidden">
+                                 <label for="serviceWarehouse"
+                                    class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-4 relative">
+                                    <div
+                                       class="customCheck absolute  z-[10] top-2 left-2 rounded-full w-5 lg:w-7 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-video overflow-hidden">
+                                       <img src="./assets/img/services/last-mile-deliveries.png" alt="WaaS"
+                                          class="object-cover">
+                                    </div>
+                                    <h4 class="text-lg font-bold mt-1 text-center">Warehouse</h4>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="flex flex-wrap items-center gap-4 mt-4">
+                              <button class="btn btn__primary" @click="step++">
+                                 <span>Save & Next</span>
+                                 <i class="bi bi-arrow-right"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div x-show.transition.in="step === 5" class="select-product">
+                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
+                              Select product Categories
+                           </h3>
+                           <div class="flex flex-wrap gap-4">
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productDairy" value="Dairy" class="hidden">
+                                 <label for="productDairy"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Milk.png" alt="Dairy" class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Dairy</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productFruits" value="Fruits & Vegitables"
+                                    class="hidden">
+                                 <label for="productFruits"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Fruit.png" alt="Fruits"
+                                          class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Fruits & Vegitables
+                                    </h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productElectronics" value="Electronics"
+                                    class="hidden">
+                                 <label for="productElectronics"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Smartphone.png" alt="Electronics"
+                                          class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Electronics</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productMedicines" value="Medicines"
+                                    class="hidden">
+                                 <label for="productMedicines"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Pharmacy.png" alt="Medicines"
+                                          class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Medicines</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productBeverages" value="Beverages"
+                                    class="hidden">
+                                 <label for="productBeverages"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Food.png" alt="Food" class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Beverages</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productGiftings" value="Giftings"
+                                    class="hidden">
+                                 <label for="productGiftings"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Giftbox.png" alt="Gift"
+                                          class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Giftings</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productEcomm" value="E-comm Packages"
+                                    class="hidden">
+                                 <label for="productEcomm"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Box.png" alt="E-comm Packages"
+                                          class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">E-comm Packages</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productCakes" value="Cakes" class="hidden">
+                                 <label for="productCakes"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Cake.png" alt="Cakes" class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Cakes</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productFood" value="Food" class="hidden">
+                                 <label for="productFood"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Fried rice.png" alt="Food"
+                                          class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Food</h4>
+                                 </label>
+                              </div>
+                              <div class="optionWrapper">
+                                 <input type="checkbox" name="product" id="productMeat" value="Meat & Fish"
+                                    class="hidden">
+                                 <label for="productMeat"
+                                    class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
+                                    <div
+                                       class="customCheck top-2 left-2 rounded-md w-5 aspect-square bg-dark-100 border border-dark-200">
+                                    </div>
+                                    <div class="aspect-square overflow-hidden">
+                                       <img src="./assets/img/flaticons/Meat.png" alt="Meat & Fish"
+                                          class="object-cover w-8">
+                                    </div>
+                                    <h4 class="font-bold mt-1 text-center leading-[100%]">Meat & Fish</h4>
+                                 </label>
+                              </div>
+                           </div>
+                           <div class="flex flex-wrap items-center gap-4 mt-4">
+                              <button class="btn btn__primary" @click="step++">
+                                 <span>Save & Next</span>
+                                 <i class="bi bi-arrow-right"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div x-show.transition.in="step === 6">
+                           <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-4">
+                              <div class="hidden lg:block ">
+                                 <h4 class="font-bold tracking-tight text-xl mb-4 capitalize">
+                                    Your Selection
+                                 </h4>
+                                 <ul class="text-xs font-light grid gap-2">
+                                    <li class="flex items-center flex-wrap gap-1">
+                                       <span>City</span>
+                                       <i class="bi bi-arrow-right"></i>
+                                       <span class="pill">banglore</span>
+                                    </li>
+                                    <li class="flex items-center flex-wrap gap-1">
+                                       <span>Delivery Type</span>
+                                       <i class="bi bi-arrow-right"></i>
+                                       <span class="pill">Hyperlocal</span>
+                                    </li>
+                                    <li class="flex items-center flex-wrap gap-1">
+                                       <span>Vehicle</span>
+                                       <i class="bi bi-arrow-right"></i>
+                                       <span class="pill">Hero NYX</span>
+                                    </li>
+                                    <li class="flex items-center flex-wrap gap-1">
+                                       <span>Vehicle</span>
+                                       <i class="bi bi-arrow-right"></i>
+                                       <span class="pill">Software</span>
+                                       <span class="pill">Warehouse</span>
+                                    </li>
+                                    <li class="flex items-center flex-wrap gap-1">
+                                       <span>Products</span>
+                                       <i class="bi bi-arrow-right"></i>
+                                       <span class="pill">Dairy</span>
+                                       <span class="pill">Meat & Fish</span>
+                                       <span class="pill">Vegitables</span>
+                                       <span class="pill">Gifting</span>
+                                       <span class="pill">Milk</span>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="grid gap-2 lg:bg-gray-50 lg:rounded-lg lg:p-8">
+                                 <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
+                                    Book a free Pilot
+                                 </h3>
+                                 <div class="form-group flex flex-col gap-1">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" placeholder="Enter full name"
+                                       class="form-control w-full p-2 px-3 border rounded-md" required>
+                                    <span class="error text-red italic font-[300] text-sm leading-[100%]"
+                                       id="fullNameError"></span>
+                                 </div>
+                                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+                                    <div class="form-group flex flex-col gap-1">
+                                       <label for="email">Email</label>
+                                       <input type="text" id="email" placeholder="Enter full name"
+                                          class="form-control w-full p-2 px-3 border rounded-md" required>
+                                       <span class="error text-red italic font-[300] text-sm leading-[100%]"
+                                          id="emailError"></span>
+                                    </div>
+                                    <div class="form-group flex flex-col gap-1">
+                                       <label for="phoneNumber">Contact Number</label>
+                                       <input type="text" id="phoneNumber" placeholder="Enter full name"
+                                          class="form-control w-full p-2 px-3 border rounded-md" required>
+                                       <span class="error text-red italic font-[300] text-sm leading-[100%]"
+                                          id="phoneNumberError"></span>
+                                    </div>
+                                 </div>
+
+                                 <button class="btn btn__primary w-fit mt-2" id="submitContactFormBtn">
+                                    <i class="bi bi-send-fill"></i>
+                                    <span>Book a Pilot</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- / Step Content -->
+                     </div>
+                  </div>
+
+                  <!-- Graphs -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 items-center justify-center">
+                     <div class="card grid gap-2 rounded-lg border card-shadow p-6 h-full bg-white">
+                        <h3 class="font-semibold text-xl lg:text-xl font-arimo tracking-tight">Graph title 1</h3>
+                        <div class="graph mt-4">
+                           <canvas id="graph1" class="w-full"></canvas>
+                        </div>
+                     </div>
+                     <div class="card grid gap-2 rounded-lg border card-shadow p-6 h-full bg-white">
+                        <h3 class="font-semibold text-xl lg:text-xl font-arimo tracking-tight">Graph title 3</h3>
+                        <div class="graph mt-4">
+                           <canvas id="graph3" class="w-full"></canvas>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
       </section>
 
       <!-- Clients -->
