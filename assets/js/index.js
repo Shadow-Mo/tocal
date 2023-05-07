@@ -52,10 +52,10 @@ $(document).ready(function () {
    });
 
    // Progress
-   var scrollOffset = 300;
+   var scrollOffset1 = 300;
    $(window).scroll(function () {
       // checking scroll position
-      if (($(window).scrollTop() + $(window).height() - scrollOffset) > $("#whyUs").position().top) {
+      if (($(window).scrollTop() + $(window).height() - scrollOffset1) > $("#whyUs").position().top) {
          $('.progress').each(function (i, obj) {
             // getting data change
             const dataChange = $(this).data("change");
