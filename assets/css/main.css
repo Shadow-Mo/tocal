@@ -519,12 +519,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "53%";
-    left: "43%";
+    top: "64%";
+    left: "37%";
   }
   to {
-    top: "23%";
-    left: "19%";
+    top: "48%";
+    left: "69%";
   }
 }
 .page__about .gallery__wrapper {
@@ -588,6 +588,40 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__about .statistics-slider-wrapper {
   position: relative;
 }
+.page__about .statistics-slider-wrapper .sub-dot {
+  width: 0.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: #005ce5;
+  position: absolute;
+  top: 28%;
+  left: 0.2rem;
+  z-index: 10;
+}
+.page__about .statistics-slider-wrapper .sub-dot.bottom {
+  top: initial;
+  bottom: 28%;
+}
+@media (min-width: 768px) {
+  .page__about .statistics-slider-wrapper .sub-dot {
+    top: 28%;
+    left: 5.2rem;
+  }
+  .page__about .statistics-slider-wrapper .sub-dot.bottom {
+    top: initial;
+    bottom: 28%;
+  }
+}
+@media (min-width: 976px) {
+  .page__about .statistics-slider-wrapper .sub-dot {
+    top: 25%;
+    left: 4.3rem;
+  }
+  .page__about .statistics-slider-wrapper .sub-dot.bottom {
+    top: initial;
+    bottom: 25%;
+  }
+}
 .page__about .statistics-slider-wrapper .statistics-slider {
   position: relative;
   transform: translateX(10%);
@@ -599,7 +633,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
   top: 50%;
   right: 103%;
   transform: translateY(-50%);
-  height: 50%;
+  height: 70%;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background: #1b1b1b;
@@ -644,6 +678,9 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 .page__about .statistics-slider-wrapper .slick-slide.slick-active p:first-child {
   font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Arimo", sans-serif;
+  letter-spacing: -2px;
 }
 @media (min-width: 976px) {
   .page__about .statistics-slider-wrapper .slick-slide.slick-active p:first-child {
@@ -661,7 +698,6 @@ nav #navbarToggle:checked ~ #navbarMenu {
   padding-left: 2rem;
 }
 .page__about .statistics-slider-wrapper .slick-slide.slick-active.slick-current .card p:first-child {
-  font-weight: 700;
   background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -895,7 +931,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
     color: #1b1b1b;
   }
   from {
-    color: red;
+    color: #ea2fa6;
   }
 }
 @keyframes blink-border {
@@ -903,7 +939,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
     border: 1px solid #e5e7eb;
   }
   from {
-    border: 1px solid red;
+    border: 1px solid #ea2fa6;
   }
 }
 [x-cloak] {
