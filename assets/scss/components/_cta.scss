@@ -11,12 +11,12 @@
       background: map-get($map: $primaryColor, $key: default);
       border: 1px solid map-get($map: $primaryColor, $key: default);
       &:hover {
-         background: map-get($map: $primaryColor, $key: 500);
-         border: 1px solid map-get($map: $primaryColor, $key: 500);
+         background: $purpleColor;
+         border: 1px solid $purpleColor;
       }
       &:focus {
-         background: map-get($map: $primaryColor, $key: 800);
-         border: 1px solid map-get($map: $primaryColor, $key: 800);
+         background: $purpleColor;
+         border: 1px solid $purpleColor;
       }
    }
    &__secondary {

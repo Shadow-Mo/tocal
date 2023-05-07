@@ -60,7 +60,7 @@ class WebsiteFooter extends HTMLElement {
                         </p>
                      </div>
                   </div>
-                  <div class="links flex flex-wrap gap-20 gap-y-10">
+                  <div class="links flex flex-wrap gap-20 lg:gap-32 gap-y-10 w-full lg:justify-center">
                      <ul class="flex flex-col gap-3">
                         <li>
                            <h4 class="text-lg font-[700]">Important Links</h4>
@@ -94,6 +94,7 @@ class WebsiteFooter extends HTMLElement {
                            </a>
                         </li>
                      </ul>
+                     <!--
                      <ul class="flex flex-col gap-3">
                         <li>
                            <h4 class="text-lg font-[700]">Miscellaneous</h4>
@@ -141,11 +142,17 @@ class WebsiteFooter extends HTMLElement {
                            </a>
                         </li>
                      </ul>
+                     -->
                      <ul class="flex flex-col gap-3">
                         <li>
                            <h4 class="text-lg font-[700]">Follow Us</h4>
                         </li>
                         <li class="flex flex-wrap gap-2">
+                           <a href="https://www.linkedin.com/company/dbyt-dynamics-mobility-solutions-private-limited/"
+                              class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#0077b5]"
+                              title="Connect with Us" target="_blank">
+                              <i class="bi bi-linkedin"></i>
+                           </a>
                            <a href="https://www.instagram.com/tocal.dbyt/"
                               class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#E1306C]"
                               title="Follow Us" target="_blank">
@@ -156,11 +163,6 @@ class WebsiteFooter extends HTMLElement {
                               title="Become a Friend" target="_blank">
                               <i class="bi bi-facebook"></i>
                            </a>
-                           <a href="https://www.linkedin.com/company/dbyt-dynamics-mobility-solutions-private-limited/"
-                              class="inline-block w-10 aspect-square rounded-lg bg-dark-700 flex items-center justify-center ease-in duration-300 hover:bg-[#0077b5]"
-                              title="Connect with Us" target="_blank">
-                              <i class="bi bi-linkedin"></i>
-                           </a>
                         </li>
                      </ul>
                   </div>
@@ -170,9 +172,8 @@ class WebsiteFooter extends HTMLElement {
          <!-- Copyright -->
          <div class="copyright bg-black">
             <div class="container">
-               <div class="flex justify-center items-center p-2 text-sm font-[300]">
-                  &copy; 2023. All rights reserved &nbsp;| &nbsp;<a href="https://www.tocal.in"
-                     class="underline hover:text-primary-600">tocal.in</a>
+               <div class="flex justify-center items-center text-center p-2 text-sm font-[300]">
+                  &copy; 2023. All rights reserved &nbsp;| &nbsp;DbyT Dynamics Mobility Solutions Pvt. Ltd.
                </div>
             </div>
          </div>
@@ -182,8 +183,17 @@ class WebsiteFooter extends HTMLElement {
                hidden flex justify-center items-center 
                w-10 aspect-square p-2 
                bg-black hover:bg-primary-700 rounded-lg cursor-pointer
-               fixed right-5 bottom-5 z-index-10" onclick="goToTop()" title="Go to top">
+               fixed right-7 bottom-[5.5rem] z-index-10" onclick="goToTop()" title="Go to top">
             <i class="bi bi-arrow-up"></i>
+         </div>
+
+         <!-- WhatsApp -->
+         <div href="#" class="
+               flex justify-center items-center 
+               w-14 aspect-square p-2 
+               bg-[#25d366] hover:bg-[#35897e] rounded-full cursor-pointer
+               fixed right-5 bottom-5 z-index-10" title="Send us a Message">
+            <i class="bi bi-whatsapp text-xl"></i>
          </div>
       </footer>
       `;

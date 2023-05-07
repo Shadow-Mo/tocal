@@ -95,6 +95,41 @@
       .statistics-slider-wrapper {
          position: relative;
 
+         .sub-dot {
+            width: 0.5rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 100%;
+            background: map-get($map: $primaryColor, $key: 700);
+            position: absolute;
+            top: 22%;
+            left: -0.4rem;
+            z-index: 10;
+
+            &.bottom {
+               top: initial;
+               bottom: 42%;
+            }
+
+            @include responsive(md) {
+               top: 20%;
+               left: 4.5rem;
+               &.bottom {
+                  top: initial;
+                  bottom: 40%;
+               }
+            }
+
+            @include responsive(lg) {
+               top: 20%;
+               left: 2.5rem;
+
+               &.bottom {
+                  top: initial;
+                  bottom: 20%;
+               }
+            }
+         }
+
          .statistics-slider {
             position: relative;
             transform: translateX(10%);
@@ -106,7 +141,7 @@
                top: 50%;
                right: 103%;
                transform: translateY(-50%);
-               height: 50%;
+               height: 70%;
                aspect-ratio: 1 / 1;
                border-radius: 100%;
                background: map-get($map: $darkColor, $key: 50);
@@ -150,6 +185,9 @@
             opacity: 1;
             p:first-child {
                font-size: 1.8rem;
+               font-weight: 700;
+               font-family: $font-primary;
+               letter-spacing: -2px;
 
                @include responsive(lg) {
                   font-size: 2.2rem;
@@ -162,7 +200,6 @@
                padding-left: 2rem;
 
                p:first-child {
-                  font-weight: 700;
                   background: linear-gradient(
                      135deg,
                      #ffbdad 0%,
