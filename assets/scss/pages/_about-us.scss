@@ -67,6 +67,7 @@
          .statistics-slider {
             position: relative;
             transform: translateX(10%);
+            max-width: 400px;
 
             &::after {
                content: "";
@@ -74,7 +75,7 @@
                top: 50%;
                right: 103%;
                transform: translateY(-50%);
-               height: 90%;
+               height: 50%;
                aspect-ratio: 1 / 1;
                border-radius: 100%;
                background: map-get($map: $darkColor, $key: 950);
@@ -96,6 +97,9 @@
 
             @include responsive(lg) {
                transform: translateX(40%);
+            }
+            @include responsive(md) {
+               transform: translateX(30%);
             }
          }
 
@@ -119,6 +123,10 @@
                @include responsive(lg) {
                   font-size: 2.2rem;
                }
+            }
+            p:last-child {
+               color: $whiteColor;
+               font-weight: 300 !important;
             }
          }
          .slick-slide.slick-active.slick-current {
