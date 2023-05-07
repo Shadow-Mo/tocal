@@ -226,6 +226,10 @@
                animation: 0.2s blink alternate infinite;
             }
          }
+
+         &.first {
+            animation: 0.2s blink-border alternate infinite;
+         }
       }
    }
 }
@@ -236,6 +240,14 @@
    }
    from {
       color: red;
+   }
+}
+@keyframes blink-border {
+   to {
+      border: 1px solid #e5e7eb;
+   }
+   from {
+      border: 1px solid red;
    }
 }
 

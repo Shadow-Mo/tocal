@@ -10,7 +10,6 @@ $(document).ready(function () {
       autoplayDuration: 2000
    });
 
-
    $('.content-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -128,7 +127,16 @@ $(document).ready(function () {
    });
 
 
+   // Form Interactions
+   $(".form-wrapper.first").click(() => {
+      $(".form-wrapper").removeClass("first");
+   })
+
+
 })
+
+
+
 // Multi Step Form
 function app() {
    return {
