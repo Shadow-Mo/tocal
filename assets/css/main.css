@@ -190,7 +190,7 @@ body {
 }
 .header.scroll .navbar {
   padding-block: 1rem;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #ea2fa6;
 }
 
 nav #navbarToggle:checked ~ #navbarMenu {
@@ -519,12 +519,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "64%";
-    left: "37%";
+    top: "57%";
+    left: "87%";
   }
   to {
-    top: "48%";
-    left: "69%";
+    top: "71%";
+    left: "79%";
   }
 }
 .page__about .gallery__wrapper {
