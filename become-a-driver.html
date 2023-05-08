@@ -61,7 +61,7 @@
       <section class="hero my-20">
          <div class="container">
             <div class="grid grid-cols-1 items-center lg:grid-cols-2 gap-10">
-               <div class="content flex flex-col gap-6 flex-1">
+               <div class="content flex flex-col gap-6 flex-1" data-aos="fade-right">
                   <h1 class="text-4xl lg:text-5xl font-bold">
                      Join us & Say goodbye to <span class="text-primary-700">low income</span>.
                   </h1>
@@ -76,7 +76,7 @@
                      </a>
                   </div>
                </div>
-               <div class="image order-first lg:order-last flex gap-4">
+               <div class="image order-first lg:order-last flex gap-4" data-aos="fade-left">
                   <img src="./assets/img/driver/hero1.svg" alt="Image 1"
                      class="mt-28 lg:mt-40 aspect-[2/3] border-t-2 border-primary-700 rounded-lg h-fit">
                   <img src="./assets/img/driver/hero2.svg" alt="Image 2"
@@ -91,7 +91,7 @@
       <!-- Why Join Tocal -->
       <section class="why-us section-spacing" id="perks">
          <div class="container">
-            <div class="title flex flex-col w-full">
+            <div class="title flex flex-col w-full" data-aos="fade-right">
                <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">Join Us To</p>
                <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
                   Earn minimum of <span class="text-primary-700">₹30,000/month</span> and
@@ -99,44 +99,47 @@
             </div>
 
             <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mt-14">
-               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
-                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
-                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white" data-aos="fade-up"
+                  data-aos-delay="0">
+                  <img src="./assets/img/icons/bike.svg" alt="Img 1" class="h-[32px] lg:h-[40px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
                      Own an EV for free
                   </p>
                </div>
-               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
-                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
-                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white" data-aos="fade-up"
+                  data-aos-delay="200">
+                  <img src="./assets/img/icons/fuel.svg" alt="Img 1" class="h-[32px] lg:h-[40px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
                      Zero petrol and maintenance cost
                   </p>
                </div>
-               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
-                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
-                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white" data-aos="fade-up"
+                  data-aos-delay="300">
+                  <img src="./assets/img/icons/salary.svg" alt="Img 1" class="h-[32px] lg:h-[40px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
                      Guaranteed fixed salary
                   </p>
                </div>
-               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
-                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
-                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white" data-aos="fade-up"
+                  data-aos-delay="400">
+                  <img src="./assets/img/icons/work-hours.svg" alt="Img 1"
+                     class="h-[32px] lg:h-[40px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
                      Flexible working hours
                   </p>
                </div>
-               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
-                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
-                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white" data-aos="fade-up"
+                  data-aos-delay="500">
+                  <img src="./assets/img/icons/payouts.svg" alt="Img 1"
+                     class="h-[32px] lg:h-[40px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
                      Weekly payouts
                   </p>
                </div>
-               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white">
-                  <img src="./assets/img/flaticons/assistance.svg" alt="Img 1"
-                     class="h-[48px] lg:h-[60px] aspect-square w-fit">
+               <div class="card card-shadow rounded-lg flex flex-col gap-4 p-6 bg-white" data-aos="fade-up"
+                  data-aos-delay="600">
+                  <img src="./assets/img/icons/insurance.svg" alt="Img 1"
+                     class="h-[32px] lg:h-[40px] aspect-square w-fit">
                   <p class="para lg:text-[18px] leading-[120%]">
                      Accident and medical insurance covered
                   </p>
@@ -147,19 +150,15 @@
 
       <!-- Earn Extra with Tocal -->
       <section class="earn-extra section-spacing py-20 card-shadow bg-white relative">
-         <!-- WHY ELEMENT -->
-         <img src="./assets/img/driver-why-element.svg" alt="Why Element"
-            class="absolute top-0 right-0 z-5 max-h-[100px] w-fit">
-
          <div class="container">
-            <div class="title flex flex-col w-full">
+            <div class="title flex flex-col w-full" data-aos="fade-right">
                <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
                   Join us & <span class="text-primary-700">Earn in many ways</span>
                </h2>
             </div>
 
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 lg:gap-8 mt-14">
-               <div class="card grid gap-2">
+               <div class="card grid gap-2" data-aos="zoom-in">
                   <div
                      class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
                      1</div>
@@ -169,7 +168,7 @@
                      reiciendis aperiam, facere incidunt amet excepturi minus.
                   </p>
                </div>
-               <div class="card grid gap-2">
+               <div class="card grid gap-2" data-aos="zoom-in" data-aos-delay="100">
                   <div
                      class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
                      2</div>
@@ -179,7 +178,7 @@
                      reiciendis aperiam, facere incidunt amet excepturi minus.
                   </p>
                </div>
-               <div class="card grid gap-2">
+               <div class="card grid gap-2" data-aos="zoom-in" data-aos-delay="200">
                   <div
                      class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
                      3</div>
@@ -189,7 +188,7 @@
                      reiciendis aperiam, facere incidunt amet excepturi minus.
                   </p>
                </div>
-               <div class="card grid gap-2">
+               <div class="card grid gap-2" data-aos="zoom-in" data-aos-delay="300">
                   <div
                      class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
                      4</div>
@@ -199,7 +198,7 @@
                      reiciendis aperiam, facere incidunt amet excepturi minus.
                   </p>
                </div>
-               <div class="card grid gap-2">
+               <div class="card grid gap-2" data-aos="zoom-in" data-aos-delay="400">
                   <div
                      class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
                      5</div>
@@ -209,7 +208,7 @@
                      reiciendis aperiam, facere incidunt amet excepturi minus.
                   </p>
                </div>
-               <div class="card grid gap-2">
+               <div class="card grid gap-2" data-aos="zoom-in" data-aos-delay="500">
                   <div
                      class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold text-xl font-arimo">
                      6</div>
@@ -219,7 +218,7 @@
                      reiciendis aperiam, facere incidunt amet excepturi minus.
                   </p>
                </div>
-               <div class="card grid gap-2">
+               <div class="card grid gap-2" data-aos="zoom-in" data-aos-delay="600">
                   <div
                      class="number w-10 lg:w-14 aspect-square flex justify-center items-center bg-dark-100 rounded-full font-bold font-arimo">
                      <i class="bi bi-asterisk text-sm"></i>
@@ -237,7 +236,205 @@
       <!-- Perks of Joining Us -->
       <section class="perks section-spacing">
          <div class="container">
-            unique perks section will go here
+            <h2 class="h-full tracking-tight grid text-center" data-aos="fade-in">
+               <span class="text-lg">Say no to toxic environment &</span>
+               <span class="text-3xl lg:text-4xl font-bold leading-[120%]">
+                  Enjoy the benefits of exciting perks!
+               </span>
+            </h2>
+
+            <div class="flex flex-wrap justify-center items-center gap-2 md:gap-4 mt-10 lg:mt-14">
+               <div
+                  class="grid gap-1 card p-4 card-shadow rounded-lg bg-white border max-w-full md:max-w-[300px] lg:max-w-[400px] hover:border-primary-700 hover:scale-105 ease-in duration-300"
+                  data-aos="zoom-out" data-aos-delay="100">
+                  <h3 class="font-bold text-xl tracking-tight">Promotion to fleet manager</h3>
+                  <p class="para">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cum.
+                  </p>
+               </div>
+               <div
+                  class="grid gap-1 card p-4 card-shadow rounded-lg bg-white border max-w-full md:max-w-[300px] lg:max-w-[400px] hover:border-primary-700 hover:scale-105 ease-in duration-300"
+                  data-aos="zoom-out" data-aos-delay="200">
+                  <h3 class="font-bold text-xl tracking-tight">Advance payouts</h3>
+                  <p class="para">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cum.
+                  </p>
+               </div>
+               <div
+                  class="grid gap-1 card p-4 card-shadow rounded-lg bg-white border max-w-full md:max-w-[300px] lg:max-w-[400px] hover:border-primary-700 hover:scale-105 ease-in duration-300"
+                  data-aos="zoom-out" data-aos-delay="300">
+                  <h3 class="font-bold text-xl tracking-tight">Family medical insurance</h3>
+                  <p class="para">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cum.
+                  </p>
+               </div>
+               <div
+                  class="grid gap-1 card p-4 card-shadow rounded-lg bg-white border max-w-full md:max-w-[300px] lg:max-w-[400px] hover:border-primary-700 hover:scale-105 ease-in duration-300"
+                  data-aos="zoom-out" data-aos-delay="400">
+                  <h3 class="font-bold text-xl tracking-tight">children education benefits</h3>
+                  <p class="para">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cum.
+                  </p>
+               </div>
+               <div
+                  class="grid gap-1 card p-4 card-shadow rounded-lg bg-white border max-w-full md:max-w-[300px] lg:max-w-[400px] hover:border-primary-700 hover:scale-105 ease-in duration-300"
+                  data-aos="zoom-out" data-aos-delay="500">
+                  <h3 class="font-bold text-xl tracking-tight">Safety kit for women drivers.</h3>
+                  <p class="para">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cum.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="location section-spacing">
+         <div class="container relative">
+            <div data-aos="flip-up"
+               class="location-inner bg-dark-950 text-white rounded-lg flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-20 p-10">
+               <div class="flex flex-col gap-4 items-center justify-center text-center w-full">
+                  <h2 class="h-full tracking-tight grid">
+                     <span class="text-lg">Hit the Road and Make Money:</span>
+                     <span class="text-3xl lg:text-4xl font-bold leading-[120%] text-gradient">
+                        Become a Driver Today!
+                     </span>
+                  </h2>
+                  <div class="flex flex-wrap items-center gap-4">
+                     <a href="/become-a-driver.html#perks" class="btn border-0 bg-[#25d366] hover:bg-[#35897e]">
+                        <i class="bi bi-whatsapp"></i>
+                        <span>Chat with Us</span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Our Fleet -->
+      <section class="fleet section-spacing">
+         <div class="container">
+            <!-- Title -->
+            <div class="title flex flex-col w-full text-center max-w-[800px] mx-auto">
+               <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
+                  Deliver to customer doorsteps to become a <span class="text-primary-700">sustainable delivery
+                     champion</span> and <span class="text-primary-700">earn</span>
+               </h2>
+            </div>
+            <!-- galley -->
+            <div class="galley-wrapper my-14 overflow-hidden" data-aos="fade-down" data-aos-delay="4000">
+               <div class="marquee">
+                  <div class="marquee__inner" id="marquee1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                  </div>
+                  <div class="marquee__inner" id="marquee2">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials section-spacing">
+         <div class="container">
+            <div class="title flex flex-col w-full">
+               <h2 class="text-3xl lg:text-4xl text-center font-[900] leading-[100%] tracking-tight w-full">
+                  What our driver's say about us!
+               </h2>
+            </div>
+
+            <!-- testominials slider -->
+            <div class="testimonial-wrapper relative mt-14">
+               <div class="testimonial-slider max-w-[850px] mx-auto px-14 lg:px-20">
+                  <div class="card">
+                     <div class="flex flex-col justify-center items-center gap-3 text-center">
+                        <!-- image -->
+                        <div
+                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
+                           <img src="/assets/img/clients/cakezone.svg" alt="Cake Zone">
+                        </div>
+                        <!-- Ratings -->
+                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                        </div>
+                        <!-- review -->
+                        <p class="para">
+                           Great customer service and very timely delivery. The fleet of drivers was great and worked
+                           very
+                           hard to make it to our customers' destination on time everyday . I very much appreciate the
+                           hard
+                           work and communication!
+                        </p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="flex flex-col justify-center items-center gap-3 text-center">
+                        <!-- image -->
+                        <div
+                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
+                           <img src="/assets/img/clients/sprink.svg" alt="Sprink">
+                        </div>
+                        <!-- Ratings -->
+                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                        </div>
+                        <!-- review -->
+                        <p class="para">
+                           I was very impressed by how quickly and professionally the TOCAL team works on ground to
+                           avoid
+                           any operations hassles. They understand our logistics pain points and work accordingly.
+                           Thanks
+                        </p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="flex flex-col justify-center items-center gap-3 text-center">
+                        <!-- image -->
+                        <div
+                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
+                           <img src="/assets/img/clients/gourmet-garden.svg" alt="Fourmet garden">
+                        </div>
+                        <!-- Ratings -->
+                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                           <i class="bi bi-star-fill"></i>
+                        </div>
+                        <!-- review -->
+                        <p class="para">
+                           We really appreciate your team providing timely service on short notices and catering to our
+                           rider requirements promptly at all our operating locations
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!-- btns -->
+               <div
+                  class="slider-btn absolute top-2/4 left-0 translate-y-2/4 z-50 w-full flex justify-between items-center p-4 lg:px-32 xl:px-48 text-xl lg:text-2xl">
+                  <button class="btn-prev"><i class="bi bi-chevron-left"></i></button>
+                  <button class="btn-next"><i class="bi bi-chevron-right"></i></button>
+               </div>
+            </div>
          </div>
       </section>
 
@@ -376,134 +573,6 @@
                         </div>
                      </li>
                   </ul>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!-- Our Fleet -->
-      <section class="fleet section-spacing">
-         <div class="container">
-            <!-- Title -->
-            <div class="title flex flex-col w-full text-center max-w-[800px] mx-auto">
-               <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
-                  Deliver to customer doorsteps to become a <span class="text-primary-700">sustainable delivery
-                     champion</span> and <span class="text-primary-700">earn</span>
-               </h2>
-            </div>
-            <!-- galley -->
-            <div class="galley-wrapper my-14 overflow-hidden">
-               <div class="marquee">
-                  <div class="marquee__inner" id="marquee1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                  </div>
-                  <div class="marquee__inner" id="marquee2">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                     <img src="./assets/img/driver/hero1.svg" alt="Image 1">
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-
-      <!-- Testimonials -->
-      <section class="testimonials section-spacing">
-         <div class="container">
-            <div class="title flex flex-col w-full">
-               <h2 class="text-3xl lg:text-4xl text-center font-[900] leading-[100%] tracking-tight w-full">
-                  What our driver's say about us!
-               </h2>
-            </div>
-
-            <!-- testominials slider -->
-            <div class="testimonial-wrapper relative mt-14">
-               <div class="testimonial-slider max-w-[850px] mx-auto px-14 lg:px-20">
-                  <div class="card">
-                     <div class="flex flex-col justify-center items-center gap-3 text-center">
-                        <!-- image -->
-                        <div
-                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
-                           <img src="/assets/img/clients/cakezone.svg" alt="Cake Zone">
-                        </div>
-                        <!-- Ratings -->
-                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                        </div>
-                        <!-- review -->
-                        <p class="para">
-                           Great customer service and very timely delivery. The fleet of drivers was great and worked
-                           very
-                           hard to make it to our customers' destination on time everyday . I very much appreciate the
-                           hard
-                           work and communication!
-                        </p>
-                     </div>
-                  </div>
-                  <div class="card">
-                     <div class="flex flex-col justify-center items-center gap-3 text-center">
-                        <!-- image -->
-                        <div
-                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
-                           <img src="/assets/img/clients/sprink.svg" alt="Sprink">
-                        </div>
-                        <!-- Ratings -->
-                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                        </div>
-                        <!-- review -->
-                        <p class="para">
-                           I was very impressed by how quickly and professionally the TOCAL team works on ground to
-                           avoid
-                           any operations hassles. They understand our logistics pain points and work accordingly.
-                           Thanks
-                        </p>
-                     </div>
-                  </div>
-                  <div class="card">
-                     <div class="flex flex-col justify-center items-center gap-3 text-center">
-                        <!-- image -->
-                        <div
-                           class="img-wrapper w-32 lg:w-36 aspect-square border flex justify-center items-center p-5 rounded-full">
-                           <img src="/assets/img/clients/gourmet-garden.svg" alt="Fourmet garden">
-                        </div>
-                        <!-- Ratings -->
-                        <div class="ratings flex gap-1 text-[#FFD700] text-2xl">
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                           <i class="bi bi-star-fill"></i>
-                        </div>
-                        <!-- review -->
-                        <p class="para">
-                           We really appreciate your team providing timely service on short notices and catering to our
-                           rider requirements promptly at all our operating locations
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <!-- btns -->
-               <div
-                  class="slider-btn absolute top-2/4 left-0 translate-y-2/4 z-50 w-full flex justify-between items-center p-4 lg:px-32 xl:px-48 text-xl lg:text-2xl">
-                  <button class="btn-prev"><i class="bi bi-chevron-left"></i></button>
-                  <button class="btn-next"><i class="bi bi-chevron-right"></i></button>
                </div>
             </div>
          </div>
