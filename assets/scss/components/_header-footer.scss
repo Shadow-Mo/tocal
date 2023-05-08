@@ -36,7 +36,8 @@
       margin-top: 0;
       .navbar {
          padding-block: 1rem;
-         border-bottom: 1px solid map-get($map: $darkColor, $key: 100);
+         // border-bottom: 1px solid map-get($map: $darkColor, $key: 100);
+         border-bottom: 1px solid $purpleColor;
       }
    }
 }
