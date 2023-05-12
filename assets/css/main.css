@@ -490,13 +490,14 @@ nav #navbarToggle:checked ~ #navbarMenu {
   transform: translate(-50%, -50%);
   z-index: -1;
   pointer-events: none;
-  width: 200px;
+  width: 600px;
   border-radius: 100%;
   aspect-ratio: 1/1;
   transition: 0.8s ease;
   transition-duration: 5s;
   filter: blur(200px);
-  opacity: 0.1;
+  opacity: 0.2;
+  display: none;
 }
 .page__home .fluid.pink {
   top: 0;
@@ -510,7 +511,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @media (min-width: 976px) {
   .page__home .fluid {
-    width: 600px;
+    display: block;
   }
 }
 
@@ -532,12 +533,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "71%";
-    left: "71%";
+    top: "18%";
+    left: "88%";
   }
   to {
-    top: "65%";
-    left: "97%";
+    top: "68%";
+    left: "85%";
   }
 }
 .page__about .gallery__wrapper {
@@ -1103,11 +1104,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "64%";
-    left: "96%";
+    top: "83%";
+    left: "71%";
   }
   to {
-    top: "6%";
-    left: "47%";
+    top: "44%";
+    left: "5%";
   }
 }/*# sourceMappingURL=main.css.map */
