@@ -130,17 +130,14 @@ function setCityValue(radioClick = false) {
       city = $("#cityText").val();
       $('input[name=city]').filter(':checked').prop('checked', false);
    }
-   console.log(city);
 }
 
 function setDeliveryType() {
    deliveryType = $('input[name=delivery]').filter(':checked').val();
-   console.log(deliveryType);
 }
 
 function setVehicle() {
    vehicle = $('input[name=vehicle]').filter(':checked').val();
-   console.log(vehicle);
 
    // change graph data
    var yData = [];
@@ -165,7 +162,6 @@ function setServices() {
       temp[i] = $(this).val();
    });
    services = temp;
-   console.log(services);
 }
 
 function setProducts() {
@@ -174,7 +170,6 @@ function setProducts() {
       temp[i] = $(this).val();
    });
    products = temp;
-   console.log(products);
 }
 
 function updateUIDisplay() {
