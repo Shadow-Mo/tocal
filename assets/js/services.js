@@ -1,8 +1,4 @@
 $(window).on('load', function () {
-   AOS.init({
-      duration: 600,
-      once: true
-   });
    $('.hero-slider').slick({
       dots: true,
       infinite: true,
@@ -13,7 +9,6 @@ $(window).on('load', function () {
       autoplay: true,
       autoplayDuration: 2000
    });
-
    $('.content-slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -39,6 +34,9 @@ $(window).on('load', function () {
          }
       ]
    });
+
+   // For smooth animations
+   AOS.refresh();
 })
 $(document).ready(function () {
    // COnfugring charts
@@ -115,6 +113,8 @@ $(document).ready(function () {
 
 })
 
+// ! ======================================================================
+// #region bookapilot form
 // getting variable data
 var city = setCityValue();
 var deliveryType = setDeliveryType();
@@ -358,3 +358,5 @@ function app() {
       }
    }
 }
+// #endregion
+// ! ======================================================================
