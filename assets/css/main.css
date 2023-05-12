@@ -204,6 +204,15 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__home {
   background: #fdfdfd;
 }
+.page__home #hireDriver {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+}
+.page__home #hireDriver.repeat.visible {
+  opacity: 1;
+  visibility: visible;
+}
 .page__home .hero {
   --duration: 10s;
 }
@@ -523,12 +532,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "86%";
-    left: "35%";
+    top: "71%";
+    left: "71%";
   }
   to {
-    top: "17%";
-    left: "68%";
+    top: "65%";
+    left: "97%";
   }
 }
 .page__about .gallery__wrapper {
@@ -1094,11 +1103,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "33%";
-    left: "16%";
+    top: "64%";
+    left: "96%";
   }
   to {
-    top: "24%";
-    left: "5%";
+    top: "6%";
+    left: "47%";
   }
 }/*# sourceMappingURL=main.css.map */

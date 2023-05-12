@@ -2,6 +2,16 @@
    &__home {
       background: map-get($map: $darkColor, $key: 50);
 
+      #hireDriver {
+         opacity: 0;
+         visibility: hidden;
+         @include transition-light;
+
+         &.repeat.visible {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
       // Hero
       .hero {
          .marquee {

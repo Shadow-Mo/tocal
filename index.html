@@ -59,6 +59,39 @@
 
    <!-- Main Content -->
    <main>
+      <!-- We are hiring -->
+      <aside id="hireDriver" class="repeat fixed bottom-0 left-0 w-full bg-dark-950 text-white z-[10000] py-6">
+         <div class="container flex flex-col lg:flex-row justify-between items-center gap-3 lg:gap-8">
+            <div class="max-w-[800px]">
+               <h2 class="font-bold text-lg lg:text-xl tracking-tight">
+                  We are hiring Riders! 🤩
+               </h2>
+               <p class="hidden lg:block para text-dark-100 leading-[120%] mt-1 text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quia ad labore eius earum incidunt sequi
+                  dolore porro reiciendis optio vero quos necessitatibus.
+               </p>
+            </div>
+            <div class="flex items-center gap-2 lg:gap-4">
+               <a href=""
+                  class="btn btn__primary bg-[#25d366] hover:bg-[#35897e] border-[#25d366] hover:border-[#35897e]">
+                  <i class="bi bi-whatsapp"></i>
+                  <span>Chat with Us</span>
+               </a>
+               <a href="./become-a-driver.html" class="btn btn__secondary btn__secondary--bordered">
+                  <span>Learn More</span>
+               </a>
+               <a href="javascript:void(0)" onclick="$('#hireDriver').removeClass('repeat')"
+                  class="hidden lg:block ml-4 hover:text-primary-700" title="Close">
+                  <i class="bi bi-x-lg"></i>
+               </a>
+            </div>
+            <a href="javascript:void(0)" onclick="$('#hireDriver').removeClass('repeat')"
+               class="font-light text-sm underline lg:hidden ml-4 hover:text-primary-700" title="Close">
+               <span>Not Now</span>
+            </a>
+         </div>
+      </aside>
+
       <!-- Hero Section -->
       <section class="hero section-spacing">
          <div class="container">
