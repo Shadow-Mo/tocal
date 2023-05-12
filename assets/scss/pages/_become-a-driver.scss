@@ -45,18 +45,70 @@
       }
 
       // Why Us
-      .why-us {
+      .earn-extra {
          .card {
+            @include transition-lazy;
             .number {
+               background: $whiteColor;
+               border: 1px solid map-get($map: $primaryColor, $key: 700);
                transition: background 0.5s ease !important;
             }
          }
          .card:hover {
             .number {
+               border: none;
                background: $gradientColor !important;
                color: $whiteColor !important;
             }
+
+            @include responsive(lg) {
+               transform: translateY(-20px);
+            }
          }
       }
+
+      // Fluid
+      .fluid {
+         position: absolute;
+         transform: translate(-50%, -50%);
+         z-index: -1;
+         pointer-events: none;
+         width: 200px;
+         border-radius: 100%;
+         aspect-ratio: 1 / 1;
+         @include transition-lazy;
+         transition-duration: 5s;
+         filter: blur(200px);
+         opacity: 0.1;
+
+         &.pink {
+            top: 0;
+            left: 0;
+            background: $gradientColor;
+            // animation: randomTopLeft 10s linear infinite alternate;
+         }
+
+         &.blue {
+            top: 0;
+            left: 100%;
+            background: map-get($map: $primaryColor, $key: 700);
+            // animation: randomTopLeft 10s linear infinite alternate;
+         }
+
+         @include responsive(lg) {
+            width: 600px;
+         }
+      }
+   }
+}
+
+@keyframes randomTopLeft {
+   from {
+      top: random(100) + "%";
+      left: random(100) + "%";
+   }
+   to {
+      top: random(100) + "%";
+      left: random(100) + "%";
    }
 }

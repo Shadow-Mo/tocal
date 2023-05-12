@@ -30,3 +30,27 @@ $('.testimonial-slider').slick({
    prevArrow: $('.testimonial-wrapper .btn-prev'),
    nextArrow: $('.testimonial-wrapper .btn-next')
 });
+
+// fluids
+const pinkFluid = $(".fluid.pink");
+const blueFluid = $(".fluid.blue");
+
+pinkFluid.css({
+   "top": Math.floor(Math.random() * (50 - 0 + 1) + 0) + "%",
+   "left": Math.floor(Math.random() * (50 - 0 + 1) + 0) + "%",
+})
+blueFluid.css({
+   "top": Math.floor(Math.random() * (100 - 50 + 1) + 50) + "%",
+   "left": Math.floor(Math.random() * (100 - 50 + 1) + 50) + "%",
+})
+setInterval(() => {
+   pinkFluid.css({
+      "top": Math.floor(Math.random() * (50 - 0 + 1) + 0) + "%",
+      "left": Math.floor(Math.random() * (50 - 0 + 1) + 0) + "%",
+   })
+   blueFluid.css({
+      "top": Math.floor(Math.random() * (100 - 50 + 1) + 50) + "%",
+      "left": Math.floor(Math.random() * (100 - 50 + 1) + 50) + "%",
+   })
+}, 3000);
+// fluid ends

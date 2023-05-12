@@ -6,17 +6,19 @@ class WebsiteFooter extends HTMLElement {
    connectedCallback() {
       this.innerHTML = `
       <footer class="bg-dark-950 text-dark-50">
-         <div class="flex flex-col gap-14 lg:gap-20 py-20 lg:py-24">
+         <div class="flex flex-col gap-10 lg:gap-14 py-14 lg:py-16">
             <!-- Top Footer -->
             <aside>
                <div class="container">
-                  <div class="flex flex-col gap-2 md:gap-0">
-                     <h3 class="heading text-3xl leading-[120%] font-arimo font-[500]">
-                        Don't let your doubts scratch your head.
-                     </h3>
-                     <h4 class="text-xl">Let us help you.</h4>
+                  <div class="lg:bg-gradient-to-r lg:from-dark-700 lg:rounded-lg lg:p-10 flex flex-col lg:flex-row lg:justify-between lg:items-center lg:w-full gap-2 md:gap-0">
+                     <div>
+                        <h3 class="heading text-3xl leading-[120%] font-arimo font-[500]">
+                           Don't let your doubts scratch your head.
+                        </h3>
+                        <h4 class="text-xl">Let us help you.</h4>
+                     </div>
 
-                     <div class="flex flex-wrap gap-3 mt-5">
+                     <div class="flex flex-wrap gap-3 mt-5 lg:mt-0">
                         <a href="./our-services.html#bookAPilot" class="btn btn__secondary btn__secondary--bordered">
                            Book a free Pilot
                         </a>

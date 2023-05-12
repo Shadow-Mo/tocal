@@ -46,6 +46,7 @@ tailwind.config = {
             black: "#000000",
             red: "#ff0000",
             purple: "#ea2fa6",
+            blueGradient: "linear-gradient(to right, red 0%, blue 100%)"
          },
 
       },

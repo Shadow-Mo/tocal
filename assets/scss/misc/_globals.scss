@@ -48,3 +48,7 @@ body {
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
+
+.bg-blue-gradient {
+   background: $gradientColor;
+}
