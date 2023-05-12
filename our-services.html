@@ -58,7 +58,7 @@
       <img src="./assets/img/service-hero-bg.svg" alt="Background" class="absolute z-[-1] top-0 right-0  w-full">
 
       <!-- Hero -->
-      <section class="hero min-h-[100vh]" data-aos="fade-up">
+      <section class="hero" data-aos="fade-up" data-aos-duration="2000">
          <div class="container">
             <!-- Slider -->
             <div class="hero-slider-wrapper">
@@ -90,9 +90,8 @@
                         </div>
                         <!-- IMAGE -->
                         <div class="img-wrapper flex-1">
-                           <lottie-player src="./assets/img/lottie/services-hero-hyperlocal.json"
-                              background="transparent" speed="1" loop autoplay
-                              style="width: 100%; height: 300px !important;"></lottie-player>
+                           <img src="./assets/img/service-hero-hyperlocal.svg" alt="Hyperlocal Deliveries"
+                              class="h-64 w-auto lg:mx-auto lg:h-96">
                         </div>
                      </div>
                   </div>
@@ -175,33 +174,37 @@
                </h2>
             </div>
 
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 mt-14">
-               <div class="card flex flex-col gap-2">
-                  <img src="./assets/img/flaticons/Shopping.svg" alt="Shopping" class="max-h-16 w-fit">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-14">
+               <div class="card flex flex-col gap-2 border rounded-lg p-4 hover:border-primary-700" data-aos="zoom-out">
+                  <img src="./assets/img/icons/ecommerce.svg" alt="Shopping" class="max-h-12 aspect-square mb-2 w-fit">
                   <h3 class="text-xl font-bold tracking-tight">E-commerce</h3>
                   <p class="para">
                      Our goals prioritise agility, cogency, empathy, profitability, and sustainability for long-term
                      success and positive impact.
                   </p>
                </div>
-               <div class="card flex flex-col gap-2">
-                  <img src="./assets/img/flaticons/Diet.svg" alt="Diet" class="max-h-16 w-fit">
+               <div class="card flex flex-col gap-2 border rounded-lg p-4 hover:border-primary-700" data-aos="zoom-out"
+                  data-aos-delay="200">
+                  <img src="./assets/img/icons/fmcg.svg" alt="Diet" class="max-h-12 aspect-square mb-2 w-fit">
                   <h3 class="text-xl font-bold tracking-tight">FMCG & Hypermarkets</h3>
                   <p class="para">
                      Our goals prioritise agility, cogency, empathy, profitability, and sustainability for long-term
                      success and positive impact.
                   </p>
                </div>
-               <div class="card flex flex-col gap-2">
-                  <img src="./assets/img/flaticons/Male.svg" alt="Male" class="max-h-16 w-fit">
+               <div class="card flex flex-col gap-2 border rounded-lg p-4 hover:border-primary-700" data-aos="zoom-out"
+                  data-aos-delay="400">
+                  <img src="./assets/img/icons/d2c.svg" alt="Male" class="max-h-12 aspect-square mb-2 w-fit">
                   <h3 class="text-xl font-bold tracking-tight">Direct to Consumers (D2C)</h3>
                   <p class="para">
                      Our goals prioritise agility, cogency, empathy, profitability, and sustainability for long-term
                      success and positive impact.
                   </p>
                </div>
-               <div class="card flex flex-col gap-2">
-                  <img src="./assets/img/flaticons/Food delivery.svg" alt="Delivery" class="max-h-16 w-fit">
+               <div class="card flex flex-col gap-2 border rounded-lg p-4 hover:border-primary-700" data-aos="zoom-out"
+                  data-aos-delay="600">
+                  <img src="./assets/img/icons/quickcommerce.svg" alt="Delivery"
+                     class="max-h-12 aspect-square mb-2 w-fit">
                   <h3 class="text-xl font-bold tracking-tight">Quick Commerce</h3>
                   <p class="para">
                      Our goals prioritise agility, cogency, empathy, profitability, and sustainability for long-term
@@ -215,7 +218,7 @@
       <!-- Vehicles -->
       <section class="vehicles section-spacing py-20 bg-[#F8F8F8]" id="vehicles">
          <div class="container">
-            <div class="title flex flex-col justify-center items-center text-center px-5 w-full">
+            <div class="title flex flex-col justify-center items-center text-center px-5 w-full" data-aos="fade-up">
                <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">We provide</p>
                <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
                   Lorem ipsum dolor sit amet consectetur.
@@ -223,7 +226,7 @@
             </div>
 
             <!-- Slider -->
-            <div class="mt-14 relative">
+            <div class="mt-14 relative" data-aos="fade-up" data-aos-delay="200">
                <!-- Nav Slider -->
                <div
                   class="nav-slider-wrapper mt-14 mb-8 lg:mt-0 lg:absolute lg:w-[100px] lg:top-2/4 lg:left-0 lg:-translate-y-2/4">
@@ -267,43 +270,32 @@
                                  delectus quis iure ratione repellat aspernatur illo culpa incidunt assumenda harum
                                  distinctio doloremque, eum ipsa modi suscipit.
                               </p>
-                              <h4 class="text-lg font-medium mt-4">Specifications/Features:</h4>
-                              <ul class="font-light grid gap-2">
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                              <h4 class="flex flex-col mt-4 mb-2">
+                                 <span class="text-lg font-medium">Specifications/Features:</span>
+                                 <a href="#" class="text-primary-700 hover:underline italic text-sm"><i
+                                       class="bi bi-download"></i>
+                                    Download Specifications</a>
+                              </h4>
+                              <ul class="font-light grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                 <li>
+                                    <i class="bi bi-speedometer text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">40 Km</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Range (1 Charge)</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-server text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">50 Kgs</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Load capacity</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-cloud-haze2-fill text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">40 Km/Hr</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Speed</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
-                                 </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
-                                 </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-plug-fill text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">2 Hours</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Charging Time</p>
                                  </li>
                               </ul>
                            </div>
@@ -322,43 +314,33 @@
                                  delectus quis iure ratione repellat aspernatur illo culpa incidunt assumenda harum
                                  distinctio doloremque, eum ipsa modi suscipit.
                               </p>
-                              <h4 class="text-lg font-medium mt-4">Specifications/Features:</h4>
-                              <ul class="font-light grid gap-2">
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+
+                              <h4 class="flex flex-col mt-4 mb-2">
+                                 <span class="text-lg font-medium">Specifications/Features:</span>
+                                 <a href="#" class="text-primary-700 hover:underline italic text-sm"><i
+                                       class="bi bi-download"></i>
+                                    Download Specifications</a>
+                              </h4>
+                              <ul class="font-light grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                 <li>
+                                    <i class="bi bi-speedometer text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">40 Km</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Range (1 Charge)</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-server text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">50 Kgs</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Load capacity</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-cloud-haze2-fill text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">40 Km/Hr</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Speed</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
-                                 </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
-                                 </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-plug-fill text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">2 Hours</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Charging Time</p>
                                  </li>
                               </ul>
                            </div>
@@ -377,43 +359,33 @@
                                  delectus quis iure ratione repellat aspernatur illo culpa incidunt assumenda harum
                                  distinctio doloremque, eum ipsa modi suscipit.
                               </p>
-                              <h4 class="text-lg font-medium mt-4">Specifications/Features:</h4>
-                              <ul class="font-light grid gap-2">
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+
+                              <h4 class="flex flex-col mt-4 mb-2">
+                                 <span class="text-lg font-medium">Specifications/Features:</span>
+                                 <a href="#" class="text-primary-700 hover:underline italic text-sm"><i
+                                       class="bi bi-download"></i>
+                                    Download Specifications</a>
+                              </h4>
+                              <ul class="font-light grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                 <li>
+                                    <i class="bi bi-speedometer text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">40 Km</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Range (1 Charge)</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-server text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">50 Kgs</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Load capacity</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-cloud-haze2-fill text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">40 Km/Hr</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Speed</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
-                                 </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
-                                 </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-plug-fill text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">2 Hours</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Charging Time</p>
                                  </li>
                               </ul>
                            </div>
@@ -432,43 +404,33 @@
                                  delectus quis iure ratione repellat aspernatur illo culpa incidunt assumenda harum
                                  distinctio doloremque, eum ipsa modi suscipit.
                               </p>
-                              <h4 class="text-lg font-medium mt-4">Specifications/Features:</h4>
-                              <ul class="font-light grid gap-2">
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+
+                              <h4 class="flex flex-col mt-4 mb-2">
+                                 <span class="text-lg font-medium">Specifications/Features:</span>
+                                 <a href="#" class="text-primary-700 hover:underline italic text-sm"><i
+                                       class="bi bi-download"></i>
+                                    Download Specifications</a>
+                              </h4>
+                              <ul class="font-light grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                 <li>
+                                    <i class="bi bi-speedometer text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">40 Km</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Range (1 Charge)</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-server text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">50 Kgs</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Load capacity</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-cloud-haze2-fill text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">40 Km/Hr</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Speed</p>
                                  </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
-                                 </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
-                                 </li>
-                                 <li
-                                    class="grid grid-cols-[120px_2rem_auto] whitespace-nowrap lg:grid-cols-[200px_50px_auto] gap-2 leading-[100%]">
-                                    <span>On Road Range</span>
-                                    <i class="bi bi-arrow-right"></i>
-                                    <span class="font-normal">90 Km/Hr</span>
+                                 <li>
+                                    <i class="bi bi-plug-fill text-3xl text-gradient"></i>
+                                    <p class="para font-medium text-dark-950">2 Hours</p>
+                                    <p class="para uppercase tracking-wide text-sm italic">Charging Time</p>
                                  </li>
                               </ul>
                            </div>
@@ -484,12 +446,15 @@
       <section class="our-pilots section-spacing">
          <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-10 lg:gap-4">
-               <div class="grid gap-6">
+               <div class="grid gap-6" data-aos="fade-right">
                   <div class="title flex flex-col w-full">
                      <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">Our Pilots</p>
                      <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
                         Areas where you can see us.
                      </h2>
+                  </div>
+                  <div class="lg:hidden img-wrapper overflow-hidden rounded-lg">
+                     <img src="./assets/img/our-pilots.jpg" alt="Our Pilots" class="aspect-video object-cover">
                   </div>
                   <div class="grid gap-2">
                      <p class="para">
@@ -511,10 +476,10 @@
                      <i class="bi bi-arrow-right"></i>
                   </a>
                </div>
-               <div>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat hic perferendis quod numquam? Animi
-                  maxime sed ut tempora quam rerum, ipsam dolorum esse enim nemo itaque, quibusdam exercitationem.
-                  Reiciendis, inventore?
+               <div class="hidden lg:block " data-aos="fade-left">
+                  <div class="img-wrapper overflow-hidden rounded-lg">
+                     <img src="./assets/img/our-pilots.jpg" alt="Our Pilots" class="aspect-video object-cover">
+                  </div>
                </div>
             </div>
          </div>
@@ -523,18 +488,23 @@
       <!-- SaaS -->
       <section class="our-sass section-spacing">
          <div class="container">
-            <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-4">
-               <div>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat hic perferendis quod numquam? Animi
-                  maxime sed ut tempora quam rerum, ipsam dolorum esse enim nemo itaque, quibusdam exercitationem.
-                  Reiciendis, inventore?
+            <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-14">
+               <div class="hidden lg:block " data-aos="fade-right">
+                  <div class="img-wrapper overflow-hidden rounded-lg">
+                     <img src="./assets/img/delivery-software.png" alt="Delivery Software"
+                        class="aspect-video object-cover">
+                  </div>
                </div>
-               <div class="grid gap-6">
+               <div class="grid gap-6" data-aos="fade-left">
                   <div class="title flex flex-col w-full">
                      <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">We also offers</p>
                      <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
                         Delivery Management Tools
                      </h2>
+                  </div>
+                  <div class="lg:hidden img-wrapper overflow-hidden rounded-lg">
+                     <img src="./assets/img/delivery-software.png" alt="Delivery Software"
+                        class="aspect-video object-cover">
                   </div>
                   <div class="grid gap-2">
                      <p class="para">
@@ -564,12 +534,15 @@
       <section class="warehouse section-spacing">
          <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-10 lg:gap-4">
-               <div class="grid gap-6">
+               <div class="grid gap-6" data-aos="fade-right">
                   <div class="title flex flex-col w-full">
                      <p class="uppercase tracking-widest mb-1 leading-[100%] w-full">We also provide</p>
                      <h2 class="text-3xl lg:text-4xl font-[900] leading-[100%] tracking-tight w-full">
                         <span class="text-primary-700">Warehouse as a Service</span> (WaaS)
                      </h2>
+                  </div>
+                  <div class="lg:hidden img-wrapper overflow-hidden rounded-lg">
+                     <img src="./assets/img/warehouse.jpg" alt="Warehouse" class="aspect-video object-cover">
                   </div>
                   <div class="grid gap-2">
                      <p class="para">
@@ -610,17 +583,17 @@
                      </ul>
                   </div>
                </div>
-               <div>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat hic perferendis quod numquam? Animi
-                  maxime sed ut tempora quam rerum, ipsam dolorum esse enim nemo itaque, quibusdam exercitationem.
-                  Reiciendis, inventore?
+               <div class="hidden lg:block " data-aos="fade-left">
+                  <div class="hidden lg:block img-wrapper overflow-hidden rounded-lg">
+                     <img src="./assets/img/warehouse.jpg" alt="Warehouse" class="object-cover">
+                  </div>
                </div>
             </div>
          </div>
       </section>
 
       <!-- Interactive Form -->
-      <section class="multi-form section-spacing" id="bookAPilot">
+      <section class="multi-form section-spacing" id="bookAPilot" data-aos="fade-up" data-aos-delay="200">
          <div class="container">
             <div x-data="app()" x-cloak>
                <!-- <div class="max-w-3xl mx-auto px-4 py-10">
@@ -879,14 +852,15 @@
                         </li>
                      </ul>
 
-                     <div class="step-wrapper" x-show.transition="step != 'complete'">
+                     <form id="bookAPilotForm" class="step-wrapper">
                         <!-- Step Content -->
                         <div x-show.transition.in="step === 1" class="select-city">
                            <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize bink">Select your city</h3>
 
                            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
                               <div class="optionWrapper">
-                                 <input type="radio" name="city" id="cityBanglore" value="Banglore" class="hidden">
+                                 <input type="radio" name="city" id="cityBanglore" value="Banglore" class="hidden"
+                                    onclick="setCityValue(radioClick = true)">
                                  <label for="cityBanglore"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative"
                                     @click="step++">
@@ -901,7 +875,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="radio" name="city" id="cityHyderabad" value="Hyderabad" class="hidden">
+                                 <input type="radio" name="city" id="cityHyderabad" value="Hyderabad" class="hidden"
+                                    onclick="setCityValue(radioClick = true)">
                                  <label for="cityHyderabad"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative"
                                     @click="step++">
@@ -916,7 +891,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="radio" name="city" id="cityIndia" value="India" class="hidden">
+                                 <input type="radio" name="city" id="cityIndia" value="India" class="hidden"
+                                    onclick="setCityValue(true)">
                                  <label for="cityIndia"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative"
                                     @click="step++">
@@ -939,12 +915,12 @@
                            <div>
                               <div class="form-group flex flex-col gap-1">
                                  <label for="phoneNumber">Enter your City</label>
-                                 <input type="text" id="phoneNumber" placeholder="Enter full name"
+                                 <input type="text" id="cityText" placeholder="Enter city name"
                                     class="form-control w-full p-2 px-3 border rounded-md" required>
                                  <span class="error text-red italic font-[300] text-sm leading-[100%]"
-                                    id="phoneNumberError"></span>
+                                    id="cityTextError"></span>
                                  <div class="flex flex-wrap items-center gap-4 mt-4">
-                                    <button class="btn btn__primary" @click="step++">
+                                    <button class="btn btn__primary" @click="step++" onclick="setCityValue()">
                                        <span>Save & Next</span>
                                        <i class="bi bi-arrow-right"></i>
                                     </button>
@@ -959,7 +935,7 @@
                            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                               <div class="optionWrapper">
                                  <input type="radio" name="delivery" id="deliveryHyperlocal" value="Hyperlocal"
-                                    class="hidden">
+                                    class="hidden" onclick="setDeliveryType()">
                                  <label for="deliveryHyperlocal"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative"
                                     @click="step++">
@@ -978,7 +954,7 @@
                               </div>
                               <div class="optionWrapper">
                                  <input type="radio" name="delivery" id="deliveryLastMile" value="Last Mile"
-                                    class="hidden">
+                                    class="hidden" onclick="setDeliveryType()">
                                  <label for="deliveryLastMile"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative"
                                     @click="step++">
@@ -1003,7 +979,8 @@
                            </h3>
                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                               <div class="optionWrapper">
-                                 <input type="radio" name="vehicle" id="vehicleHeroNYX" value="Hero Nyx" class="hidden">
+                                 <input type="radio" name="vehicle" id="vehicleHeroNYX" value="Hero Nyx" class="hidden"
+                                    onclick="setVehicle()">
                                  <label for="vehicleHeroNYX"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1018,7 +995,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="radio" name="vehicle" id="vehicleEagle" value="Eagle" class="hidden">
+                                 <input type="radio" name="vehicle" id="vehicleEagle" value="Eagle" class="hidden"
+                                    onclick="setVehicle()">
                                  <label for="vehicleEagle"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1033,7 +1011,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="radio" name="vehicle" id="vehicleRage" value="Rage +" class="hidden">
+                                 <input type="radio" name="vehicle" id="vehicleRage" value="Rage +" class="hidden"
+                                    onclick="setVehicle()">
                                  <label for="vehicleRage"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1048,7 +1027,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="radio" name="vehicle" id="vehicleEular" value="Eular" class="hidden">
+                                 <input type="radio" name="vehicle" id="vehicleEular" value="Eular" class="hidden"
+                                    onclick="setVehicle()">
                                  <label for="vehicleEular"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1064,7 +1044,7 @@
                               </div>
                            </div>
                            <div class="flex flex-wrap items-center gap-4 mt-4">
-                              <button class="btn btn__primary" @click="step++">
+                              <button class="btn btn__primary" @click="step++" onclick="setVehicle()">
                                  <span>Save & Next</span>
                                  <i class="bi bi-arrow-right"></i>
                               </button>
@@ -1075,21 +1055,11 @@
                            </div>
                         </div>
                         <div x-show.transition.in="step === 4" class="select-service">
-                           <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
-                              Choose the services
+                           <h3 class="font-bold tracking-tight text-2xl capitalize">
+                              Choose the services (Optional)
                            </h3>
+                           <p class="para italic mb-4 text-orange-300 font-light leading-[100%]">Driver Included</p>
                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                              <div class="optionWrapper">
-                                 <label for="vehicleHeroNYX"
-                                    class="block cursor-pointer rounded-lg bg-gray-100 border border-dark-100 p-4 relative"
-                                    title="Mandatory">
-                                    <div class="aspect-video overflow-hidden">
-                                       <img src="./assets/img/vehical/thumbnail/hero-nyx.svg" alt="Hero Nyx"
-                                          class="object-cover">
-                                    </div>
-                                    <h4 class="text-lg font-bold mt-1 text-center">Driver</h4>
-                                 </label>
-                              </div>
                               <div class="optionWrapper">
                                  <label for="vehicleEagle"
                                     class="block cursor-pointer rounded-lg bg-gray-100 border border-dark-100 p-4 relative"
@@ -1102,8 +1072,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="service" id="serviceSoftware" value="Software"
-                                    class="hidden">
+                                 <input type="checkbox" name="service[]" id="serviceSoftware" value="Software"
+                                    class="serviceCheckbox hidden" onclick="setServices()">
                                  <label for="serviceSoftware"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative"
                                     title="Choose & save upto 5% to 10% in delivery cost.">
@@ -1117,8 +1087,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="service" id="serviceWarehouse" value="Warehouse"
-                                    class="hidden">
+                                 <input type="checkbox" name="service[]" id="serviceWarehouse" value="Warehouse"
+                                    class="serviceCheckbox hidden" onclick="setServices()">
                                  <label for="serviceWarehouse"
                                     class="block hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1133,7 +1103,7 @@
                               </div>
                            </div>
                            <div class="flex flex-wrap items-center gap-4 mt-4">
-                              <button class="btn btn__primary" @click="step++">
+                              <button class="btn btn__primary" @click="step++" onclick="setServices()">
                                  <span>Save & Next</span>
                                  <i class="bi bi-arrow-right"></i>
                               </button>
@@ -1147,7 +1117,8 @@
                               categories</p>
                            <div class="flex flex-wrap gap-4">
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productDairy" value="Dairy" class="hidden">
+                                 <input type="checkbox" name="products[]" id="productDairy" value="Dairy"
+                                    class="hidden productCheckbox" onclick="setProducts()">
                                  <label for="productDairy"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1160,8 +1131,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productFruits" value="Fruits & Vegitables"
-                                    class="hidden">
+                                 <input type="checkbox" name="products[]" id="productFruits" value="Fruits & Vegitables"
+                                    class="productCheckbox hidden" onclick="setProducts()">
                                  <label for="productFruits"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1176,8 +1147,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productElectronics" value="Electronics"
-                                    class="hidden">
+                                 <input type="checkbox" name="products[]" id="productElectronics" value="Electronics"
+                                    class="productCheckbox hidden" onclick="setProducts()">
                                  <label for="productElectronics"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1191,8 +1162,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productMedicines" value="Medicines"
-                                    class="hidden">
+                                 <input type="checkbox" name="products[]" id="productMedicines" value="Medicines"
+                                    class="productCheckbox hidden" onclick="setProducts()">
                                  <label for="productMedicines"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1206,8 +1177,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productBeverages" value="Beverages"
-                                    class="hidden">
+                                 <input type="checkbox" name="products[]" id="productBeverages" value="Beverages"
+                                    class="productCheckbox hidden" onclick="setProducts()">
                                  <label for="productBeverages"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1220,8 +1191,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productGiftings" value="Giftings"
-                                    class="hidden">
+                                 <input type="checkbox" name="products[]" id="productGiftings" value="Giftings"
+                                    class="productCheckbox hidden" onclick="setProducts()">
                                  <label for="productGiftings"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1235,8 +1206,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productEcomm" value="E-comm Packages"
-                                    class="hidden">
+                                 <input type="checkbox" name="products[]" id="productEcomm" value="E-comm Packages"
+                                    class="productCheckbox hidden" onclick="setProducts()">
                                  <label for="productEcomm"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1250,7 +1221,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productCakes" value="Cakes" class="hidden">
+                                 <input type="checkbox" name="products[]" id="productCakes" value="Cakes"
+                                    class="hidden productCheckbox" onclick="setProducts()">
                                  <label for="productCakes"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1263,7 +1235,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productFood" value="Food" class="hidden">
+                                 <input type="checkbox" name="products[]" id="productFood" value="Food"
+                                    class="hidden productCheckbox" onclick="setProducts()">
                                  <label for="productFood"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1277,8 +1250,8 @@
                                  </label>
                               </div>
                               <div class="optionWrapper">
-                                 <input type="checkbox" name="product" id="productMeat" value="Meat & Fish"
-                                    class="hidden">
+                                 <input type="checkbox" name="products[]" id="productMeat" value="Meat & Fish"
+                                    class="productCheckbox hidden" onclick="setProducts()">
                                  <label for="productMeat"
                                     class="flex items-center w-fit gap-2 hover:text-primary-700 cursor-pointer rounded-lg bg-white border border-dark-100 hover:shadow-lg p-2 lg:p-4 relative">
                                     <div
@@ -1293,7 +1266,7 @@
                               </div>
                            </div>
                            <div class="flex flex-wrap items-center gap-4 mt-4">
-                              <button class="btn btn__primary" @click="step++">
+                              <button class="btn btn__primary" @click="step++" onclick="updateUIDisplay()">
                                  <span>Save & Next</span>
                                  <i class="bi bi-arrow-right"></i>
                               </button>
@@ -1309,32 +1282,27 @@
                                     <li class="flex items-center flex-wrap gap-1">
                                        <span>City</span>
                                        <i class="bi bi-arrow-right"></i>
-                                       <span class="pill">banglore</span>
+                                       <div id="showCity" class="flex gap-1 flex-wrap"></div>
                                     </li>
                                     <li class="flex items-center flex-wrap gap-1">
                                        <span>Delivery Type</span>
                                        <i class="bi bi-arrow-right"></i>
-                                       <span class="pill">Hyperlocal</span>
+                                       <div id="showDeliveryType" class="flex gap-1 flex-wrap"></div>
                                     </li>
                                     <li class="flex items-center flex-wrap gap-1">
                                        <span>Vehicle</span>
                                        <i class="bi bi-arrow-right"></i>
-                                       <span class="pill">Hero NYX</span>
+                                       <div id="showVehicle" class="flex gap-1 flex-wrap"></div>
                                     </li>
                                     <li class="flex items-center flex-wrap gap-1">
-                                       <span>Vehicle</span>
+                                       <span>Services</span>
                                        <i class="bi bi-arrow-right"></i>
-                                       <span class="pill">Software</span>
-                                       <span class="pill">Warehouse</span>
+                                       <div id="showServices" class="flex gap-1 flex-wrap"></div>
                                     </li>
                                     <li class="flex items-center flex-wrap gap-1">
                                        <span>Products</span>
                                        <i class="bi bi-arrow-right"></i>
-                                       <span class="pill">Dairy</span>
-                                       <span class="pill">Meat & Fish</span>
-                                       <span class="pill">Vegitables</span>
-                                       <span class="pill">Gifting</span>
-                                       <span class="pill">Milk</span>
+                                       <div id="showProducts" class="flex gap-1 flex-wrap"></div>
                                     </li>
                                  </ul>
                               </div>
@@ -1352,43 +1320,59 @@
                                  <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
                                     <div class="form-group flex flex-col gap-1">
                                        <label for="email">Email</label>
-                                       <input type="text" id="email" placeholder="Enter full name"
+                                       <input type="text" id="email" placeholder="Enter email"
                                           class="form-control w-full p-2 px-3 border rounded-md" required>
                                        <span class="error text-red italic font-[300] text-sm leading-[100%]"
                                           id="emailError"></span>
                                     </div>
                                     <div class="form-group flex flex-col gap-1">
                                        <label for="phoneNumber">Contact Number</label>
-                                       <input type="text" id="phoneNumber" placeholder="Enter full name"
+                                       <input type="text" id="phoneNumber" placeholder="Enter contact number"
                                           class="form-control w-full p-2 px-3 border rounded-md" required>
                                        <span class="error text-red italic font-[300] text-sm leading-[100%]"
                                           id="phoneNumberError"></span>
                                     </div>
                                  </div>
 
-                                 <button class="btn btn__primary w-fit mt-2" id="submitContactFormBtn">
+                                 <button class="btn btn__primary w-fit mt-2" id="submitContactFormBtn"
+                                    @click="bookAPilot(event)">
                                     <i class="bi bi-send-fill"></i>
                                     <span>Book a Pilot</span>
                                  </button>
+
+                                 <span id="responseText"></span>
                               </div>
                            </div>
                         </div>
+                        <div x-show.transition.in="step === 'complete'">
+                           <div class="flex flex-col justify-center items-center gap-1 py-20">
+                              <h2 class="text-4xl">🎉</h2>
+                              <h3 class="text-2xl font-bold tracking-tight">Hurray! We got your request.</h3>
+                              <p class="para m-0">Our team will soon contact you</p>
+                              <button @click="step=1" class="btn btn__primary mt-4">
+                                 <i class="bi bi-arrow-clockwise"></i>
+                                 <span>Start Again</span>
+                              </button>
+                           </div>
+                        </div>
                         <!-- / Step Content -->
-                     </div>
+                     </form>
                   </div>
 
                   <!-- Graphs -->
                   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 items-center justify-center">
                      <div class="card grid gap-2 rounded-lg border card-shadow p-6 h-full bg-white">
-                        <h3 class="font-semibold text-xl lg:text-xl font-arimo tracking-tight">x: vehicle & y:delivery
-                           cost, "<grp title>"</h3>
+                        <h3 class="font-semibold text-xl lg:text-xl font-arimo tracking-tight">Change in Delivery Cost
+                           (in ₹)
+                        </h3>
                         <div class="graph mt-4">
                            <canvas id="graph1" class="w-full"></canvas>
                         </div>
                      </div>
                      <div class="card grid gap-2 rounded-lg border card-shadow p-6 h-full bg-white">
-                        <h3 class="font-semibold text-xl lg:text-xl font-arimo tracking-tight">Graph title 3 show
-                           everything at once</h3>
+                        <h3 class="font-semibold text-xl lg:text-xl font-arimo tracking-tight">
+                           CO<sub>2</sub> Emmission Reduced (in kiloton)
+                        </h3>
                         <div class="graph mt-4">
                            <canvas id="graph3" class="w-full"></canvas>
                         </div>
@@ -1465,7 +1449,6 @@
    <!-- 3rd Party JS Libraries -->
    <script src="/assets/vendor/jquery/jquery-3.6.0.min.js"></script>
    <script src="/assets/vendor/slick-slider/slick.min.js"></script>
-   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.1/chart.umd.js"></script>
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>

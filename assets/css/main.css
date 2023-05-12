@@ -519,12 +519,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "22%";
-    left: "7%";
+    top: "90%";
+    left: "22%";
   }
   to {
-    top: "56%";
-    left: "68%";
+    top: "79%";
+    left: "77%";
   }
 }
 .page__about .gallery__wrapper {
