@@ -31,11 +31,15 @@
 
    <!-- 3rd Party CSS Libraries -->
    <script src="https://cdn.tailwindcss.com"></script>
-   <link rel="stylesheet" href="/assets/vendor/slick-slider/slick.css">
-   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="preload" href="/assets/vendor/slick-slider/slick.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+   <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" as="style"
       onload="this.onload=null;this.rel='stylesheet'" />
    <noscript>
+      <link rel="stylesheet" href="/assets/vendor/slick-slider/slick.css" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
    </noscript>
 
@@ -358,7 +362,7 @@
                <div data-aos="fade-up"
                   class="flex-1 card bg-white card-shadow md:max-w-[320px] lg:max-w-full p-6 rounded-lg flex flex-col gap-4">
                   <div class="img-wrapper rounded-md overflow-hidden">
-                     <img src="./assets/img/services/hyperlocal-deliveries.png" alt="Hyperlocal Deliveries">
+                     <img src="./assets/img/services/hyperlocal-deliveries.webp" alt="Hyperlocal Deliveries">
                   </div>
                   <h3>
                      <span class="text-sm uppercase tracking-light">We do</span>
@@ -373,7 +377,7 @@
                <div data-aos="fade-up" data-aos-delay="200"
                   class="flex-1 card bg-white card-shadow md:max-w-[320px] lg:max-w-full p-6 rounded-lg flex flex-col gap-4">
                   <div class="img-wrapper rounded-md overflow-hidden">
-                     <img src="./assets/img/services/fullfilment-centers.png" alt="Last-mile deliveries">
+                     <img src="./assets/img/services/lastmile-deliveries.webp" alt="Last-mile deliveries">
                   </div>
                   <h3>
                      <span class="text-sm uppercase tracking-light">We do</span>
@@ -388,7 +392,7 @@
                <div data-aos="fade-up" data-aos-delay="400"
                   class="flex-1 card bg-white card-shadow md:max-w-[320px] lg:max-w-full p-6 rounded-lg flex flex-col gap-4">
                   <div class="img-wrapper rounded-md overflow-hidden">
-                     <img src="./assets/img/services/last-mile-deliveries.png" alt="Fullfilment Centres">
+                     <img src="./assets/img/services/fullfilment-centres.webp" alt="Fullfilment Centres">
                   </div>
                   <h3>
                      <span class="text-sm uppercase tracking-light">We provide</span>

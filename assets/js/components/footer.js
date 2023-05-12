@@ -10,7 +10,7 @@ class WebsiteFooter extends HTMLElement {
             <!-- Top Footer -->
             <aside>
                <div class="container">
-                  <div class="lg:bg-gradient-to-r lg:from-dark-700 lg:rounded-lg lg:p-10 flex flex-col lg:flex-row lg:justify-between lg:items-center lg:w-full gap-2 md:gap-0">
+                  <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center lg:w-full gap-2 md:gap-0">
                      <div>
                         <h3 class="heading text-3xl leading-[120%] font-arimo font-[500]">
                            Don't let your doubts scratch your head.
