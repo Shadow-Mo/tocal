@@ -12,7 +12,7 @@ $(window).scroll(function () {
    }
 });
 
-$(document).ready(function () {
+$(window).on('load', function () {
    // Initiate Animation
    AOS.init({
       // Global settings:
