@@ -329,7 +329,7 @@
          @include transition-lazy;
          transition-duration: 5s;
          filter: blur(200px);
-         opacity: 0.2;
+         opacity: 0.1;
          display: none;
 
          &.pink {

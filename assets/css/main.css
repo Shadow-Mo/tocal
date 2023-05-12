@@ -496,7 +496,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
   transition: 0.8s ease;
   transition-duration: 5s;
   filter: blur(200px);
-  opacity: 0.2;
+  opacity: 0.1;
   display: none;
 }
 .page__home .fluid.pink {
@@ -533,12 +533,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "18%";
-    left: "88%";
+    top: "12%";
+    left: "65%";
   }
   to {
-    top: "68%";
-    left: "85%";
+    top: "6%";
+    left: "10%";
   }
 }
 .page__about .gallery__wrapper {
@@ -1104,11 +1104,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "83%";
-    left: "71%";
+    top: "19%";
+    left: "64%";
   }
   to {
-    top: "44%";
-    left: "5%";
+    top: "74%";
+    left: "77%";
   }
 }/*# sourceMappingURL=main.css.map */
