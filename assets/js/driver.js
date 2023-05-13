@@ -25,10 +25,35 @@ $('.testimonial-slider').slick({
    dots: false,
    infinite: true,
    speed: 300,
-   slidesToShow: 1,
+   slidesToShow: 3,
+   slidesToScroll: 1,
    adaptiveHeight: true,
    prevArrow: $('.testimonial-wrapper .btn-prev'),
-   nextArrow: $('.testimonial-wrapper .btn-next')
+   nextArrow: $('.testimonial-wrapper .btn-next'),
+   responsive: [
+      {
+         breakpoint: 1300,
+         settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+         }
+      },
+      {
+         breakpoint: 976,
+         settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+         }
+      },
+      {
+         breakpoint: 768,
+         settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+         }
+      }
+   ]
 });
 
 // fluids
