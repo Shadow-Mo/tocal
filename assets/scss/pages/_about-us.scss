@@ -11,51 +11,59 @@
                width: 100%;
 
                .marquee {
-                  @include flex-start;
+                  display: flex;
+                  width: 200vw;
 
                   &__inner {
-                     @include flex-start;
+                     width: 100%;
+                     display: flex;
+                     max-height: 250px;
                      gap: 0.5rem;
                      padding-inline: 0.25rem;
                   }
                }
-
+               --duration: 15s;
                #row1marquee1 {
-                  animation: row1marquee1 10s linear infinite;
+                  animation: row1marquee1 var(--duration) linear infinite;
                }
                #row1marquee2 {
-                  animation: row1marquee2 10s linear infinite;
-                  animation-delay: 5s;
+                  animation: row1marquee2 var(--duration) linear infinite;
+                  animation-delay: calc(var(--duration) / 2);
                }
                #row2marquee1 {
-                  animation: row1marquee1 10s linear infinite reverse;
+                  animation: row1marquee1 var(--duration) linear infinite
+                     reverse;
                }
                #row2marquee2 {
-                  animation: row1marquee2 10s linear infinite reverse;
-                  animation-delay: 5s;
+                  animation: row1marquee2 var(--duration) linear infinite
+                     reverse;
+                  animation-delay: calc(var(--duration) / 2);
                }
                #row3marquee1 {
-                  animation: row1marquee1 10s linear infinite;
+                  animation: row1marquee1 var(--duration) linear infinite;
                }
                #row3marquee2 {
-                  animation: row1marquee2 10s linear infinite;
-                  animation-delay: 5s;
+                  animation: row1marquee2 var(--duration) linear infinite;
+                  animation-delay: calc(var(--duration) / 2);
                }
             }
             .card {
-               width: calc((100vw / 2) - (0.5rem / 4));
-               aspect-ratio: 3 / 2;
                background: map-get($map: $darkColor, $key: 100);
+               width: fit-content;
 
                img {
                   width: 100%;
-                  object-fit: contain;
+                  height: 100%;
+                  object-fit: cover;
+                  // object-position: top;
                }
             }
 
             @include responsive(lg) {
                .card {
-                  width: calc((100vw / 5) - (0.5rem / 4));
+                  img {
+                     // min-width: 200px;
+                  }
                }
             }
          }

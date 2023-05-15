@@ -533,12 +533,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "45%";
-    left: "10%";
+    top: "41%";
+    left: "89%";
   }
   to {
-    top: "54%";
-    left: "96%";
+    top: "73%";
+    left: "85%";
   }
 }
 .page__about .gallery__wrapper {
@@ -550,54 +550,50 @@ nav #navbarToggle:checked ~ #navbarMenu {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  --duration: 15s;
 }
 .page__about .gallery__wrapper .row .marquee {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  width: 200vw;
 }
 .page__about .gallery__wrapper .row .marquee__inner {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  max-height: 250px;
   gap: 0.5rem;
   padding-inline: 0.25rem;
 }
 .page__about .gallery__wrapper .row #row1marquee1 {
-  animation: row1marquee1 10s linear infinite;
+  animation: row1marquee1 var(--duration) linear infinite;
 }
 .page__about .gallery__wrapper .row #row1marquee2 {
-  animation: row1marquee2 10s linear infinite;
-  animation-delay: 5s;
+  animation: row1marquee2 var(--duration) linear infinite;
+  animation-delay: calc(var(--duration) / 2);
 }
 .page__about .gallery__wrapper .row #row2marquee1 {
-  animation: row1marquee1 10s linear infinite reverse;
+  animation: row1marquee1 var(--duration) linear infinite reverse;
 }
 .page__about .gallery__wrapper .row #row2marquee2 {
-  animation: row1marquee2 10s linear infinite reverse;
-  animation-delay: 5s;
+  animation: row1marquee2 var(--duration) linear infinite reverse;
+  animation-delay: calc(var(--duration) / 2);
 }
 .page__about .gallery__wrapper .row #row3marquee1 {
-  animation: row1marquee1 10s linear infinite;
+  animation: row1marquee1 var(--duration) linear infinite;
 }
 .page__about .gallery__wrapper .row #row3marquee2 {
-  animation: row1marquee2 10s linear infinite;
-  animation-delay: 5s;
+  animation: row1marquee2 var(--duration) linear infinite;
+  animation-delay: calc(var(--duration) / 2);
 }
 .page__about .gallery__wrapper .card {
-  width: calc(50vw - 0.125rem);
-  aspect-ratio: 3/2;
   background: #e3e3e3;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .page__about .gallery__wrapper .card img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-@media (min-width: 976px) {
-  .page__about .gallery__wrapper .card {
-    width: calc(20vw - 0.125rem);
-  }
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .page__about .statistics-slider-wrapper {
   position: relative;
@@ -1111,11 +1107,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "95%";
-    left: "4%";
+    top: "73%";
+    left: "64%";
   }
   to {
-    top: "40%";
-    left: "34%";
+    top: "30%";
+    left: "27%";
   }
 }/*# sourceMappingURL=main.css.map */
