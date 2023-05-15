@@ -533,12 +533,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "12%";
-    left: "65%";
+    top: "45%";
+    left: "10%";
   }
   to {
-    top: "6%";
-    left: "10%";
+    top: "54%";
+    left: "96%";
   }
 }
 .page__about .gallery__wrapper {
@@ -1028,6 +1028,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
   gap: 1rem;
   padding-inline: 0.5rem;
 }
+@media (min-width: 976px) {
+  .page__driver .marquee__inner {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
 .page__driver .marquee .card {
   width: 100%;
   aspect-ratio: 4/2;
@@ -1041,6 +1046,8 @@ nav #navbarToggle:checked ~ #navbarMenu {
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   aspect-ratio: 2/3;
 }
 @media (min-width: 768px) {
@@ -1104,11 +1111,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "19%";
-    left: "64%";
+    top: "95%";
+    left: "4%";
   }
   to {
-    top: "74%";
-    left: "77%";
+    top: "40%";
+    left: "34%";
   }
 }/*# sourceMappingURL=main.css.map */
