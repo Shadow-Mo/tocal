@@ -39,6 +39,17 @@ a {
   text-decoration: none;
 }
 
+[aria-hidden=true] a[href],
+[aria-hidden=true] area[href],
+[aria-hidden=true] input:not([disabled]),
+[aria-hidden=true] select:not([disabled]),
+[aria-hidden=true] textarea:not([disabled]),
+[aria-hidden=true] button:not([disabled]),
+[aria-hidden=true] [tabindex]:not([disabled]),
+[aria-hidden=true] [contenteditable=true]:not([disabled]) {
+  visibility: hidden;
+}
+
 body {
   padding-top: 70px;
   background: #fdfdfd;
@@ -533,12 +544,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "41%";
-    left: "89%";
+    top: "57%";
+    left: "79%";
   }
   to {
-    top: "73%";
-    left: "85%";
+    top: "82%";
+    left: "98%";
   }
 }
 .page__about .gallery__wrapper {
@@ -1107,11 +1118,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "73%";
-    left: "64%";
+    top: "32%";
+    left: "7%";
   }
   to {
-    top: "30%";
-    left: "27%";
+    top: "42%";
+    left: "10%";
   }
 }/*# sourceMappingURL=main.css.map */

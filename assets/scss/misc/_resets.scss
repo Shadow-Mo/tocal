@@ -40,3 +40,14 @@ img {
 a {
    text-decoration: none;
 }
+
+[aria-hidden="true"] a[href],
+[aria-hidden="true"] area[href],
+[aria-hidden="true"] input:not([disabled]),
+[aria-hidden="true"] select:not([disabled]),
+[aria-hidden="true"] textarea:not([disabled]),
+[aria-hidden="true"] button:not([disabled]),
+[aria-hidden="true"] [tabindex]:not([disabled]),
+[aria-hidden="true"] [contenteditable="true"]:not([disabled]) {
+   visibility: hidden;
+}
