@@ -33,30 +33,38 @@ class WebsiteFooter extends HTMLElement {
             <!-- Main Footer -->
             <aside>
                <div class="container flex flex-col gap-10 lg:flex-row lg:justify-between">
-                  <div class="about flex flex-col gap-3 max-w-[500px]">
+                  <div class="about flex flex-col gap-1 max-w-[500px]">
                      <h4 class="text-lg font-[700]">About Us</h4>
-                     <p class="para text-dark-100 mb-2">
+                     <p class="para text-[#d6d6d6] mb-2 text-sm">
                         At TOCAL, we specialise in hyperlocal and last-mile delivery services. Our platform offers a
                         dedicated fleet of delivery executives equipped with EVs, providing fast and efficient delivery...
-                        <a href="./about-us.html" class="text-primary-600 underline hover:text-purple">Read More</a>
+                        <a href="./about-us.html" class="text-primary-600 underline hover:text-purple">More about us</a>
                      </p>
-                     <p class="para">
-                        <span class="font-[600] italic block text-white">Address:</span>
-                        <span class="text-sm text-dark-100">VMG3+X4, 1642/C, A Block, AECS Layout – A Block, AECS Layout,
-                           Singasandra,
-                           Bengaluru, Karnataka 560068</span>
-                     </p>
+                     <div class="flex flex-wrap gap-10 gap-y-3 my-2">
+                        <p class="para">
+                           <span class="font-[600] italic block text-white">Office Address:</span>
+                           <span class="text-sm text-[#d6d6d6]">VMG3+X4, 1642/C, A Block, AECS Layout – A Block, AECS Layout,
+                              Singasandra,
+                              Bengaluru, Karnataka 560068</span>
+                        </p>
+                        <p class="para">
+                           <span class="font-[600] italic block text-white">Registered Address:</span>
+                           <span class="text-sm text-[#d6d6d6]">VMG3+X4, 1642/C, A Block, AECS Layout – A Block, AECS Layout,
+                              Singasandra,
+                              Bengaluru, Karnataka 560068</span>
+                        </p>
+                     </div>
                      <div class="flex flex-wrap gap-10 gap-y-3">
                         <p class="para">
                            <span class="font-[600] italic block text-white">Email:</span>
-                           <span class="text-sm text-dark-100">
+                           <span class="text-sm text-[#d6d6d6]">
                               <a href="mailto:info@dbytdynamics.com"
                                  class="underline hover:text-primary-700">info@dbytdynamics.com</a>
                            </span>
                         </p>
                         <p class="para">
                            <span class="font-[600] italic block text-white">Phone:</span>
-                           <span class="text-sm text-dark-100 flex gap-2">
+                           <span class="text-sm text-[#d6d6d6] flex gap-2">
                               <a href="tel:918222042225" class="underline hover:text-primary-700">+91-8222042225</a>
                            </span>
                         </p>
@@ -69,28 +77,28 @@ class WebsiteFooter extends HTMLElement {
                         </li>
                         <li>
                            <a href="/our-services.html"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Our Services</span>
                            </a>
                         </li>
                         <li>
                            <a href="/about-us.html"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>About Us</span>
                            </a>
                         </li>
                         <li>
                            <a href="/become-a-driver.html"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Become a Driver</span>
                            </a>
                         </li>
                         <li>
                            <a href="/contact-us.html"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Contact Us</span>
                            </a>
@@ -103,42 +111,42 @@ class WebsiteFooter extends HTMLElement {
                         </li>
                         <li>
                            <a href="#"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Terms & Conditions</span>
                            </a>
                         </li>
                         <li>
                            <a href="#"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Privacy Policy</span>
                            </a>
                         </li>
                         <li>
                            <a href="#"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Become a Driver</span>
                            </a>
                         </li>
                         <li>
                            <a href="#"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Insurance Policy</span>
                            </a>
                         </li>
                         <li>
                            <a href="#"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Disclaimer</span>
                            </a>
                         </li>
                         <li>
                            <a href="#"
-                              class="flex items-center gap-2 text-dark-200 font-[300] hover:text-primary-600 leading-[100%]">
+                              class="flex items-center gap-2 text-[#d6d6d6] font-[300] hover:text-primary-600 leading-[100%]">
                               <i class="bi bi-caret-right-fill text-primary-600"></i>
                               <span>Partner Policy</span>
                            </a>
