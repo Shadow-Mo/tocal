@@ -544,12 +544,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "57%";
-    left: "79%";
+    top: "94%";
+    left: "26%";
   }
   to {
-    top: "82%";
-    left: "98%";
+    top: "19%";
+    left: "89%";
   }
 }
 .page__about .gallery__wrapper {
@@ -1118,11 +1118,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "32%";
-    left: "7%";
+    top: "84%";
+    left: "53%";
   }
   to {
-    top: "42%";
-    left: "10%";
+    top: "66%";
+    left: "23%";
   }
 }/*# sourceMappingURL=main.css.map */
