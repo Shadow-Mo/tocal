@@ -66,7 +66,7 @@ class WebsiteFooter extends HTMLElement {
                         <p class="para">
                            <span class="font-[400] block text-white">Phone:</span>
                            <span class="text-sm text-[#d6d6d6] flex gap-2">
-                              <a href="tel:918222042225" class="underline hover:text-primary-700">+91-8222042225</a>
+                              <a href="tel:919840499441" class="underline hover:text-primary-700">+91-9840499441</a>
                            </span>
                         </p>
                      </div>
@@ -199,7 +199,7 @@ class WebsiteFooter extends HTMLElement {
          </div>
 
          <!-- WhatsApp -->
-         <a href="https://wa.me/919840499441?text=hi" class="
+         <a href="https://wa.me/919840499441?text=Hi, I wanted to try your services." class="
                flex justify-center items-center 
                w-14 aspect-square p-2 
                bg-[#25d366] hover:bg-[#35897e] rounded-full cursor-pointer
