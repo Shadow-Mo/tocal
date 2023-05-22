@@ -33,25 +33,26 @@ class WebsiteFooter extends HTMLElement {
             <!-- Main Footer -->
             <aside>
                <div class="container flex flex-col gap-10 lg:flex-row lg:justify-between">
-                  <div class="about flex flex-col gap-1 max-w-[500px]">
+                  <div class="about flex flex-col gap-1 max-w-[600px]">
                      <h4 class="text-lg font-[700]">About Us</h4>
                      <p class="para text-[#d6d6d6] mb-2 text-sm">
-                        At TOCAL, we specialise in hyperlocal and last-mile delivery services. Our platform offers a
-                        dedicated fleet of delivery executives equipped with EVs, providing fast and efficient delivery...
-                        <a href="./about-us.html" class="text-primary-600 underline hover:text-purple">More about us</a>
+                        DbyT Dynamics Mobility Solutions Private Limited is an early-stage startup working with a
+                        vision to build a sustainable hyperlocal & last-mile delivery network called TOCAL to help
+                        businesses deliver their goods locally & cost-effectively.                     
                      </p>
                      <div class="flex flex-wrap gap-10 gap-y-3 my-2">
                         <p class="para">
-                           <span class="font-[600] italic block text-white">Office Address:</span>
-                           <span class="text-sm text-[#d6d6d6]">VMG3+X4, 1642/C, A Block, AECS Layout – A Block, AECS Layout,
-                              Singasandra,
-                              Bengaluru, Karnataka 560068</span>
+                           <span class="font-[600] italic block text-white">Registered Address:</span>
+                           <span class="text-sm text-[#d6d6d6]">
+                              Tiruchirappalli Regional Engineering College TREC-STEP, Rec 
+                              Complex Thuvakudy, Tiruchirappalli, Tamil Nadu- 620015, India.                           
+                           </span>
                         </p>
                         <p class="para">
-                           <span class="font-[600] italic block text-white">Registered Address:</span>
-                           <span class="text-sm text-[#d6d6d6]">VMG3+X4, 1642/C, A Block, AECS Layout – A Block, AECS Layout,
-                              Singasandra,
-                              Bengaluru, Karnataka 560068</span>
+                           <span class="font-[600] italic block text-white">Office Address:</span>
+                           <span class="text-sm text-[#d6d6d6]">
+                              TOCAL,1642/C, A Block, AECS Layout, Singasandra, Bengaluru, Karnataka 560068
+                           </span>
                         </p>
                      </div>
                      <div class="flex flex-wrap gap-10 gap-y-3">
@@ -198,13 +199,13 @@ class WebsiteFooter extends HTMLElement {
          </div>
 
          <!-- WhatsApp -->
-         <div href="#" class="
+         <a href="https://wa.me/919840499441?text=hi" class="
                flex justify-center items-center 
                w-14 aspect-square p-2 
                bg-[#25d366] hover:bg-[#35897e] rounded-full cursor-pointer
                fixed right-5 bottom-5 z-index-10" title="Send us a Message">
             <i class="bi bi-whatsapp text-xl"></i>
-         </div>
+         </a>
       </footer>
       `;
    }
