@@ -42,14 +42,14 @@ class WebsiteFooter extends HTMLElement {
                      </p>
                      <div class="flex flex-wrap gap-10 gap-y-3 my-2">
                         <p class="para">
-                           <span class="font-[600] italic block text-white">Registered Address:</span>
+                           <span class="font-[400] block text-white">Registered Address:</span>
                            <span class="text-sm text-[#d6d6d6]">
                               Tiruchirappalli Regional Engineering College TREC-STEP, Rec 
                               Complex Thuvakudy, Tiruchirappalli, Tamil Nadu- 620015, India.                           
                            </span>
                         </p>
                         <p class="para">
-                           <span class="font-[600] italic block text-white">Office Address:</span>
+                           <span class="font-[400] block text-white">Office Address:</span>
                            <span class="text-sm text-[#d6d6d6]">
                               TOCAL,1642/C, A Block, AECS Layout, Singasandra, Bengaluru, Karnataka 560068
                            </span>
@@ -57,14 +57,14 @@ class WebsiteFooter extends HTMLElement {
                      </div>
                      <div class="flex flex-wrap gap-10 gap-y-3">
                         <p class="para">
-                           <span class="font-[600] italic block text-white">Email:</span>
+                           <span class="font-[400] block text-white">Email:</span>
                            <span class="text-sm text-[#d6d6d6]">
                               <a href="mailto:info@dbytdynamics.com"
                                  class="underline hover:text-primary-700">info@dbytdynamics.com</a>
                            </span>
                         </p>
                         <p class="para">
-                           <span class="font-[600] italic block text-white">Phone:</span>
+                           <span class="font-[400] block text-white">Phone:</span>
                            <span class="text-sm text-[#d6d6d6] flex gap-2">
                               <a href="tel:918222042225" class="underline hover:text-primary-700">+91-8222042225</a>
                            </span>
