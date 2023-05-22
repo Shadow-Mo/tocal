@@ -47,7 +47,7 @@ a {
 [aria-hidden=true] button:not([disabled]),
 [aria-hidden=true] [tabindex]:not([disabled]),
 [aria-hidden=true] [contenteditable=true]:not([disabled]) {
-  visibility: hidden;
+  visibility: hidden !important;
 }
 
 body {
@@ -544,12 +544,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "94%";
-    left: "26%";
+    top: "31%";
+    left: "2%";
   }
   to {
-    top: "19%";
-    left: "89%";
+    top: "71%";
+    left: "50%";
   }
 }
 .page__about .gallery__wrapper {
@@ -1118,11 +1118,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "84%";
-    left: "53%";
+    top: "54%";
+    left: "91%";
   }
   to {
-    top: "66%";
-    left: "23%";
+    top: "51%";
+    left: "3%";
   }
 }/*# sourceMappingURL=main.css.map */

@@ -49,5 +49,5 @@ a {
 [aria-hidden="true"] button:not([disabled]),
 [aria-hidden="true"] [tabindex]:not([disabled]),
 [aria-hidden="true"] [contenteditable="true"]:not([disabled]) {
-   visibility: hidden;
+   visibility: hidden !important;
 }
