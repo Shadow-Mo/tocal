@@ -274,7 +274,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__home .clientSlider .marquee {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 400vw;
+  width: 600vw;
 }
 .page__home .clientSlider .marquee__inner {
   width: 100%;
@@ -286,13 +286,15 @@ nav #navbarToggle:checked ~ #navbarMenu {
   padding: 1rem;
   width: 100%;
   aspect-ratio: 4/2;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #ffffff;
   border: 2px solid rgba(234, 47, 166, 0.1);
 }
 .page__home .clientSlider .marquee img {
   height: 100%;
+  width: auto;
 }
 @media (min-width: 768px) {
   .page__home .clientSlider .marquee {
@@ -545,12 +547,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "97%";
+    top: "32%";
     left: "66%";
   }
   to {
-    top: "93%";
-    left: "60%";
+    top: "39%";
+    left: "52%";
   }
 }
 .page__about .gallery__wrapper {
@@ -816,7 +818,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
 .page__services .clientSlider .marquee {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 400vw;
+  width: 600vw;
 }
 .page__services .clientSlider .marquee__inner {
   width: 100%;
@@ -1137,11 +1139,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "65%";
-    left: "87%";
+    top: "74%";
+    left: "45%";
   }
   to {
-    top: "98%";
-    left: "50%";
+    top: "56%";
+    left: "54%";
   }
 }/*# sourceMappingURL=main.css.map */

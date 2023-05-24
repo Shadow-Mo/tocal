@@ -64,7 +64,7 @@
          .marquee {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            width: 400vw;
+            width: 600vw;
 
             &__inner {
                width: 100%;
@@ -77,13 +77,14 @@
                padding: 1rem;
                width: 100%;
                aspect-ratio: 4 / 2;
-               @include grid-center;
+               @include flex-center;
                background: $whiteColor;
                border: 2px solid rgba($purpleColor, 0.1);
             }
 
             img {
                height: 100%;
+               width: auto;
             }
 
             @include responsive(md) {
