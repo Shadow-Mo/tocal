@@ -826,7 +826,7 @@
                            <h3 class="font-bold tracking-tight text-2xl capitalize">
                               Choose the services (Optional)
                            </h3>
-                           <p class="para italic mb-4 text-orange-300 font-light leading-[100%]">Driver Included</p>
+                           <p class="para italic mb-4 text-orange-500 font-light leading-[100%]">Driver Included</p>
                            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                               <div class="optionWrapper">
                                  <label for="vehicleEagle"
@@ -1078,41 +1078,45 @@
                                     </li>
                                  </ul>
                               </div>
-                              <div class="grid gap-2 lg:bg-gray-50 lg:rounded-lg lg:p-8">
-                                 <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
-                                    Book a free Pilot
-                                 </h3>
-                                 <div class="form-group flex flex-col gap-1">
-                                    <label for="fullName">Full Name</label>
-                                    <input type="text" id="fullName" placeholder="Enter full name"
-                                       class="form-control w-full p-2 px-3 border rounded-md" required>
-                                    <span class="error text-red italic font-[300] text-sm leading-[100%]"
-                                       id="fullNameError"></span>
+                              <div class="">
+                                 <div
+                                    class="bg-orange-100 text-sm text-center font-light rounded-md mb-2 block p-2 px-4 italic">
+                                    <span>Your results are calculated in the chart!</span>
                                  </div>
-                                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+                                 <div class="grid gap-2 lg:bg-gray-50 lg:rounded-lg lg:p-8">
+                                    <h3 class="font-bold tracking-tight text-2xl mb-4 capitalize">
+                                       Book a free Pilot
+                                    </h3>
                                     <div class="form-group flex flex-col gap-1">
-                                       <label for="email">Email</label>
-                                       <input type="text" id="email" placeholder="Enter email"
+                                       <label for="fullName">Full Name</label>
+                                       <input type="text" id="fullName" placeholder="Enter full name"
                                           class="form-control w-full p-2 px-3 border rounded-md" required>
                                        <span class="error text-red italic font-[300] text-sm leading-[100%]"
-                                          id="emailError"></span>
+                                          id="fullNameError"></span>
                                     </div>
-                                    <div class="form-group flex flex-col gap-1">
-                                       <label for="phoneNumber">Contact Number</label>
-                                       <input type="text" id="phoneNumber" placeholder="Enter contact number"
-                                          class="form-control w-full p-2 px-3 border rounded-md" required>
-                                       <span class="error text-red italic font-[300] text-sm leading-[100%]"
-                                          id="phoneNumberError"></span>
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+                                       <div class="form-group flex flex-col gap-1">
+                                          <label for="email">Email</label>
+                                          <input type="text" id="email" placeholder="Enter email"
+                                             class="form-control w-full p-2 px-3 border rounded-md" required>
+                                          <span class="error text-red italic font-[300] text-sm leading-[100%]"
+                                             id="emailError"></span>
+                                       </div>
+                                       <div class="form-group flex flex-col gap-1">
+                                          <label for="phoneNumber">Contact Number</label>
+                                          <input type="text" id="phoneNumber" placeholder="Enter contact number"
+                                             class="form-control w-full p-2 px-3 border rounded-md" required>
+                                          <span class="error text-red italic font-[300] text-sm leading-[100%]"
+                                             id="phoneNumberError"></span>
+                                       </div>
                                     </div>
+                                    <button class="btn btn__primary w-fit mt-2" id="submitContactFormBtn"
+                                       @click="bookAPilot(event)">
+                                       <i class="bi bi-send-fill"></i>
+                                       <span>Book a Pilot</span>
+                                    </button>
+                                    <span id="responseText"></span>
                                  </div>
-
-                                 <button class="btn btn__primary w-fit mt-2" id="submitContactFormBtn"
-                                    @click="bookAPilot(event)">
-                                    <i class="bi bi-send-fill"></i>
-                                    <span>Book a Pilot</span>
-                                 </button>
-
-                                 <span id="responseText"></span>
                               </div>
                            </div>
                         </div>
