@@ -104,6 +104,7 @@
       // Statistics Slider
       .statistics-slider-wrapper {
          position: relative;
+         transform: translateX(10%);
 
          .sub-dot {
             width: 0.5rem;

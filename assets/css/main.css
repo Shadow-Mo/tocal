@@ -308,6 +308,7 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 .page__home .statistics-slider-wrapper {
   position: relative;
+  transform: translateX(10%);
 }
 .page__home .statistics-slider-wrapper .sub-dot {
   width: 0.5rem;
@@ -544,12 +545,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "31%";
-    left: "2%";
+    top: "29%";
+    left: "43%";
   }
   to {
-    top: "71%";
-    left: "50%";
+    top: "50%";
+    left: "39%";
   }
 }
 .page__about .gallery__wrapper {
@@ -1118,11 +1119,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "54%";
-    left: "91%";
+    top: "13%";
+    left: "69%";
   }
   to {
-    top: "51%";
-    left: "3%";
+    top: "100%";
+    left: "49%";
   }
 }/*# sourceMappingURL=main.css.map */
