@@ -547,12 +547,12 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 @keyframes randomTopLeft {
   from {
-    top: "32%";
-    left: "66%";
+    top: "19%";
+    left: "54%";
   }
   to {
-    top: "39%";
-    left: "52%";
+    top: "11%";
+    left: "70%";
   }
 }
 .page__about .gallery__wrapper {
@@ -765,9 +765,10 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 .page__services .hero .hero-slider .slick-dots {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  margin-top: -1rem;
 }
 .page__services .hero .hero-slider .slick-dots li {
   width: 1rem !important;
@@ -784,6 +785,19 @@ nav #navbarToggle:checked ~ #navbarMenu {
 }
 .page__services .hero .hero-slider .slick-dots li.slick-active {
   background: linear-gradient(135deg, #ffbdad 0%, #ea2fa6 86.88%) !important;
+}
+@media (min-width: 768px) {
+  .page__services .hero .hero-slider .slick-dots {
+    margin-top: -10px;
+  }
+}
+@media (min-width: 976px) {
+  .page__services .hero .hero-slider .slick-dots {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -1rem;
+  }
 }
 .page__services .vehicles .content-slider-wrapper .content-slider {
   width: 100% !important;
@@ -1139,11 +1153,11 @@ nav #navbarToggle:checked ~ #navbarMenu {
 
 @keyframes randomTopLeft {
   from {
-    top: "74%";
-    left: "45%";
+    top: "52%";
+    left: "83%";
   }
   to {
-    top: "56%";
-    left: "54%";
+    top: "80%";
+    left: "46%";
   }
 }/*# sourceMappingURL=main.css.map */

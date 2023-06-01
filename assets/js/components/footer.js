@@ -184,7 +184,7 @@ class WebsiteFooter extends HTMLElement {
          <div class="copyright bg-black">
             <div class="container">
                <div class="flex justify-center items-center text-center p-2 text-sm font-[300]">
-                  &copy; 2023. All rights reserved &nbsp;| &nbsp;DbyT Dynamics Mobility Solutions Private Limited
+                  &copy; 2021-23. All rights reserved &nbsp;| &nbsp;DbyT Dynamics Mobility Solutions Private Limited
                </div>
             </div>
          </div>

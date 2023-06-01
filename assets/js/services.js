@@ -6,8 +6,9 @@ $(window).on('load', function () {
       slidesToShow: 1,
       adaptiveHeight: true,
       arrows: false,
-      autoplay: true,
-      autoplayDuration: 2000
+      // autoplay: true,
+      autoplayDuration: 2000,
+      fade: true
    });
    $('.content-slider').slick({
       slidesToShow: 1,

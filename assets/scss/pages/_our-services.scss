@@ -2,9 +2,12 @@
    &__services {
       .hero {
          .hero-slider {
+            .card {
+            }
             .slick-dots {
-               @include flex-start;
+               @include flex-center;
                gap: 0.5rem;
+               margin-top: -1rem;
 
                li {
                   width: 1rem !important;
@@ -23,6 +26,14 @@
                   &.slick-active {
                      background: $gradientColor !important;
                   }
+               }
+
+               @include responsive(md) {
+                  margin-top: -10px;
+               }
+               @include responsive(lg) {
+                  @include flex-start;
+                  margin-top: -1rem;
                }
             }
          }
