@@ -6,7 +6,7 @@ $(window).on('load', function () {
       slidesToShow: 1,
       adaptiveHeight: true,
       arrows: false,
-      // autoplay: true,
+      autoplay: true,
       autoplayDuration: 2000,
       fade: true
    });
