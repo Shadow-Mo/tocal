@@ -199,7 +199,7 @@ class WebsiteFooter extends HTMLElement {
          </div>
 
          <!-- WhatsApp -->
-         <a href="https://wa.me/918222042225?text=Hi, I wanted to try your services." class="
+         <a href="https://wa.me/918222042225?text=Hi, I want to try your services." class="
                flex justify-center items-center 
                w-14 aspect-square p-2 
                bg-[#25d366] hover:bg-[#35897e] rounded-full cursor-pointer
