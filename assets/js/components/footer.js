@@ -66,7 +66,7 @@ class WebsiteFooter extends HTMLElement {
                         <p class="para">
                            <span class="font-[400] block text-white">Phone:</span>
                            <span class="text-sm text-[#d6d6d6] flex gap-2">
-                              <a href="tel:919840499441" class="underline hover:text-primary-700">+91-9840499441</a>
+                              <a href="tel:918222042225" class="underline hover:text-primary-700">+91-8222042225</a>
                            </span>
                         </p>
                      </div>
